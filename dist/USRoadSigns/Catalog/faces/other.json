@@ -1,0 +1,44 @@
+{
+  "faces": [
+    { "id": "R15-1", "note": "Railroad crossbuck, blades 48 x 9 (bounding 40.3, center 20.15)", "shape": "crossbuck", "width": 48, "height": 9, "background": "white",
+      "elements": [
+        { "type": "rect", "x": 20.15, "y": 20.15, "width": 47.4, "height": 8.4, "rotation": 45, "color": "none", "strokeColor": "black", "strokeWidth": 0.5 },
+        { "type": "rect", "x": 20.15, "y": 20.15, "width": 47.4, "height": 8.4, "rotation": -45, "color": "none", "strokeColor": "black", "strokeWidth": 0.5 },
+        { "type": "rect", "x": 20.15, "y": 20.15, "width": 8.9, "height": 8.9, "rotation": 45, "color": "white" },
+        { "type": "text", "text": "RAIL", "font": "C", "size": 4.2, "x": 10.0, "y": 10.0, "rotation": 45, "maxWidth": 13 },
+        { "type": "text", "text": "ROAD", "font": "C", "size": 4.2, "x": 30.3, "y": 30.3, "rotation": 45, "maxWidth": 13 },
+        { "type": "text", "text": "CROSS", "font": "C", "size": 4.2, "x": 10.0, "y": 30.3, "rotation": -45, "maxWidth": 13 },
+        { "type": "text", "text": "ING", "font": "C", "size": 4.2, "x": 30.3, "y": 10.0, "rotation": -45, "maxWidth": 13 }
+      ] },
+    { "id": "R15-2P", "note": "Number of tracks plaque, 27 x 9", "shape": "rect", "width": 27, "height": 9, "cornerRadius": 0.5, "background": "white",
+      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.35 },
+      "elements": [ { "type": "text", "text": "2 TRACKS", "font": "C", "size": 4.0, "x": 13.5, "y": 4.5, "maxWidth": 23 } ] },
+    { "id": "W10-1", "note": "Highway-rail grade crossing advance warning, 36 in circle", "shape": "circle", "width": 36, "height": 36, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.5, "radius": 0 },
+      "elements": [
+        { "type": "symbol", "symbol": "railroad-x", "x": 18, "y": 18, "width": 29, "height": 29 },
+        { "type": "text", "text": "R", "font": "D", "size": 7.0, "x": 8.2, "y": 18 },
+        { "type": "text", "text": "R", "font": "D", "size": 7.0, "x": 27.8, "y": 18 }
+      ] },
+    { "id": "OM3-L", "note": "Type 3 object marker, stripes sloping down to the left, 12 x 36", "shape": "rect", "width": 12, "height": 36, "cornerRadius": 0.5, "background": "yellow",
+      "elements": [
+        { "type": "rect", "x": 6, "y": -2.5, "width": 3, "height": 22, "rotation": 45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 6.0, "width": 3, "height": 22, "rotation": 45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 14.5, "width": 3, "height": 22, "rotation": 45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 23.0, "width": 3, "height": 22, "rotation": 45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 31.5, "width": 3, "height": 22, "rotation": 45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 40.0, "width": 3, "height": 22, "rotation": 45, "color": "black" }
+      ] },
+    { "id": "OM3-R", "note": "Type 3 object marker, stripes sloping down to the right, 12 x 36", "shape": "rect", "width": 12, "height": 36, "cornerRadius": 0.5, "background": "yellow",
+      "elements": [
+        { "type": "rect", "x": 6, "y": -2.5, "width": 3, "height": 22, "rotation": -45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 6.0, "width": 3, "height": 22, "rotation": -45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 14.5, "width": 3, "height": 22, "rotation": -45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 23.0, "width": 3, "height": 22, "rotation": -45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 31.5, "width": 3, "height": 22, "rotation": -45, "color": "black" },
+        { "type": "rect", "x": 6, "y": 40.0, "width": 3, "height": 22, "rotation": -45, "color": "black" }
+      ] },
+    { "id": "OM4-3", "note": "End-of-roadway marker (Type 4, red diamond), 18 in", "shape": "diamond", "width": 18, "height": 18, "cornerRadius": 1.0, "background": "red",
+      "elements": [] }
+  ]
+}

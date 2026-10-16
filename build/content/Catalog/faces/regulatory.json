@@ -1,0 +1,258 @@
+{
+  "faces": [
+    {
+      "id": "R1-1", "note": "STOP, 30 in octagon",
+      "shape": "octagon", "width": 30, "height": 30, "cornerRadius": 1.0, "background": "red",
+      "border": { "color": "white", "width": 0.75, "inset": 0.5, "radius": 0.6 },
+      "elements": [ { "type": "text", "text": "STOP", "font": "C", "size": 10, "x": 15, "y": 15, "maxWidth": 23, "color": "white" } ]
+    },
+    {
+      "id": "R1-3P", "note": "ALL WAY plaque, 18 x 6",
+      "shape": "rect", "width": 18, "height": 6, "cornerRadius": 0.375, "background": "red",
+      "border": { "color": "white", "width": 0.375, "inset": 0.25, "radius": 0.25 },
+      "elements": [ { "type": "text", "text": "ALL WAY", "font": "C", "size": 3.0, "x": 9, "y": 3, "maxWidth": 15, "color": "white" } ]
+    },
+    {
+      "id": "R1-2", "note": "YIELD, 36 in triangle (point down)",
+      "shape": "triangle", "width": 36, "height": 36, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "red", "width": 4.5, "inset": 0, "radius": 1.5 },
+      "elements": [ { "type": "text", "text": "YIELD", "font": "C", "size": 4.0, "x": 18, "y": 10.2, "maxWidth": 12.2, "color": "red" } ]
+    },
+    {
+      "id": "R5-1", "note": "DO NOT ENTER, 30 x 30",
+      "shape": "rect", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "white",
+      "elements": [
+        { "type": "ellipse", "x": 15, "y": 15, "width": 28, "height": 28, "color": "red" },
+        { "type": "rect", "x": 15, "y": 15, "width": 21.5, "height": 4.6, "color": "white" },
+        { "type": "text", "text": "DO NOT", "font": "D", "size": 3.3, "x": 15, "y": 8.4, "maxWidth": 17, "color": "white" },
+        { "type": "text", "text": "ENTER", "font": "D", "size": 3.3, "x": 15, "y": 21.6, "maxWidth": 17, "color": "white" }
+      ]
+    },
+    {
+      "id": "R5-1a", "note": "WRONG WAY, 36 x 24",
+      "shape": "rect", "width": 36, "height": 24, "cornerRadius": 1.5, "background": "red",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "text", "lines": [ "WRONG", "WAY" ], "font": "D", "size": 6.0, "lineSpacing": 9.4, "x": 18, "y": 12, "maxWidth": 30, "color": "white" } ]
+    },
+    {
+      "id": "R10-11", "note": "NO TURN ON RED, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "text", "lines": [ "NO", "TURN", "ON RED" ], "font": "D", "size": 4.5, "lineSpacing": 7.6, "x": 12, "y": 15, "maxWidth": 20 } ]
+    },
+    {
+      "id": "R4-7", "note": "Keep Right symbol sign, 24 x 30 conventional road",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 15, "width": 17, "height": 24 } ]
+    },
+    {
+      "id": "R4-8", "note": "Keep Left symbol sign (mirror of R4-7)",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 15, "width": 17, "height": 24, "mirrorX": true } ]
+    },
+    {
+      "id": "R6-1R", "note": "ONE WAY, arrow pointing right, 36 x 12",
+      "shape": "rect", "width": 36, "height": 12, "cornerRadius": 0.75, "background": "black",
+      "border": { "color": "white", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "arrow", "x1": 2.4, "y1": 6, "x2": 33.6, "y2": 6, "shaftWidth": 5.4, "headWidth": 9.6, "headLength": 7.6, "color": "white" },
+        { "type": "text", "text": "ONE WAY", "font": "D", "size": 4.0, "x": 14.6, "y": 6, "maxWidth": 21.5, "color": "black" }
+      ]
+    },
+    {
+      "id": "R6-1L", "note": "ONE WAY, arrow pointing left, 36 x 12",
+      "shape": "rect", "width": 36, "height": 12, "cornerRadius": 0.75, "background": "black",
+      "border": { "color": "white", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "arrow", "x1": 33.6, "y1": 6, "x2": 2.4, "y2": 6, "shaftWidth": 5.4, "headWidth": 9.6, "headLength": 7.6, "color": "white" },
+        { "type": "text", "text": "ONE WAY", "font": "D", "size": 4.0, "x": 21.4, "y": 6, "maxWidth": 21.5, "color": "black" }
+      ]
+    },
+    {
+      "id": "R3-1", "note": "No right turn, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "turn-left", "x": 12, "y": 12.3, "width": 13, "height": 13, "mirrorX": true },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R3-2", "note": "No left turn, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "turn-left", "x": 12, "y": 12.3, "width": 13, "height": 13 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R3-4", "note": "No U-turn, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "u-turn", "x": 12, "y": 12.3, "width": 12.5, "height": 12.5 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R5-2", "note": "No trucks, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "truck", "x": 12, "y": 12.2, "width": 14.5, "height": 7.8 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R5-6", "note": "No bicycles, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "bicycle", "x": 12, "y": 12.3, "width": 14.5, "height": 9.1 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R9-3", "note": "No pedestrian crossing (symbol), 18 x 18",
+      "shape": "rect", "width": 18, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.3, "radius": 0.875 },
+      "elements": [
+        { "type": "symbol", "symbol": "pedestrian", "x": 9, "y": 9.1, "width": 6.4, "height": 10.8 },
+        { "type": "symbol", "symbol": "prohibition", "x": 9, "y": 9, "width": 15, "height": 15 }
+      ]
+    },
+    {
+      "id": "R8-3", "note": "No parking symbol, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "no-parking-p", "x": 12, "y": 12, "width": 15, "height": 15 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R7-1B", "note": "NO PARKING ANY TIME with double arrow, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 2.2, "x": 6, "y": 2.9, "color": "red" },
+        { "type": "text", "text": "PARKING", "font": "C", "size": 1.8, "x": 6, "y": 6.0, "maxWidth": 10, "color": "red" },
+        { "type": "text", "lines": [ "ANY", "TIME" ], "font": "C", "size": 1.8, "lineSpacing": 2.8, "x": 6, "y": 10.5, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.3, "x2": 10.6, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.3, "x2": 1.4, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-1R", "note": "NO PARKING ANY TIME, arrow right, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 2.2, "x": 6, "y": 2.9, "color": "red" },
+        { "type": "text", "text": "PARKING", "font": "C", "size": 1.8, "x": 6, "y": 6.0, "maxWidth": 10, "color": "red" },
+        { "type": "text", "lines": [ "ANY", "TIME" ], "font": "C", "size": 1.8, "lineSpacing": 2.8, "x": 6, "y": 10.5, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 1.6, "y1": 15.3, "x2": 10.6, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-1L", "note": "NO PARKING ANY TIME, arrow left, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 2.2, "x": 6, "y": 2.9, "color": "red" },
+        { "type": "text", "text": "PARKING", "font": "C", "size": 1.8, "x": 6, "y": 6.0, "maxWidth": 10, "color": "red" },
+        { "type": "text", "lines": [ "ANY", "TIME" ], "font": "C", "size": 1.8, "lineSpacing": 2.8, "x": 6, "y": 10.5, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 10.4, "y1": 15.3, "x2": 1.4, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-7R", "note": "NO PARKING BUS STOP, arrow right, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "lines": [ "NO", "PARKING" ], "font": "C", "size": 1.8, "lineSpacing": 2.8, "x": 6, "y": 3.8, "maxWidth": 10, "color": "red" },
+        { "type": "text", "lines": [ "BUS", "STOP" ], "font": "D", "size": 2.4, "lineSpacing": 3.6, "x": 6, "y": 10.0, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 1.6, "y1": 15.3, "x2": 10.6, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-7L", "note": "NO PARKING BUS STOP, arrow left, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "lines": [ "NO", "PARKING" ], "font": "C", "size": 1.8, "lineSpacing": 2.8, "x": 6, "y": 3.8, "maxWidth": 10, "color": "red" },
+        { "type": "text", "lines": [ "BUS", "STOP" ], "font": "D", "size": 2.4, "lineSpacing": 3.6, "x": 6, "y": 10.0, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 10.4, "y1": 15.3, "x2": 1.4, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-8", "note": "RESERVED PARKING with International Symbol of Access, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "green", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "lines": [ "RESERVED", "PARKING" ], "font": "C", "size": 1.6, "lineSpacing": 2.5, "x": 6, "y": 3.3, "maxWidth": 10, "color": "green" },
+        { "type": "rect", "x": 6, "y": 11.4, "width": 8.4, "height": 8.4, "cornerRadius": 0.3, "color": "blue" },
+        { "type": "symbol", "symbol": "wheelchair", "x": 6, "y": 11.4, "width": 6.4, "height": 6.4, "color": "white" }
+      ]
+    },
+    {
+      "id": "R-FireLane", "note": "FIRE LANE NO PARKING (common local sign), 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "rect", "x": 6, "y": 5.0, "width": 10.6, "height": 7.6, "cornerRadius": 0.35, "color": "red" },
+        { "type": "text", "lines": [ "FIRE", "LANE" ], "font": "D", "size": 2.3, "lineSpacing": 3.4, "x": 6, "y": 5.0, "maxWidth": 9.4, "color": "white" },
+        { "type": "text", "lines": [ "NO", "PARKING" ], "font": "C", "size": 1.7, "lineSpacing": 2.6, "x": 6, "y": 11.6, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.6, "x2": 10.6, "y2": 15.6, "shaftWidth": 0.8, "headWidth": 2.2, "headLength": 1.6, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.6, "x2": 1.4, "y2": 15.6, "shaftWidth": 0.8, "headWidth": 2.2, "headLength": 1.6, "color": "red" }
+      ]
+    },
+    {
+      "id": "R2-1-25", "note": "SPEED LIMIT 25, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "25", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-35", "note": "SPEED LIMIT 35, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "35", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-45", "note": "SPEED LIMIT 45, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "45", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-55", "note": "SPEED LIMIT 55, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "55", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-65", "note": "SPEED LIMIT 65, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "65", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    }
+  ]
+}

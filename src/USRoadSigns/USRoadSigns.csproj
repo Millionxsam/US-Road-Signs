@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<!--
+		US Road Signs - Cities: Skylines II code mod.
+
+		Build modes:
+		  1. Official CS2 modding toolchain installed (Options > Modding in the game): Mod.props/Mod.targets are
+		     imported, the post processor runs and the mod is deployed to the local Mods folder automatically.
+		  2. No toolchain: the project references the game assemblies directly (Xbox or Steam install is detected
+		     automatically, or pass -p:ManagedPath=...). build.ps1 then assembles dist\USRoadSigns.
+	-->
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<OutputType>Library</OutputType>
+		<AssemblyName>USRoadSigns</AssemblyName>
+		<RootNamespace>USRoadSigns</RootNamespace>
+		<Configurations>Debug;Release</Configurations>
+		<Version>1.0.0</Version>
+		<Nullable>disable</Nullable>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+		<!-- The file where mod information which is required for publishing mod on PDX mods are stored -->
+		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
+		<!-- Generated textures, icons and the catalog produced by tools\SignForge (see build.ps1) -->
+		<ModContentDir Condition="'$(ModContentDir)' == ''">$(MSBuildThisFileDirectory)..\..\build\content</ModContentDir>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<CSIIToolPath>$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))</CSIIToolPath>
+		<UseOfficialToolchain Condition="'$(UseOfficialToolchain)' == '' AND '$(CSIIToolPath)' != '' AND Exists('$(CSIIToolPath)\Mod.props') AND Exists('$(CSIIToolPath)\Mod.targets')">true</UseOfficialToolchain>
+	</PropertyGroup>
+
+	<!-- Imports must be after the PropertyGroup blocks above -->
+	<Import Project="$(CSIIToolPath)\Mod.props" Condition="'$(UseOfficialToolchain)' == 'true'" />
+	<Import Project="$(CSIIToolPath)\Mod.targets" Condition="'$(UseOfficialToolchain)' == 'true'" />
+
+	<!-- Fallback game location detection (used when the toolchain is not installed) -->
+	<PropertyGroup Condition="'$(ManagedPath)' == ''">
+		<ManagedPath Condition="Exists('C:\XboxGames\Cities- Skylines II - PC Edition\Content\Cities2_Data\Managed\Game.dll')">C:\XboxGames\Cities- Skylines II - PC Edition\Content\Cities2_Data\Managed</ManagedPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(ManagedPath)' == ''">
+		<ManagedPath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\Cities Skylines II\Cities2_Data\Managed\Game.dll')">C:\Program Files (x86)\Steam\steamapps\common\Cities Skylines II\Cities2_Data\Managed</ManagedPath>
+	</PropertyGroup>
+
+	<Target Name="USRS_CheckManagedPath" BeforeTargets="BeforeBuild" Condition="'$(UseOfficialToolchain)' != 'true'">
+		<Error Condition="!Exists('$(ManagedPath)\Game.dll')" Text="Cities: Skylines II was not found. Build with -p:ManagedPath=&quot;&lt;game folder&gt;\Cities2_Data\Managed&quot;" />
+	</Target>
+
+	<ItemGroup>
+		<Reference Include="Game"><HintPath>$(ManagedPath)\Game.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.Core"><HintPath>$(ManagedPath)\Colossal.Core.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.Logging"><HintPath>$(ManagedPath)\Colossal.Logging.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.IO.AssetDatabase"><HintPath>$(ManagedPath)\Colossal.IO.AssetDatabase.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.AssetPipeline"><HintPath>$(ManagedPath)\Colossal.AssetPipeline.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.AssetPipeline.Native"><HintPath>$(ManagedPath)\Colossal.AssetPipeline.Native.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.Localization"><HintPath>$(ManagedPath)\Colossal.Localization.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.Mathematics"><HintPath>$(ManagedPath)\Colossal.Mathematics.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.PSI.Common"><HintPath>$(ManagedPath)\Colossal.PSI.Common.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.UI"><HintPath>$(ManagedPath)\Colossal.UI.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Colossal.UI.Binding"><HintPath>$(ManagedPath)\Colossal.UI.Binding.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedPath)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Unity.Burst"><HintPath>$(ManagedPath)\Unity.Burst.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Unity.Collections"><HintPath>$(ManagedPath)\Unity.Collections.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Unity.Entities"><HintPath>$(ManagedPath)\Unity.Entities.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Unity.Mathematics"><HintPath>$(ManagedPath)\Unity.Mathematics.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Unity.InputSystem"><HintPath>$(ManagedPath)\Unity.InputSystem.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Newtonsoft.Json"><HintPath>$(ManagedPath)\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Update="System"><Private>false</Private></Reference>
+		<Reference Update="System.Core"><Private>false</Private></Reference>
+		<Reference Update="System.Data"><Private>false</Private></Reference>
+	</ItemGroup>
+
+	<!-- Shared, engine-independent code (catalog model + geometry generation), also used by tools\SignForge -->
+	<ItemGroup>
+		<Compile Include="..\Shared\**\*.cs" Link="Shared\%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<!-- Ship the generated catalog, textures and icons next to the DLL -->
+	<ItemGroup>
+		<Content Include="$(ModContentDir)\**\*.*" Condition="Exists('$(ModContentDir)')">
+			<Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(UseOfficialToolchain)' == 'true'">
+		<None Include="$(ModPropsFile)" Link="Properties\Mod.props" />
+		<None Include="$(ModTargetsFile)" Link="Properties\Mod.targets" />
+	</ItemGroup>
+
+</Project>

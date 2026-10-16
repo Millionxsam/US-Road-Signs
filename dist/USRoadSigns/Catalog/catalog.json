@@ -1,0 +1,45 @@
+{
+  "formatVersion": 1,
+  "prefabPrefix": "USRS_",
+
+  "menu": {
+    "id": "USRoadSigns",
+    "name": "US Road Signs",
+    "description": "Freely placeable American road signs (MUTCD style), each with its own post and mounting hardware.",
+    "icon": "Icons/menu.png",
+    "priority": 1010
+  },
+
+  "categories": [
+    { "id": "Regulatory",       "name": "Regulatory",          "priority": 10, "icon": "Icons/Categories/Regulatory.png",       "description": "Regulatory signs: stop, yield, one way, turn and parking restrictions, prohibitions." },
+    { "id": "Warning",          "name": "Warning",             "priority": 20, "icon": "Icons/Categories/Warning.png",          "description": "Yellow diamond warning signs for curves, intersections, merges and hazards." },
+    { "id": "Guide",            "name": "Guide",               "priority": 30, "icon": "Icons/Categories/Guide.png",            "description": "Green guide signs: destinations, distances and street names." },
+    { "id": "Highway",          "name": "Highway",             "priority": 40, "icon": "Icons/Categories/Highway.png",          "description": "Route shields, route assemblies, lane-use, entrance and exit signs." },
+    { "id": "Services",         "name": "Services",            "priority": 50, "icon": "Icons/Categories/Services.png",         "description": "Blue motorist service signs." },
+    { "id": "SchoolPedestrian", "name": "School & Pedestrian", "priority": 60, "icon": "Icons/Categories/SchoolPedestrian.png", "description": "School zone, school crossing, pedestrian and bicycle signs." },
+    { "id": "Construction",     "name": "Construction",        "priority": 70, "icon": "Icons/Categories/Construction.png",     "description": "Orange temporary traffic control signs for work zones and detours." },
+    { "id": "Other",            "name": "Other",               "priority": 80, "icon": "Icons/Categories/Other.png",            "description": "Markers, railroad signs and blank sign blanks." }
+  ],
+
+  "colors": {
+    "white":  "#E6E7E2",
+    "black":  "#161616",
+    "red":    "#B11D2D",
+    "yellow": "#F2B60E",
+    "fyg":    "#C9DA1E",
+    "orange": "#EC6A1C",
+    "green":  "#00674A",
+    "blue":   "#10488F",
+    "brown":  "#5A3825",
+    "gray":   "#7B7E80",
+    "none":   "#00000000"
+  },
+
+  "mounting": {
+    "mountHeight": 84,
+    "panelGap": 1.0,
+    "postTopClearance": 1.5,
+    "postBurial": 6,
+    "plateThickness": 0.125
+  }
+}

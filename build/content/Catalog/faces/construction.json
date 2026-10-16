@@ -1,0 +1,121 @@
+{
+  "_comment": "Temporary traffic control (orange). 36 in diamond: bounding box 50.91, center 25.46.",
+  "faces": [
+    {
+      "id": "W20-1", "note": "ROAD WORK AHEAD, 36 in diamond",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "lines": [ "ROAD", "WORK", "AHEAD" ], "font": "C", "size": 5.4, "lineSpacing": 8.1, "x": 25.46, "y": 25.46 } ]
+    },
+    {
+      "id": "W20-2", "note": "DETOUR AHEAD, 36 in diamond",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "lines": [ "DETOUR", "AHEAD" ], "font": "C", "size": 5.4, "lineSpacing": 8.1, "x": 25.46, "y": 25.46, "maxWidth": 28 } ]
+    },
+    {
+      "id": "W20-3", "note": "ROAD CLOSED AHEAD, 36 in diamond",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "lines": [ "ROAD", "CLOSED", "AHEAD" ], "font": "C", "size": 5.0, "lineSpacing": 7.6, "x": 25.46, "y": 25.46, "maxWidth": 26 } ]
+    },
+    {
+      "id": "W20-5R", "note": "RIGHT LANE CLOSED AHEAD, 36 in diamond",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "lines": [ "RIGHT", "LANE", "CLOSED", "AHEAD" ], "font": "C", "size": 4.4, "lineSpacing": 6.4, "x": 25.46, "y": 25.46, "maxWidth": 22 } ]
+    },
+    {
+      "id": "W20-5L", "note": "LEFT LANE CLOSED AHEAD, 36 in diamond",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "lines": [ "LEFT", "LANE", "CLOSED", "AHEAD" ], "font": "C", "size": 4.4, "lineSpacing": 6.4, "x": 25.46, "y": 25.46, "maxWidth": 22 } ]
+    },
+    {
+      "id": "W4-2R-TTC", "note": "Right lane ends (merge left), orange 36 in diamond",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "symbol", "symbol": "lane-ends", "x": 25.46, "y": 25.46, "width": 23, "height": 23 } ]
+    },
+    {
+      "id": "W4-2L-TTC", "note": "Left lane ends (merge right), orange 36 in diamond",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "symbol", "symbol": "lane-ends", "x": 25.46, "y": 25.46, "width": 23, "height": 23, "mirrorX": true } ]
+    },
+    {
+      "id": "W20-7", "note": "Flagger symbol, 36 in diamond",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "symbol", "symbol": "flagger", "x": 25.9, "y": 25.9, "width": 16, "height": 24.5 } ]
+    },
+    {
+      "id": "M4-9R", "note": "DETOUR with arrow right, 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.875, "background": "orange",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "DETOUR", "font": "C", "size": 5.0, "x": 15, "y": 7.2, "maxWidth": 24 },
+        { "type": "arrow", "x1": 4, "y1": 16.8, "x2": 26.2, "y2": 16.8, "shaftWidth": 3.2, "headWidth": 8, "headLength": 6.2 }
+      ]
+    },
+    {
+      "id": "M4-9L", "note": "DETOUR with arrow left, 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.875, "background": "orange",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "DETOUR", "font": "C", "size": 5.0, "x": 15, "y": 7.2, "maxWidth": 24 },
+        { "type": "arrow", "x1": 26, "y1": 16.8, "x2": 3.8, "y2": 16.8, "shaftWidth": 3.2, "headWidth": 8, "headLength": 6.2 }
+      ]
+    },
+    {
+      "id": "M4-9S", "note": "DETOUR with arrow straight ahead, 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.875, "background": "orange",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "DETOUR", "font": "C", "size": 5.0, "x": 15, "y": 7.2, "maxWidth": 24 },
+        { "type": "arrow", "x1": 15, "y1": 21.8, "x2": 15, "y2": 11.2, "shaftWidth": 3.2, "headWidth": 7.4, "headLength": 5.2 }
+      ]
+    },
+    {
+      "id": "R11-2", "note": "ROAD CLOSED, 48 x 30 (white, used on Type III barricades)",
+      "shape": "rect", "width": 48, "height": 30, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "text", "lines": [ "ROAD", "CLOSED" ], "font": "C", "size": 6.5, "lineSpacing": 10.5, "x": 24, "y": 15, "maxWidth": 40 } ]
+    },
+    {
+      "id": "R11-4", "note": "ROAD CLOSED TO THRU TRAFFIC, 60 x 30",
+      "shape": "rect", "width": 60, "height": 30, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "text", "lines": [ "ROAD CLOSED", "TO", "THRU TRAFFIC" ], "font": "C", "size": 5.0, "lineSpacing": 8.0, "x": 30, "y": 15, "maxWidth": 52 } ]
+    },
+    {
+      "id": "BarricadeRailR", "note": "Type III barricade rail, 60 x 8, orange/white stripes sloping down to the right (traffic passes right)",
+      "shape": "rect", "width": 60, "height": 8, "cornerRadius": 0.25, "background": "white",
+      "elements": [
+        { "type": "rect", "x": -5.0, "y": 4, "width": 6, "height": 16, "rotation": -45, "color": "orange" },
+        { "type": "rect", "x": 12.0, "y": 4, "width": 6, "height": 16, "rotation": -45, "color": "orange" },
+        { "type": "rect", "x": 29.0, "y": 4, "width": 6, "height": 16, "rotation": -45, "color": "orange" },
+        { "type": "rect", "x": 46.0, "y": 4, "width": 6, "height": 16, "rotation": -45, "color": "orange" },
+        { "type": "rect", "x": 63.0, "y": 4, "width": 6, "height": 16, "rotation": -45, "color": "orange" }
+      ]
+    },
+    {
+      "id": "G20-2", "note": "END ROAD WORK, 36 x 18",
+      "shape": "rect", "width": 36, "height": 18, "cornerRadius": 1.5, "background": "orange",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "text", "lines": [ "END", "ROAD WORK" ], "font": "C", "size": 4.2, "lineSpacing": 6.6, "x": 18, "y": 9, "maxWidth": 30 } ]
+    },
+    {
+      "id": "G20-5aP", "note": "WORK ZONE plaque, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.5, "background": "orange",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "text", "lines": [ "WORK", "ZONE" ], "font": "C", "size": 4.6, "lineSpacing": 7.0, "x": 12, "y": 9, "maxWidth": 20 } ]
+    },
+    {
+      "id": "R2-6P", "note": "FINES DOUBLE plaque, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "text", "lines": [ "FINES", "DOUBLE" ], "font": "C", "size": 4.4, "lineSpacing": 7.0, "x": 12, "y": 9, "maxWidth": 20 } ]
+    }
+  ]
+}

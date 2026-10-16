@@ -1,0 +1,46 @@
+{
+  "_comment": "Conventional-road guide signs (green, white legend). Place names are fictional.",
+  "faces": [
+    { "id": "D1-1R", "note": "Destination with arrow right, 60 x 18", "shape": "rect", "width": 60, "height": 18, "cornerRadius": 1.5, "background": "green",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "Downtown", "font": "EM", "size": 6.0, "x": 5, "y": 9, "align": "left", "maxWidth": 36, "color": "white" },
+        { "type": "arrow", "x1": 43, "y1": 9, "x2": 56, "y2": 9, "shaftWidth": 2.4, "headWidth": 7.0, "headLength": 5.0, "color": "white" }
+      ] },
+    { "id": "D1-1L", "note": "Destination with arrow left, 60 x 18", "shape": "rect", "width": 60, "height": 18, "cornerRadius": 1.5, "background": "green",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "arrow", "x1": 17, "y1": 9, "x2": 4, "y2": 9, "shaftWidth": 2.4, "headWidth": 7.0, "headLength": 5.0, "color": "white" },
+        { "type": "text", "text": "Downtown", "font": "EM", "size": 6.0, "x": 55, "y": 9, "align": "right", "maxWidth": 36, "color": "white" }
+      ] },
+    { "id": "D1-1S", "note": "Destination with arrow straight ahead, 60 x 18", "shape": "rect", "width": 60, "height": 18, "cornerRadius": 1.5, "background": "green",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "arrow", "x1": 9, "y1": 15.2, "x2": 9, "y2": 2.8, "shaftWidth": 2.4, "headWidth": 7.0, "headLength": 5.0, "color": "white" },
+        { "type": "text", "text": "Downtown", "font": "EM", "size": 6.0, "x": 55, "y": 9, "align": "right", "maxWidth": 38, "color": "white" }
+      ] },
+    { "id": "D1-2", "note": "Two destinations (straight and right), 66 x 30", "shape": "rect", "width": 66, "height": 30, "cornerRadius": 1.875, "background": "green",
+      "border": { "color": "white", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "arrow", "x1": 8.5, "y1": 13.4, "x2": 8.5, "y2": 2.6, "shaftWidth": 2.2, "headWidth": 6.4, "headLength": 4.4, "color": "white" },
+        { "type": "text", "text": "Airport", "font": "EM", "size": 5.5, "x": 17, "y": 8.2, "align": "left", "maxWidth": 42, "color": "white" },
+        { "type": "text", "text": "Downtown", "font": "EM", "size": 5.5, "x": 5, "y": 21.8, "align": "left", "maxWidth": 42, "color": "white" },
+        { "type": "arrow", "x1": 49, "y1": 21.8, "x2": 61.5, "y2": 21.8, "shaftWidth": 2.2, "headWidth": 6.4, "headLength": 4.4, "color": "white" }
+      ] },
+    { "id": "D3-1", "note": "Street name sign blade, 36 x 9", "shape": "rect", "width": 36, "height": 9, "cornerRadius": 0.5, "background": "green",
+      "border": { "color": "white", "width": 0.3, "inset": 0.25, "radius": 0.35 },
+      "elements": [ { "type": "text", "text": "Main St", "font": "EM", "size": 4.4, "x": 18, "y": 4.7, "maxWidth": 32, "color": "white" } ] },
+    { "id": "I-2", "note": "City limit sign, 48 x 24", "shape": "rect", "width": 48, "height": 24, "cornerRadius": 1.5, "background": "green",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "Maple Grove", "font": "EM", "size": 5.5, "x": 24, "y": 8.4, "maxWidth": 42, "color": "white" },
+        { "type": "text", "text": "CITY LIMIT", "font": "D", "size": 4.0, "x": 24, "y": 17.0, "maxWidth": 40, "color": "white" }
+      ] },
+    { "id": "D11-1", "note": "BIKE ROUTE, 24 x 18", "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.5, "background": "green",
+      "border": { "color": "white", "width": 0.5, "inset": 0.375, "radius": 1.0 },
+      "elements": [
+        { "type": "symbol", "symbol": "bicycle", "x": 12, "y": 6.8, "width": 12.5, "height": 7.8, "color": "white" },
+        { "type": "text", "text": "BIKE ROUTE", "font": "C", "size": 2.8, "x": 12, "y": 14.4, "maxWidth": 20, "color": "white" }
+      ] }
+  ]
+}

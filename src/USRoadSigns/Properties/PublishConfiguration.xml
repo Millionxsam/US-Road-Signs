@@ -1,0 +1,12 @@
+<Publish>
+	<ModId Value="" />
+	<DisplayName Value="US Road Signs" />
+	<ShortDescription Value="A library of realistic MUTCD-style American road signs with posts, placeable anywhere." />
+	<LongDescription>
+Adds a "US Road Signs" toolbar menu with regulatory, warning, guide, highway, service, school and pedestrian, and construction signs.
+Every sign is a complete assembly: sign face, mounting hardware and galvanized post. Place them freely, rotate them, or paint rows with the line tool.
+	</LongDescription>
+	<ModVersion Value="1.0.0" />
+	<GameVersion Value="1.*" />
+	<AccessLevel Value="Private" />
+</Publish>

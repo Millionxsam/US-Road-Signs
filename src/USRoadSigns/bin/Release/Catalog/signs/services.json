@@ -1,0 +1,14 @@
+{
+  "signs": [
+    { "id": "D9-7_Gas", "name": "Gas", "category": "Services", "code": "D9-7", "panels": [ { "face": "D9-7" } ], "support": { "type": "post" } },
+    { "id": "D9-8_Food", "name": "Food", "category": "Services", "code": "D9-8", "panels": [ { "face": "D9-8" } ], "support": { "type": "post" } },
+    { "id": "D9-9_Lodging", "name": "Lodging", "category": "Services", "code": "D9-9", "panels": [ { "face": "D9-9" } ], "support": { "type": "post" } },
+    { "id": "D9-2_Hospital", "name": "Hospital", "category": "Services", "code": "D9-2", "panels": [ { "face": "D9-2" } ], "support": { "type": "post" } },
+    { "id": "D5-1_RestArea", "name": "Rest Area", "category": "Services", "code": "D5-1", "panels": [ { "face": "D5-1" } ], "support": { "type": "post" } },
+    { "id": "D9-1_Telephone", "name": "Telephone", "category": "Services", "code": "D9-1", "panels": [ { "face": "D9-1" } ], "support": { "type": "post" } },
+    { "id": "D9-10_Information", "name": "Information", "category": "Services", "code": "D9-10", "panels": [ { "face": "D9-10" } ], "support": { "type": "post" } },
+    { "id": "D9_Parking", "name": "Parking", "category": "Services", "code": "D4-1 style", "panels": [ { "face": "D9-P" } ], "support": { "type": "post" } },
+    { "id": "I-5_Airport", "name": "Airport", "category": "Services", "code": "I-5", "panels": [ { "face": "I-5" } ], "support": { "type": "post" } },
+    { "id": "D9-6_Accessible", "name": "Accessible Facilities", "category": "Services", "code": "D9-6", "panels": [ { "face": "D9-6" } ], "support": { "type": "post" } }
+  ]
+}

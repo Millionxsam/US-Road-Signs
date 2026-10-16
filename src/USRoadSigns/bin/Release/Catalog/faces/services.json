@@ -1,0 +1,95 @@
+{
+  "_comment": "Blue general service signs (D9 family) with a word legend below the symbol, 24 x 30.",
+  "faces": [
+    {
+      "id": "D9-7", "note": "GAS",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "gas-pump", "x": 12, "y": 11.5, "width": 16, "height": 16, "color": "white" },
+        { "type": "text", "text": "GAS", "font": "D", "size": 4.0, "x": 12, "y": 24.4, "maxWidth": 19, "color": "white" }
+      ]
+    },
+    {
+      "id": "D9-8", "note": "FOOD",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "fork-knife", "x": 12, "y": 11.5, "width": 16, "height": 16, "color": "white" },
+        { "type": "text", "text": "FOOD", "font": "D", "size": 4.0, "x": 12, "y": 24.4, "maxWidth": 19, "color": "white" }
+      ]
+    },
+    {
+      "id": "D9-9", "note": "LODGING",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "bed", "x": 12, "y": 12, "width": 17, "height": 11.9, "color": "white" },
+        { "type": "text", "text": "LODGING", "font": "C", "size": 3.6, "x": 12, "y": 24.4, "maxWidth": 19, "color": "white" }
+      ]
+    },
+    {
+      "id": "D9-2", "note": "HOSPITAL",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "H", "font": "EM", "size": 13.0, "x": 12, "y": 11.5, "color": "white" },
+        { "type": "text", "text": "HOSPITAL", "font": "C", "size": 3.4, "x": 12, "y": 24.4, "maxWidth": 19, "color": "white" }
+      ]
+    },
+    {
+      "id": "D9-1", "note": "TELEPHONE",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "telephone", "x": 12, "y": 11.5, "width": 15, "height": 15, "color": "white" },
+        { "type": "text", "text": "PHONE", "font": "D", "size": 3.8, "x": 12, "y": 24.4, "maxWidth": 19, "color": "white" }
+      ]
+    },
+    {
+      "id": "D9-10", "note": "INFORMATION",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "info", "x": 12, "y": 11.5, "width": 14, "height": 14, "color": "white" },
+        { "type": "text", "text": "INFO", "font": "D", "size": 4.0, "x": 12, "y": 24.4, "maxWidth": 19, "color": "white" }
+      ]
+    },
+    {
+      "id": "D9-P", "note": "PARKING",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "P", "font": "EM", "size": 13.0, "x": 12, "y": 11.5, "color": "white" },
+        { "type": "text", "text": "PARKING", "font": "C", "size": 3.6, "x": 12, "y": 24.4, "maxWidth": 19, "color": "white" }
+      ]
+    },
+    {
+      "id": "D9-6", "note": "Accessible (International Symbol of Access)",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "wheelchair", "x": 12, "y": 11.5, "width": 15, "height": 15, "color": "white" },
+        { "type": "text", "text": "ACCESSIBLE", "font": "C", "size": 3.0, "x": 12, "y": 24.4, "maxWidth": 19.5, "color": "white" }
+      ]
+    },
+    {
+      "id": "I-5", "note": "AIRPORT",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "airplane", "x": 12, "y": 11.5, "width": 15, "height": 15, "color": "white" },
+        { "type": "text", "text": "AIRPORT", "font": "C", "size": 3.6, "x": 12, "y": 24.4, "maxWidth": 19, "color": "white" }
+      ]
+    },
+    {
+      "id": "D5-1", "note": "REST AREA with arrow, 36 x 24",
+      "shape": "rect", "width": 36, "height": 24, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "REST", "AREA" ], "font": "D", "size": 5.0, "lineSpacing": 7.6, "x": 14, "y": 12, "maxWidth": 20, "color": "white" },
+        { "type": "symbol", "symbol": "diagonal-arrow", "x": 29, "y": 12, "width": 9, "height": 9, "color": "white" }
+      ]
+    }
+  ]
+}

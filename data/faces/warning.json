@@ -1,0 +1,210 @@
+{
+  "_comment": "Warning signs. 30 in diamond: bounding box 42.43, center 21.21. 36 in diamond: 50.91, center 25.46.",
+  "faces": [
+    {
+      "id": "W1-1R", "note": "Turn right",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "turn-arrow", "x": 21.21, "y": 21.21, "width": 17, "height": 17 } ]
+    },
+    {
+      "id": "W1-1L", "note": "Turn left",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "turn-arrow", "x": 21.21, "y": 21.21, "width": 17, "height": 17, "mirrorX": true } ]
+    },
+    {
+      "id": "W1-2R", "note": "Curve right",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "curve-arrow", "x": 21.21, "y": 21.21, "width": 17, "height": 18 } ]
+    },
+    {
+      "id": "W1-2L", "note": "Curve left",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "curve-arrow", "x": 21.21, "y": 21.21, "width": 17, "height": 18, "mirrorX": true } ]
+    },
+    {
+      "id": "W1-6R", "note": "One-direction large arrow (sharp turn), 48 x 24",
+      "shape": "rect", "width": 48, "height": 24, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "arrow", "x1": 5, "y1": 12, "x2": 43.5, "y2": 12, "shaftWidth": 7, "headWidth": 17, "headLength": 13 } ]
+    },
+    {
+      "id": "W1-6L", "note": "One-direction large arrow (sharp turn), pointing left",
+      "shape": "rect", "width": 48, "height": 24, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "arrow", "x1": 43, "y1": 12, "x2": 4.5, "y2": 12, "shaftWidth": 7, "headWidth": 17, "headLength": 13 } ]
+    },
+    {
+      "id": "W1-8R", "note": "Chevron alignment, 18 x 24, pointing right (no border)",
+      "shape": "rect", "width": 18, "height": 24, "cornerRadius": 1.125, "background": "yellow",
+      "elements": [ { "type": "polygon", "points": [ 3.5, 2.5, 9.2, 2.5, 15.2, 12, 9.2, 21.5, 3.5, 21.5, 9.5, 12 ] } ]
+    },
+    {
+      "id": "W1-8L", "note": "Chevron alignment, pointing left",
+      "shape": "rect", "width": 18, "height": 24, "cornerRadius": 1.125, "background": "yellow",
+      "elements": [ { "type": "polygon", "points": [ 14.5, 2.5, 8.8, 2.5, 2.8, 12, 8.8, 21.5, 14.5, 21.5, 8.5, 12 ] } ]
+    },
+    {
+      "id": "W2-1", "note": "Cross road intersection",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "cross-road", "x": 21.21, "y": 21.21, "width": 19, "height": 19 } ]
+    },
+    {
+      "id": "W2-2R", "note": "Side road on the right",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "side-road", "x": 21.21, "y": 21.21, "width": 19, "height": 19 } ]
+    },
+    {
+      "id": "W2-2L", "note": "Side road on the left",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "side-road", "x": 21.21, "y": 21.21, "width": 19, "height": 19, "mirrorX": true } ]
+    },
+    {
+      "id": "W2-4", "note": "T intersection",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "t-intersection", "x": 21.21, "y": 21.21, "width": 21, "height": 21 } ]
+    },
+    {
+      "id": "W2-6", "note": "Circular intersection (roundabout)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "roundabout", "x": 21.21, "y": 21.21, "width": 21, "height": 21 } ]
+    },
+    {
+      "id": "W3-1", "note": "Stop ahead",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "stop-ahead", "x": 21.21, "y": 21.21, "width": 16, "height": 21 } ]
+    },
+    {
+      "id": "W3-2", "note": "Yield ahead",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "yield-ahead", "x": 21.21, "y": 21.21, "width": 16, "height": 21 } ]
+    },
+    {
+      "id": "W3-3", "note": "Signal ahead",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "traffic-signal", "x": 21.21, "y": 21.21, "width": 10, "height": 20 } ]
+    },
+    {
+      "id": "W4-1R", "note": "Merge from the right",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "merge", "x": 21.21, "y": 21.21, "width": 19, "height": 19 } ]
+    },
+    {
+      "id": "W4-1L", "note": "Merge from the left",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "merge", "x": 21.21, "y": 21.21, "width": 19, "height": 19, "mirrorX": true } ]
+    },
+    {
+      "id": "W4-2R", "note": "Right lane ends (lane reduction)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "lane-ends", "x": 21.21, "y": 21.21, "width": 19, "height": 19 } ]
+    },
+    {
+      "id": "W4-2L", "note": "Left lane ends (lane reduction)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "lane-ends", "x": 21.21, "y": 21.21, "width": 19, "height": 19, "mirrorX": true } ]
+    },
+    {
+      "id": "W6-1", "note": "Divided highway begins",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "divided-highway", "x": 21.21, "y": 21.21, "width": 18, "height": 20 } ]
+    },
+    {
+      "id": "W6-2", "note": "Divided highway ends",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "divided-highway", "x": 21.21, "y": 21.21, "width": 18, "height": 20, "rotation": 180 } ]
+    },
+    {
+      "id": "W6-3", "note": "Two-way traffic",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "two-way-traffic", "x": 21.21, "y": 21.21, "width": 18, "height": 19 } ]
+    },
+    {
+      "id": "W7-1", "note": "Hill (truck on downgrade)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "symbol", "symbol": "truck", "x": 22.6, "y": 21.1, "width": 17, "height": 9.2, "rotation": 19.8 },
+        { "type": "symbol", "symbol": "slope", "x": 21.21, "y": 25.2, "width": 22, "height": 7.9 }
+      ]
+    },
+    {
+      "id": "W8-5", "note": "Slippery when wet",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "slippery-car", "x": 21.21, "y": 21.21, "width": 17, "height": 19 } ]
+    },
+    {
+      "id": "W8-13", "note": "BRIDGE ICES BEFORE ROAD, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "lines": [ "BRIDGE", "ICES", "BEFORE", "ROAD" ], "font": "C", "size": 4.4, "lineSpacing": 6.4, "x": 25.46, "y": 25.46, "maxWidth": 22 } ]
+    },
+    {
+      "id": "W-HiddenDriveway", "note": "HIDDEN DRIVEWAY word message, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "lines": [ "HIDDEN", "DRIVEWAY" ], "font": "C", "size": 5.0, "lineSpacing": 7.6, "x": 25.46, "y": 25.46, "maxWidth": 30 } ]
+    },
+    {
+      "id": "W11-1", "note": "Bicycle warning (yellow)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "bicycle", "x": 21.21, "y": 21.6, "width": 21, "height": 13.2 } ]
+    },
+    {
+      "id": "W11-2Y", "note": "Pedestrian warning (yellow)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "pedestrian", "x": 21.21, "y": 21.4, "width": 13, "height": 19.5 } ]
+    },
+    {
+      "id": "W11-3", "note": "Deer crossing",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "deer", "x": 21.0, "y": 21.6, "width": 23, "height": 23 } ]
+    },
+    {
+      "id": "W14-1", "note": "DEAD END",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "text", "lines": [ "DEAD", "END" ], "font": "D", "size": 5.0, "lineSpacing": 7.5, "x": 21.21, "y": 21.21 } ]
+    },
+    {
+      "id": "W14-2", "note": "NO OUTLET",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "text", "lines": [ "NO", "OUTLET" ], "font": "C", "size": 5.0, "lineSpacing": 7.5, "x": 21.21, "y": 21.21, "maxWidth": 24 } ]
+    },
+    {
+      "id": "W14-3", "note": "NO PASSING ZONE pennant, 48 x 36, mounted on the left side of the road",
+      "shape": "pennant", "width": 48, "height": 36, "cornerRadius": 1.5, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.0 },
+      "elements": [ { "type": "text", "lines": [ "NO", "PASSING", "ZONE" ], "font": "C", "size": 4.0, "lineSpacing": 6.2, "x": 15.5, "y": 18, "maxWidth": 18 } ]
+    },
+    {
+      "id": "W16-9PY", "note": "AHEAD plaque (yellow), 24 x 12",
+      "shape": "rect", "width": 24, "height": 12, "cornerRadius": 1.5, "background": "yellow",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "text", "text": "AHEAD", "font": "C", "size": 5.0, "x": 12, "y": 6, "maxWidth": 19 } ]
+    }
+  ]
+}

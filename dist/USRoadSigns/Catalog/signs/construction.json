@@ -1,0 +1,32 @@
+{
+  "signs": [
+    { "id": "W20-1_RoadWorkAhead", "name": "Road Work Ahead", "category": "Construction", "code": "W20-1",
+      "description": "Advance warning of a work zone (36 in orange diamond).", "panels": [ { "face": "W20-1" } ], "support": { "type": "u-channel" } },
+    { "id": "W20-1_RoadWorkAheadPortable", "name": "Road Work Ahead (Portable Stand)", "category": "Construction", "code": "W20-1",
+      "description": "Road Work Ahead on a spring-loaded portable stand for temporary placement.", "panels": [ { "face": "W20-1" } ], "support": { "type": "portable-stand" } },
+    { "id": "G20-5aP_WorkZoneSpeedLimit45", "name": "Work Zone Speed Limit 45", "category": "Construction", "code": "R2-1 + G20-5aP + R2-6P",
+      "description": "Work zone speed limit with WORK ZONE and FINES DOUBLE plaques.",
+      "panels": [ { "face": "G20-5aP" }, { "face": "R2-1-45" }, { "face": "R2-6P" } ], "support": { "type": "post" } },
+    { "id": "W20-5R_RightLaneClosedAhead", "name": "Right Lane Closed Ahead", "category": "Construction", "code": "W20-5R", "panels": [ { "face": "W20-5R" } ], "support": { "type": "u-channel" } },
+    { "id": "W20-5L_LeftLaneClosedAhead", "name": "Left Lane Closed Ahead", "category": "Construction", "code": "W20-5L", "panels": [ { "face": "W20-5L" } ], "support": { "type": "u-channel" } },
+    { "id": "W4-2R_MergeLeftWorkZone", "name": "Merge Left (Right Lane Ends)", "category": "Construction", "code": "W4-2",
+      "description": "Orange lane reduction sign for work zones.", "panels": [ { "face": "W4-2R-TTC" } ], "support": { "type": "u-channel" } },
+    { "id": "W4-2L_MergeRightWorkZone", "name": "Merge Right (Left Lane Ends)", "category": "Construction", "code": "W4-2",
+      "description": "Orange lane reduction sign for work zones.", "panels": [ { "face": "W4-2L-TTC" } ], "support": { "type": "u-channel" } },
+    { "id": "W20-2_DetourAhead", "name": "Detour Ahead", "category": "Construction", "code": "W20-2", "panels": [ { "face": "W20-2" } ], "support": { "type": "u-channel" } },
+    { "id": "M4-9R_DetourRight", "name": "Detour (Right)", "category": "Construction", "code": "M4-9", "panels": [ { "face": "M4-9R" } ], "support": { "type": "u-channel" } },
+    { "id": "M4-9L_DetourLeft", "name": "Detour (Left)", "category": "Construction", "code": "M4-9", "panels": [ { "face": "M4-9L" } ], "support": { "type": "u-channel" } },
+    { "id": "M4-9S_DetourStraight", "name": "Detour (Straight)", "category": "Construction", "code": "M4-9", "panels": [ { "face": "M4-9S" } ], "support": { "type": "u-channel" } },
+    { "id": "W20-3_RoadClosedAhead", "name": "Road Closed Ahead", "category": "Construction", "code": "W20-3", "panels": [ { "face": "W20-3" } ], "support": { "type": "u-channel" } },
+    { "id": "R11-2_RoadClosedBarricade", "name": "Road Closed (Type III Barricade)", "category": "Construction", "code": "R11-2",
+      "description": "ROAD CLOSED sign mounted on a Type III barricade with three striped rails.",
+      "panels": [ { "face": "R11-2" }, { "face": "BarricadeRailR", "gapAbove": 1 }, { "face": "BarricadeRailR", "gapAbove": 10 }, { "face": "BarricadeRailR", "gapAbove": 10 } ],
+      "support": { "type": "barricade", "mountHeight": 10, "spacing": 50 } },
+    { "id": "R11-4_RoadClosedThruTraffic", "name": "Road Closed To Thru Traffic", "category": "Construction", "code": "R11-4",
+      "panels": [ { "face": "R11-4" } ], "support": { "type": "twin-square", "mountHeight": 60, "spacing": 36 } },
+    { "id": "W20-7_Flagger", "name": "Flagger Ahead", "category": "Construction", "code": "W20-7", "panels": [ { "face": "W20-7" } ], "support": { "type": "u-channel" } },
+    { "id": "W20-7_FlaggerPortable", "name": "Flagger Ahead (Portable Stand)", "category": "Construction", "code": "W20-7",
+      "panels": [ { "face": "W20-7" } ], "support": { "type": "portable-stand" } },
+    { "id": "G20-2_EndRoadWork", "name": "End Road Work", "category": "Construction", "code": "G20-2", "panels": [ { "face": "G20-2" } ], "support": { "type": "u-channel" } }
+  ]
+}

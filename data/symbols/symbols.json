@@ -1,0 +1,366 @@
+{
+  "_comment": "Vector pictograms. SVG path syntax, +Y down, drawn into the element box keeping aspect ratio. fill/stroke: fg (element color), bg (face background), a palette name or #hex, or none.",
+  "symbols": [
+    {
+      "id": "keep-right",
+      "viewBox": [ 0, 0, 100, 140 ],
+      "parts": [
+        { "path": "M 9 114 A 15 15 0 1 1 39 114 A 15 15 0 1 1 9 114 Z" },
+        { "path": "M 29 4 L 29 34 C 29 62 74 52 74 82 L 74 98", "fill": "none", "stroke": "fg", "strokeWidth": 16, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 50 92 L 98 92 L 74 134 Z" }
+      ]
+    },
+    {
+      "id": "pedestrian",
+      "viewBox": [ 0, 0, 100, 170 ],
+      "parts": [
+        { "path": "M 39 17 A 14 14 0 1 1 67 17 A 14 14 0 1 1 39 17 Z" },
+        { "path": "M 52 43 L 56 84", "fill": "none", "stroke": "fg", "strokeWidth": 23 },
+        { "path": "M 49 45 L 37 66 L 30 88", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
+        { "path": "M 60 45 L 72 64 L 82 82", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
+        { "path": "M 58 90 L 70 121 L 84 150 L 94 158", "fill": "none", "stroke": "fg", "strokeWidth": 17.5 },
+        { "path": "M 54 90 L 42 122 L 33 154 L 19 158", "fill": "none", "stroke": "fg", "strokeWidth": 17.5 }
+      ]
+    },
+    {
+      "id": "school-children",
+      "viewBox": [ 0, 0, 180, 170 ],
+      "parts": [
+        { "path": "M 39 17 A 14 14 0 1 1 67 17 A 14 14 0 1 1 39 17 Z" },
+        { "path": "M 52 43 L 56 84", "fill": "none", "stroke": "fg", "strokeWidth": 23 },
+        { "path": "M 49 45 L 37 66 L 30 88", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
+        { "path": "M 60 45 L 76 62 L 100 74", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
+        { "path": "M 58 90 L 70 121 L 84 150 L 94 158", "fill": "none", "stroke": "fg", "strokeWidth": 17.5 },
+        { "path": "M 54 90 L 42 122 L 33 154 L 19 158", "fill": "none", "stroke": "fg", "strokeWidth": 17.5 },
+
+        { "path": "M 126.4 48.1 A 10.9 10.9 0 1 1 148.2 48.1 A 10.9 10.9 0 1 1 126.4 48.1 Z" },
+        { "path": "M 136.6 68.3 L 139.7 100.3", "fill": "none", "stroke": "fg", "strokeWidth": 17.9 },
+        { "path": "M 134.2 69.9 L 118 80 L 104 76", "fill": "none", "stroke": "fg", "strokeWidth": 9.75 },
+        { "path": "M 142.8 69.9 L 152.2 84.7 L 160 98.8", "fill": "none", "stroke": "fg", "strokeWidth": 9.75 },
+        { "path": "M 141.2 105 L 150.6 129.2 L 161.5 151.8 L 169.3 158", "fill": "none", "stroke": "fg", "strokeWidth": 13.65 },
+        { "path": "M 138.1 105 L 128.8 130 L 121.7 154.9 L 110.8 158", "fill": "none", "stroke": "fg", "strokeWidth": 13.65 }
+      ]
+    },
+    {
+      "id": "flagger",
+      "viewBox": [ 0, 0, 110, 170 ],
+      "parts": [
+        { "path": "M 29 17 A 14 14 0 1 1 57 17 A 14 14 0 1 1 29 17 Z" },
+        { "path": "M 42 43 L 43 92", "fill": "none", "stroke": "fg", "strokeWidth": 24 },
+        { "path": "M 36 47 L 27 72 L 26 96", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
+        { "path": "M 50 47 L 70 62 L 84 58", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
+        { "path": "M 86 66 L 86 30", "fill": "none", "stroke": "fg", "strokeWidth": 5, "lineCap": "flat" },
+        { "path": "M 79 4 L 93 4 L 103 14 L 103 28 L 93 38 L 79 38 L 69 28 L 69 14 Z" },
+        { "path": "M 47 94 L 50 130 L 52 162", "fill": "none", "stroke": "fg", "strokeWidth": 16 },
+        { "path": "M 38 94 L 34 130 L 32 162", "fill": "none", "stroke": "fg", "strokeWidth": 16 },
+        { "path": "M 22 164 L 42 164 M 42 164 L 64 164", "fill": "none", "stroke": "fg", "strokeWidth": 8 }
+      ]
+    },
+    {
+      "id": "bicycle",
+      "viewBox": [ 0, 0, 160, 100 ],
+      "parts": [
+        { "path": "M 8 70 A 26 26 0 1 1 60 70 A 26 26 0 1 1 8 70 Z", "fill": "none", "stroke": "fg", "strokeWidth": 8 },
+        { "path": "M 100 70 A 26 26 0 1 1 152 70 A 26 26 0 1 1 100 70 Z", "fill": "none", "stroke": "fg", "strokeWidth": 8 },
+        { "path": "M 34 70 L 72 70 L 56 32 Z M 56 32 L 108 32 L 72 70 M 104 20 L 126 70", "fill": "none", "stroke": "fg", "strokeWidth": 7, "lineJoin": "round" },
+        { "path": "M 44 26 L 68 26", "fill": "none", "stroke": "fg", "strokeWidth": 8 },
+        { "path": "M 96 16 L 114 16", "fill": "none", "stroke": "fg", "strokeWidth": 7 }
+      ]
+    },
+    {
+      "id": "deer",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 22 50 C 32 38 56 38 66 42 L 74 30 C 72 26 73 21 77 18 L 84 17 C 88 19 91 21 91 25 L 87 28 L 81 34 L 77 48 C 75 54 71 56 67 57 L 83 70 L 91 79 L 88 83 L 77 75 L 61 63 C 54 63 45 63 39 61 L 17 80 L 11 84 L 9 80 L 26 61 C 20 61 14 59 11 55 L 7 47 C 13 49 18 51 22 50 Z" },
+        { "path": "M 80 18 L 73 5 M 76 12 L 68 9 M 85 17 L 88 3 M 87 10 L 95 7", "fill": "none", "stroke": "fg", "strokeWidth": 3.2 }
+      ]
+    },
+    {
+      "id": "truck",
+      "viewBox": [ 0, 0, 160, 86 ],
+      "parts": [
+        { "path": "M 46 6 L 156 6 L 156 62 L 46 62 Z" },
+        { "path": "M 4 64 L 4 34 L 16 16 L 42 16 L 42 64 Z" },
+        { "path": "M 11 36 L 19 24 L 35 24 L 35 36 Z", "fill": "bg" },
+        { "path": "M 4 58 L 156 58 L 156 66 L 4 66 Z" },
+        { "path": "M 11 72 A 11 11 0 1 1 33 72 A 11 11 0 1 1 11 72 Z" },
+        { "path": "M 103 72 A 11 11 0 1 1 125 72 A 11 11 0 1 1 103 72 Z" },
+        { "path": "M 128 72 A 11 11 0 1 1 150 72 A 11 11 0 1 1 128 72 Z" }
+      ]
+    },
+    {
+      "id": "slope",
+      "viewBox": [ 0, 0, 100, 36 ],
+      "parts": [ { "path": "M 0 0 L 100 36 L 0 36 Z" } ]
+    },
+    {
+      "id": "traffic-signal",
+      "viewBox": [ 0, 0, 50, 100 ],
+      "parts": [
+        { "path": "M 9 1 L 41 1 A 7 7 0 0 1 48 8 L 48 92 A 7 7 0 0 1 41 99 L 9 99 A 7 7 0 0 1 2 92 L 2 8 A 7 7 0 0 1 9 1 Z" },
+        { "path": "M 14 20 A 11 11 0 1 1 36 20 A 11 11 0 1 1 14 20 Z", "fill": "#C8202F" },
+        { "path": "M 14 50 A 11 11 0 1 1 36 50 A 11 11 0 1 1 14 50 Z", "fill": "#F7C21B" },
+        { "path": "M 14 80 A 11 11 0 1 1 36 80 A 11 11 0 1 1 14 80 Z", "fill": "#1FA05A" }
+      ]
+    },
+    {
+      "id": "stop-ahead",
+      "viewBox": [ 0, 0, 100, 132 ],
+      "parts": [
+        { "path": "M 39.2 2 L 60.8 2 L 76 17.2 L 76 38.8 L 60.8 54 L 39.2 54 L 24 38.8 L 24 17.2 Z", "fill": "red", "stroke": "fg", "strokeWidth": 2.5 },
+        { "path": "M 40.9 6 L 59.1 6 L 72 18.9 L 72 37.1 L 59.1 50 L 40.9 50 L 28 37.1 L 28 18.9 Z", "fill": "none", "stroke": "white", "strokeWidth": 1.8 },
+        { "path": "M 50 130 L 50 84", "fill": "none", "stroke": "fg", "strokeWidth": 15, "lineCap": "flat" },
+        { "path": "M 28 86 L 50 60 L 72 86 Z" }
+      ]
+    },
+    {
+      "id": "yield-ahead",
+      "viewBox": [ 0, 0, 100, 132 ],
+      "parts": [
+        { "path": "M 18 3 L 82 3 L 50 58.4 Z", "fill": "red", "stroke": "fg", "strokeWidth": 2.5, "lineJoin": "miter" },
+        { "path": "M 32 11 L 68 11 L 50 42.2 Z", "fill": "white" },
+        { "path": "M 50 130 L 50 88", "fill": "none", "stroke": "fg", "strokeWidth": 15, "lineCap": "flat" },
+        { "path": "M 28 90 L 50 64 L 72 90 Z" }
+      ]
+    },
+    {
+      "id": "yield-triangle",
+      "viewBox": [ 0, 0, 100, 87 ],
+      "parts": [
+        { "path": "M 2 2 L 98 2 L 50 85 Z", "fill": "red" },
+        { "path": "M 20 12.5 L 80 12.5 L 50 64.5 Z", "fill": "white" }
+      ]
+    },
+    {
+      "id": "turn-arrow",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 32 96 L 32 40 L 66 40", "fill": "none", "stroke": "fg", "strokeWidth": 15, "lineCap": "flat", "lineJoin": "miter" },
+        { "path": "M 62 16 L 98 40 L 62 64 Z" }
+      ]
+    },
+    {
+      "id": "curve-arrow",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 28 98 L 28 74 C 28 46 66 54 66 28", "fill": "none", "stroke": "fg", "strokeWidth": 15, "lineCap": "flat" },
+        { "path": "M 44 32 L 66 2 L 88 32 Z" }
+      ]
+    },
+    {
+      "id": "cross-road",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 42 2 L 58 2 L 58 98 L 42 98 Z" },
+        { "path": "M 6 43 L 94 43 L 94 57 L 6 57 Z" }
+      ]
+    },
+    {
+      "id": "side-road",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 34 2 L 50 2 L 50 98 L 34 98 Z" },
+        { "path": "M 50 43 L 92 43 L 92 57 L 50 57 Z" }
+      ]
+    },
+    {
+      "id": "t-intersection",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 4 22 L 96 22 L 96 38 L 4 38 Z" },
+        { "path": "M 42 38 L 58 38 L 58 96 L 42 96 Z" }
+      ]
+    },
+    {
+      "id": "merge",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 38 98 L 38 34", "fill": "none", "stroke": "fg", "strokeWidth": 15, "lineCap": "flat" },
+        { "path": "M 16 38 L 38 4 L 60 38 Z" },
+        { "path": "M 88 96 C 84 74 50 72 44 50", "fill": "none", "stroke": "fg", "strokeWidth": 11, "lineCap": "flat" }
+      ]
+    },
+    {
+      "id": "lane-ends",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 32 98 L 32 34", "fill": "none", "stroke": "fg", "strokeWidth": 13, "lineCap": "flat" },
+        { "path": "M 12 38 L 32 6 L 52 38 Z" },
+        { "path": "M 72 98 L 72 72 C 72 54 44 54 40 38", "fill": "none", "stroke": "fg", "strokeWidth": 13, "lineCap": "flat" }
+      ]
+    },
+    {
+      "id": "divided-highway",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 32 98 L 32 62 C 32 48 20 44 20 30 L 20 2", "fill": "none", "stroke": "fg", "strokeWidth": 10, "lineCap": "flat" },
+        { "path": "M 68 98 L 68 62 C 68 48 80 44 80 30 L 80 2", "fill": "none", "stroke": "fg", "strokeWidth": 10, "lineCap": "flat" },
+        { "path": "M 50 54 C 44 46 41 36 41 24 L 41 2 L 59 2 L 59 24 C 59 36 56 46 50 54 Z" }
+      ]
+    },
+    {
+      "id": "two-way-traffic",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 32 4 L 32 66", "fill": "none", "stroke": "fg", "strokeWidth": 13, "lineCap": "flat" },
+        { "path": "M 14 62 L 32 96 L 50 62 Z" },
+        { "path": "M 68 96 L 68 34", "fill": "none", "stroke": "fg", "strokeWidth": 13, "lineCap": "flat" },
+        { "path": "M 50 38 L 68 4 L 86 38 Z" }
+      ]
+    },
+    {
+      "id": "roundabout",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 39.1 19.9 A 32 32 0 0 0 18.5 55.6", "fill": "none", "stroke": "fg", "strokeWidth": 11, "lineCap": "flat" },
+        { "path": "M 28.4 53.9 L 20.6 67.4 L 8.6 57.3 Z" },
+        { "path": "M 29.4 74.5 A 32 32 0 0 0 70.6 74.5", "fill": "none", "stroke": "fg", "strokeWidth": 11, "lineCap": "flat" },
+        { "path": "M 64.2 66.8 L 79.8 66.8 L 77.0 82.2 Z" },
+        { "path": "M 81.5 55.6 A 32 32 0 0 0 60.9 19.9", "fill": "none", "stroke": "fg", "strokeWidth": 11, "lineCap": "flat" },
+        { "path": "M 57.5 29.3 L 49.6 15.8 L 64.3 10.5 Z" }
+      ]
+    },
+    {
+      "id": "slippery-car",
+      "viewBox": [ 0, 0, 100, 112 ],
+      "parts": [
+        { "path": "M 24 44 L 31 21 C 32 17 35 15 39 15 L 61 15 C 65 15 68 17 69 21 L 76 44 C 81 46 84 50 84 55 L 84 70 L 16 70 L 16 55 C 16 50 19 46 24 44 Z" },
+        { "path": "M 32 42 L 37 24 C 38 22 39 21 41 21 L 59 21 C 61 21 62 22 63 24 L 68 42 Z", "fill": "bg" },
+        { "path": "M 19 68 L 33 68 L 33 80 L 19 80 Z M 67 68 L 81 68 L 81 80 L 67 80 Z" },
+        { "path": "M 22 52 A 4 4 0 1 1 30 52 A 4 4 0 1 1 22 52 Z M 70 52 A 4 4 0 1 1 78 52 A 4 4 0 1 1 70 52 Z", "fill": "bg" },
+        { "path": "M 26 86 C 14 94 38 100 22 110", "fill": "none", "stroke": "fg", "strokeWidth": 5 },
+        { "path": "M 74 86 C 62 94 86 100 70 110", "fill": "none", "stroke": "fg", "strokeWidth": 5 }
+      ]
+    },
+    {
+      "id": "wheelchair",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 37 11 A 9 9 0 1 1 55 11 A 9 9 0 1 1 37 11 Z" },
+        { "path": "M 44 26 L 46 56 L 70 56 L 80 84 L 90 81", "fill": "none", "stroke": "fg", "strokeWidth": 9, "lineJoin": "round" },
+        { "path": "M 45 39 L 66 39", "fill": "none", "stroke": "fg", "strokeWidth": 8 },
+        { "path": "M 30 49.2 A 24 24 0 1 0 66 72", "fill": "none", "stroke": "fg", "strokeWidth": 8, "lineCap": "flat" }
+      ]
+    },
+    {
+      "id": "gas-pump",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 22 8 L 62 8 C 64 8 66 10 66 12 L 66 88 L 18 88 L 18 12 C 18 10 20 8 22 8 Z" },
+        { "path": "M 26 16 L 58 16 L 58 40 L 26 40 Z", "fill": "bg" },
+        { "path": "M 12 86 L 72 86 L 72 96 L 12 96 Z" },
+        { "path": "M 66 30 L 76 30 C 81 30 83 34 83 39 L 83 70 C 83 76 91 76 91 70 L 91 28 L 81 16", "fill": "none", "stroke": "fg", "strokeWidth": 5.5, "lineJoin": "round" }
+      ]
+    },
+    {
+      "id": "fork-knife",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 28 6 L 28 34 M 38 6 L 38 34 M 48 6 L 48 34", "fill": "none", "stroke": "fg", "strokeWidth": 5, "lineCap": "round" },
+        { "path": "M 25.5 30 L 50.5 30 L 50.5 36 C 50.5 44 45 48 42 48 L 34 48 C 31 48 25.5 44 25.5 36 Z" },
+        { "path": "M 34 46 L 42 46 L 42 92 C 42 96 34 96 34 92 Z" },
+        { "path": "M 74 4 C 62 14 60 38 64 54 L 74 54 Z" },
+        { "path": "M 66 52 L 75 52 L 75 92 C 75 96 66 96 66 92 Z" }
+      ]
+    },
+    {
+      "id": "bed",
+      "viewBox": [ 0, 0, 100, 70 ],
+      "parts": [
+        { "path": "M 4 6 L 13 6 L 13 66 L 4 66 Z" },
+        { "path": "M 13 38 L 96 38 L 96 52 L 13 52 Z" },
+        { "path": "M 87 52 L 96 52 L 96 66 L 87 66 Z" },
+        { "path": "M 18 28 A 9 9 0 1 1 36 28 A 9 9 0 1 1 18 28 Z" },
+        { "path": "M 40 21 L 88 21 C 92 21 96 25 96 30 L 96 36 L 40 36 Z" }
+      ]
+    },
+    {
+      "id": "telephone",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 14 32 C 14 20 28 10 50 10 C 72 10 86 20 86 32 L 86 40 L 66 42 L 64 32 C 58 29 42 29 36 32 L 34 42 L 14 40 Z" },
+        { "path": "M 30 48 L 40 42 L 60 42 L 70 48 L 84 90 L 16 90 Z" },
+        { "path": "M 38 66 A 12 12 0 1 1 62 66 A 12 12 0 1 1 38 66 Z", "fill": "none", "stroke": "bg", "strokeWidth": 5 }
+      ]
+    },
+    {
+      "id": "info",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 39 15 A 11 11 0 1 1 61 15 A 11 11 0 1 1 39 15 Z" },
+        { "path": "M 34 34 L 60 34 L 60 84 L 68 84 L 68 96 L 32 96 L 32 84 L 40 84 L 40 46 L 34 46 Z" }
+      ]
+    },
+    {
+      "id": "airplane",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 50 3 C 54 3 57 9 57 16 L 57 38 L 96 60 L 96 68 L 57 57 L 57 80 L 69 88 L 69 95 L 50 90 L 31 95 L 31 88 L 43 80 L 43 57 L 4 68 L 4 60 L 43 38 L 43 16 C 43 9 46 3 50 3 Z" }
+      ]
+    },
+    {
+      "id": "u-turn",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 68 98 L 68 40 C 68 12 30 12 30 40 L 30 52", "fill": "none", "stroke": "fg", "strokeWidth": 14, "lineCap": "flat" },
+        { "path": "M 10 50 L 30 82 L 50 50 Z" }
+      ]
+    },
+    {
+      "id": "turn-left",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 66 98 L 66 48 C 66 38 60 34 50 34 L 34 34", "fill": "none", "stroke": "fg", "strokeWidth": 15, "lineCap": "flat" },
+        { "path": "M 36 12 L 4 34 L 36 56 Z" }
+      ]
+    },
+    {
+      "id": "arrow-straight",
+      "viewBox": [ 0, 0, 60, 100 ],
+      "parts": [
+        { "path": "M 30 98 L 30 36", "fill": "none", "stroke": "fg", "strokeWidth": 15, "lineCap": "flat" },
+        { "path": "M 6 40 L 30 4 L 54 40 Z" }
+      ]
+    },
+    {
+      "id": "arrow-straight-left",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 64 98 L 64 36", "fill": "none", "stroke": "fg", "strokeWidth": 14, "lineCap": "flat" },
+        { "path": "M 42 40 L 64 4 L 86 40 Z" },
+        { "path": "M 64 88 L 64 78 C 64 68 58 62 46 62 L 30 62", "fill": "none", "stroke": "fg", "strokeWidth": 14, "lineCap": "flat" },
+        { "path": "M 32 42 L 4 62 L 32 82 Z" }
+      ]
+    },
+    {
+      "id": "no-parking-p",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 32 16 L 58 16 C 74 16 82 26 82 40 C 82 54 74 64 58 64 L 46 64 L 46 88 L 32 88 Z M 46 28 L 46 52 L 57 52 C 64 52 68 48 68 40 C 68 32 64 28 57 28 Z" }
+      ]
+    },
+    {
+      "id": "prohibition",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 6 50 A 44 44 0 1 1 94 50 A 44 44 0 1 1 6 50 Z", "fill": "none", "stroke": "red", "strokeWidth": 9 },
+        { "path": "M 21.5 15.1 L 84.9 78.5 L 78.5 84.9 L 15.1 21.5 Z", "fill": "red" }
+      ]
+    },
+    {
+      "id": "diagonal-arrow",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 12 88 L 64 36", "fill": "none", "stroke": "fg", "strokeWidth": 14, "lineCap": "flat" },
+        { "path": "M 46 22 L 94 6 L 78 54 Z" }
+      ]
+    },
+    {
+      "id": "railroad-x",
+      "viewBox": [ 0, 0, 100, 100 ],
+      "parts": [
+        { "path": "M 14 14 L 86 86 M 86 14 L 14 86", "fill": "none", "stroke": "fg", "strokeWidth": 11, "lineCap": "flat" }
+      ]
+    }
+  ]
+}
