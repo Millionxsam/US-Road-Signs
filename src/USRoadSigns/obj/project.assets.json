@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\US Road Signs\\src\\USRoadSigns\\USRoadSigns.csproj",
+      "projectUniqueName": "C:\\Projects\\us-road-signs\\src\\USRoadSigns\\USRoadSigns.csproj",
       "projectName": "USRoadSigns",
-      "projectPath": "C:\\Projects\\US Road Signs\\src\\USRoadSigns\\USRoadSigns.csproj",
+      "projectPath": "C:\\Projects\\us-road-signs\\src\\USRoadSigns\\USRoadSigns.csproj",
       "packagesPath": "C:\\Users\\samda\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\US Road Signs\\src\\USRoadSigns\\obj\\",
+      "outputPath": "C:\\Projects\\us-road-signs\\src\\USRoadSigns\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

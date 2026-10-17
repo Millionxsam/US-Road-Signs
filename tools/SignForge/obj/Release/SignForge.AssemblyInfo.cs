@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignForge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5e2948d20433c910cc3f8a6fd9095147461a7ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignForge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignForge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

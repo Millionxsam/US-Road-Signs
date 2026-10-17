@@ -1,12 +1,55 @@
 <Publish>
 	<ModId Value="" />
 	<DisplayName Value="US Road Signs" />
-	<ShortDescription Value="A library of realistic MUTCD-style American road signs with posts, placeable anywhere." />
+	<ShortDescription Value="730 realistic American road signs with posts (regular and flashing signs)." />
 	<LongDescription>
-Adds a "US Road Signs" toolbar menu with regulatory, warning, guide, highway, service, school and pedestrian, and construction signs.
-Every sign is a complete assembly: sign face, mounting hardware and galvanized post. Place them freely, rotate them, or paint rows with the line tool.
+US Road Signs adds 730 freely placeable American road signs, modeled on the MUTCD (the US Manual on Uniform Traffic Control Devices): 365 standard signs, plus a flashing version of every one.
+
+Every sign is a complete 3D assembly, not a flat decal. Each one has a printed sign face on a plate with real thickness, mounting bolts, and its support: a galvanized post, twin posts, a Type III barricade, a portable stand, or an in-street flexible base.
+
+SIGN CATEGORIES
+Find everything in the "US Road Signs" toolbar menu:
+- Regulatory: stop, yield, speed limits, one way, turn restrictions, parking rules and more
+- Warning: curves, intersections, merges, lane drops, crossings, hills and other hazards
+- Guide: green guide signs
+- Highway: lane-use, freeway entrance, exit and service signs
+- Services: blue motorist service signs
+- School and Pedestrian: school zones, crosswalks, pedestrian and bicycle signs
+- Construction: orange work-zone signs, detours, flaggers, barricades and portable signs
+- Other: railroad signs, object markers and more
+
+FLASHING SIGNS
+Every category has a matching "(Flashing)" category with LED-enhanced versions of each sign. The LEDs are built into the sign border and are real in-game lights: they flash about once a second, day and night.
+LED colors follow the sign's color scheme:
+- Amber: yellow and fluorescent yellow-green warning, school and pedestrian signs
+- Red: regulatory signs such as STOP, YIELD, WRONG WAY and speed limits
+- Orange: orange work-zone signs
+- White: guide, service, parking and other signs
+
+PLACEMENT
+- Place signs anywhere, no road is needed. You should use the Anarchy mod if you want to place signs on top of roads.
+- Rotate them freely while placing, like any other prop.
+- Use the line and curve tools to place rows of signs.
+- To raise or lower a sign, use Move It. If the game won't let you place a sign near road geometry, use Anarchy.
+
+OPTIONS
+Under Game Options > US Road Signs:
+- Standard post style: square perforated tube, galvanized U-channel, or round pipe with clamp brackets
+- Show or hide mounting bolts
+Restart the game after changing these. Signs already in your city update automatically.
 	</LongDescription>
+	<Thumbnail Value="Properties/Thumbnail.jpg" />
+	<Screenshot Value="Properties/Screenshots/1.png" />
+	<Screenshot Value="Properties/Screenshots/4.jpg" />
+	<Screenshot Value="Properties/Screenshots/5.jpg" />
+	<Screenshot Value="Properties/Screenshots/9.png" />
+	<Screenshot Value="Properties/Screenshots/7.png" />
+	<Screenshot Value="Properties/Screenshots/10.png" />
+	<Screenshot Value="Properties/Screenshots/12.png" />
+	<Screenshot Value="Properties/Screenshots/14.png" />
+	<Screenshot Value="Properties/Screenshots/15.png" />
+	<Screenshot Value="Properties/Screenshots/16.png" />
 	<ModVersion Value="1.0.0" />
 	<GameVersion Value="1.*" />
-	<AccessLevel Value="Private" />
+	<AccessLevel Value="Public" />
 </Publish>

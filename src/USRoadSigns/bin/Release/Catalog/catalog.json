@@ -11,14 +11,14 @@
   },
 
   "categories": [
-    { "id": "Regulatory",       "name": "Regulatory",          "priority": 10, "icon": "Icons/Categories/Regulatory.png",       "description": "Regulatory signs: stop, yield, one way, turn and parking restrictions, prohibitions." },
-    { "id": "Warning",          "name": "Warning",             "priority": 20, "icon": "Icons/Categories/Warning.png",          "description": "Yellow diamond warning signs for curves, intersections, merges and hazards." },
-    { "id": "Guide",            "name": "Guide",               "priority": 30, "icon": "Icons/Categories/Guide.png",            "description": "Green guide signs: destinations, distances and street names." },
-    { "id": "Highway",          "name": "Highway",             "priority": 40, "icon": "Icons/Categories/Highway.png",          "description": "Route shields, route assemblies, lane-use, entrance and exit signs." },
-    { "id": "Services",         "name": "Services",            "priority": 50, "icon": "Icons/Categories/Services.png",         "description": "Blue motorist service signs." },
-    { "id": "SchoolPedestrian", "name": "School & Pedestrian", "priority": 60, "icon": "Icons/Categories/SchoolPedestrian.png", "description": "School zone, school crossing, pedestrian and bicycle signs." },
-    { "id": "Construction",     "name": "Construction",        "priority": 70, "icon": "Icons/Categories/Construction.png",     "description": "Orange temporary traffic control signs for work zones and detours." },
-    { "id": "Other",            "name": "Other",               "priority": 80, "icon": "Icons/Categories/Other.png",            "description": "Markers, railroad signs and blank sign blanks." }
+    { "id": "Regulatory",       "name": "Regulatory",          "priority": 10, "flashing": true, "icon": "Icons/Categories/Regulatory.png",       "description": "Regulatory signs: stop, yield, one way, turn and parking restrictions, prohibitions." },
+    { "id": "Warning",          "name": "Warning",             "priority": 20, "flashing": true, "icon": "Icons/Categories/Warning.png",          "description": "Yellow diamond warning signs for curves, intersections, merges and hazards." },
+    { "id": "Guide",            "name": "Guide",               "priority": 30, "flashing": true, "flashingColor": "white", "icon": "Icons/Categories/Guide.png",            "description": "Green guide signs." },
+    { "id": "Highway",          "name": "Highway",             "priority": 40, "flashing": true, "icon": "Icons/Categories/Highway.png",          "description": "Lane-use, entrance, exit and freeway service signs." },
+    { "id": "Services",         "name": "Services",            "priority": 50, "flashing": true, "flashingColor": "white", "icon": "Icons/Categories/Services.png",         "description": "Blue motorist service signs." },
+    { "id": "SchoolPedestrian", "name": "School & Pedestrian", "priority": 60, "flashing": true, "icon": "Icons/Categories/SchoolPedestrian.png", "description": "School zone, school crossing, pedestrian and bicycle signs." },
+    { "id": "Construction",     "name": "Construction",        "priority": 70, "flashing": true, "icon": "Icons/Categories/Construction.png",     "description": "Orange temporary traffic control signs for work zones and detours." },
+    { "id": "Other",            "name": "Other",               "priority": 80, "flashing": true, "icon": "Icons/Categories/Other.png",            "description": "Markers, railroad signs and blank sign blanks." }
   ],
 
   "colors": {
@@ -33,6 +33,20 @@
     "brown":  "#5A3825",
     "gray":   "#7B7E80",
     "none":   "#00000000"
+  },
+
+  "flashing": {
+    "colors": {
+      "amber":  "#FFB21E",
+      "red":    "#FF2414",
+      "orange": "#FF7414",
+      "white":  "#FFF4E0"
+    },
+    "intensity": 8,
+    "period": 1.1,
+    "onFraction": 0.5,
+    "maxSpacing": 16,
+    "lampDiameter": 1.1
   },
 
   "mounting": {

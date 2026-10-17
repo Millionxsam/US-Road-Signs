@@ -44,13 +44,23 @@
       "id": "R4-7", "note": "Keep Right symbol sign, 24 x 30 conventional road",
       "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
       "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 1.125 },
-      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 15, "width": 17, "height": 24 } ]
+      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 14.4, "width": 20.1, "height": 25.8 } ]
+    },
+    {
+      "id": "R6-3", "note": "DIVIDED HIGHWAY crossing, 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "DIVIDED", "font": "E", "size": 2.6, "x": 15, "y": 5.0, "maxWidth": 14.5 },
+        { "type": "symbol", "symbol": "divided-highway-crossing", "x": 15, "y": 12.06, "width": 24.5, "height": 9.875 },
+        { "type": "text", "text": "HIGHWAY", "font": "E", "size": 2.6, "x": 15, "y": 19.2, "maxWidth": 16.5 }
+      ]
     },
     {
       "id": "R4-8", "note": "Keep Left symbol sign (mirror of R4-7)",
       "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
       "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 1.125 },
-      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 15, "width": 17, "height": 24, "mirrorX": true } ]
+      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 14.4, "width": 20.1, "height": 25.8, "mirrorX": true } ]
     },
     {
       "id": "R6-1R", "note": "ONE WAY, arrow pointing right, 36 x 12",
@@ -134,7 +144,7 @@
       ]
     },
     {
-      "id": "R7-1B", "note": "NO PARKING ANY TIME with double arrow, 12 x 18",
+      "id": "R7-1B", "flashingPadding": 1.5, "note": "NO PARKING ANY TIME with double arrow, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -146,7 +156,7 @@
       ]
     },
     {
-      "id": "R7-1R", "note": "NO PARKING ANY TIME, arrow right, 12 x 18",
+      "id": "R7-1R", "flashingPadding": 1.5, "note": "NO PARKING ANY TIME, arrow right, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -157,7 +167,7 @@
       ]
     },
     {
-      "id": "R7-1L", "note": "NO PARKING ANY TIME, arrow left, 12 x 18",
+      "id": "R7-1L", "flashingPadding": 1.5, "note": "NO PARKING ANY TIME, arrow left, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -168,7 +178,7 @@
       ]
     },
     {
-      "id": "R7-7R", "note": "NO PARKING BUS STOP, arrow right, 12 x 18",
+      "id": "R7-7R", "flashingPadding": 1.5, "note": "NO PARKING BUS STOP, arrow right, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -178,7 +188,7 @@
       ]
     },
     {
-      "id": "R7-7L", "note": "NO PARKING BUS STOP, arrow left, 12 x 18",
+      "id": "R7-7L", "flashingPadding": 1.5, "note": "NO PARKING BUS STOP, arrow left, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -188,7 +198,7 @@
       ]
     },
     {
-      "id": "R7-8", "note": "RESERVED PARKING with International Symbol of Access, 12 x 18",
+      "id": "R7-8", "flashingPadding": 1.5, "note": "RESERVED PARKING with International Symbol of Access, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "green", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -198,7 +208,7 @@
       ]
     },
     {
-      "id": "R-FireLane", "note": "FIRE LANE NO PARKING (common local sign), 12 x 18",
+      "id": "R-FireLane", "flashingPadding": 1.5, "note": "FIRE LANE NO PARKING (common local sign), 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -252,6 +262,653 @@
       "elements": [
         { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
         { "type": "text", "text": "65", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-15", "note": "SPEED LIMIT 15, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "15", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-20", "note": "SPEED LIMIT 20, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "20", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-30", "note": "SPEED LIMIT 30, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "30", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-40", "note": "SPEED LIMIT 40, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "40", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-50", "note": "SPEED LIMIT 50, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "50", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-60", "note": "SPEED LIMIT 60, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "60", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-70", "note": "SPEED LIMIT 70, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "70", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R2-1-75", "note": "SPEED LIMIT 75, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "lines": [ "SPEED", "LIMIT" ], "font": "D", "size": 3.6, "lineSpacing": 5.6, "x": 12, "y": 7.4, "maxWidth": 20 },
+        { "type": "text", "text": "75", "font": "E", "size": 10, "x": 12, "y": 20.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "W4-4P", "note": "CROSS TRAFFIC DOES NOT STOP plaque, 24 x 12",
+      "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "yellow",
+      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "CROSS TRAFFIC", "font": "C", "size": 2.6, "x": 12, "y": 3.92, "maxWidth": 20.75 },
+        { "type": "text", "text": "DOES NOT STOP", "font": "C", "size": 2.6, "x": 12, "y": 8.08, "maxWidth": 20.75 }
+      ]
+    },
+    {
+      "id": "R1-10P", "note": "EXCEPT RIGHT TURN plaque, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "EXCEPT", "font": "C", "size": 3.6, "x": 12, "y": 6.12, "maxWidth": 20.25 },
+        { "type": "text", "text": "RIGHT TURN", "font": "C", "size": 3.6, "x": 12, "y": 11.88, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R1-2aP", "note": "TO ONCOMING TRAFFIC plaque, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "TO", "font": "C", "size": 3, "x": 12, "y": 4.2, "maxWidth": 20.25 },
+        { "type": "text", "text": "ONCOMING", "font": "C", "size": 3, "x": 12, "y": 9, "maxWidth": 20.25 },
+        { "type": "text", "text": "TRAFFIC", "font": "C", "size": 3, "x": 12, "y": 13.8, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R3-3", "note": "NO TURNS, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 6, "x": 12, "y": 7.2, "maxWidth": 20 },
+        { "type": "text", "text": "TURNS", "font": "D", "size": 6, "x": 12, "y": 16.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R3-18", "note": "No U-turn or left turn, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "u-or-left", "x": 12, "y": 12.2, "width": 12.5, "height": 14.5 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R3-27", "note": "No straight through, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "arrow-straight", "x": 12, "y": 12.2, "width": 8, "height": 13.5 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R4-1", "note": "DO NOT PASS, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "DO", "font": "D", "size": 5.6, "x": 12, "y": 6.04, "maxWidth": 20 },
+        { "type": "text", "text": "NOT", "font": "D", "size": 5.6, "x": 12, "y": 15, "maxWidth": 20 },
+        { "type": "text", "text": "PASS", "font": "D", "size": 5.6, "x": 12, "y": 23.96, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R4-2", "note": "PASS WITH CARE, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "PASS", "font": "D", "size": 5.6, "x": 12, "y": 6.04, "maxWidth": 20 },
+        { "type": "text", "text": "WITH", "font": "D", "size": 5.6, "x": 12, "y": 15, "maxWidth": 20 },
+        { "type": "text", "text": "CARE", "font": "D", "size": 5.6, "x": 12, "y": 23.96, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R5-3", "note": "NO MOTOR VEHICLES, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 4.4, "x": 12, "y": 6, "maxWidth": 20 },
+        { "type": "text", "text": "MOTOR", "font": "C", "size": 3.6, "x": 12, "y": 12.64, "maxWidth": 20 },
+        { "type": "text", "text": "VEHICLES", "font": "C", "size": 3.6, "x": 12, "y": 18.4, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R5-4", "note": "NO COMMERCIAL VEHICLES, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 4.6, "x": 12, "y": 8.94, "maxWidth": 20 },
+        { "type": "text", "text": "COMMERCIAL", "font": "B", "size": 3.6, "x": 12, "y": 15.8, "maxWidth": 20 },
+        { "type": "text", "text": "VEHICLES", "font": "C", "size": 3.6, "x": 12, "y": 21.56, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R5-11", "note": "AUTHORIZED VEHICLES ONLY, 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "AUTHORIZED", "font": "C", "size": 3.8, "x": 15, "y": 5.92, "maxWidth": 26 },
+        { "type": "text", "text": "VEHICLES", "font": "C", "size": 3.8, "x": 15, "y": 12, "maxWidth": 26 },
+        { "type": "text", "text": "ONLY", "font": "C", "size": 3.8, "x": 15, "y": 18.08, "maxWidth": 26 }
+      ]
+    },
+    {
+      "id": "R5-12", "note": "NO THRU TRAFFIC, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 5.6, "x": 12, "y": 6.34, "maxWidth": 20 },
+        { "type": "text", "text": "THRU", "font": "D", "size": 5.6, "x": 12, "y": 15.3, "maxWidth": 20 },
+        { "type": "text", "text": "TRAFFIC", "font": "C", "size": 5, "x": 12, "y": 23.96, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R5-2aP", "note": "EXCEPT LOCAL DELIVERY plaque, 24 x 12",
+      "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "EXCEPT LOCAL", "font": "C", "size": 2.6, "x": 12, "y": 3.92, "maxWidth": 20.75 },
+        { "type": "text", "text": "DELIVERY", "font": "C", "size": 2.6, "x": 12, "y": 8.08, "maxWidth": 20.75 }
+      ]
+    },
+    {
+      "id": "R6-2R", "note": "ONE WAY (vertical) with arrow right, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "ONE", "font": "D", "size": 6.2, "x": 12, "y": 6.6, "maxWidth": 20 },
+        { "type": "text", "text": "WAY", "font": "D", "size": 6.2, "x": 12, "y": 15.2, "maxWidth": 20 },
+        { "type": "arrow", "x1": 3, "y1": 23.6, "x2": 21, "y2": 23.6, "shaftWidth": 2.6, "headWidth": 7.4, "headLength": 5.4 }
+      ]
+    },
+    {
+      "id": "R6-2L", "note": "ONE WAY (vertical) with arrow left, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "ONE", "font": "D", "size": 6.2, "x": 12, "y": 6.6, "maxWidth": 20 },
+        { "type": "text", "text": "WAY", "font": "D", "size": 6.2, "x": 12, "y": 15.2, "maxWidth": 20 },
+        { "type": "arrow", "x1": 21, "y1": 23.6, "x2": 3, "y2": 23.6, "shaftWidth": 2.6, "headWidth": 7.4, "headLength": 5.4 }
+      ]
+    },
+    {
+      "id": "R7-4", "flashingPadding": 1.5, "note": "NO STANDING ANY TIME, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 2.2, "x": 6, "y": 2.9, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "STANDING", "font": "C", "size": 1.8, "x": 6, "y": 6, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "ANY", "font": "C", "size": 1.8, "x": 6, "y": 9.1, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "TIME", "font": "C", "size": 1.8, "x": 6, "y": 11.9, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.3, "x2": 10.6, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.3, "x2": 1.4, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-4a", "flashingPadding": 1.5, "note": "NO STOPPING ANY TIME, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 2.2, "x": 6, "y": 2.9, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "STOPPING", "font": "C", "size": 1.8, "x": 6, "y": 6, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "ANY", "font": "C", "size": 1.8, "x": 6, "y": 9.1, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "TIME", "font": "C", "size": 1.8, "x": 6, "y": 11.9, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.3, "x2": 10.6, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.3, "x2": 1.4, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-6", "flashingPadding": 1.5, "note": "NO PARKING LOADING ZONE, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 2, "x": 6, "y": 2.9, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "PARKING", "font": "D", "size": 2, "x": 6, "y": 5.6, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "LOADING", "font": "C", "size": 1.7, "x": 6, "y": 9, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "ZONE", "font": "C", "size": 1.7, "x": 6, "y": 11.8, "maxWidth": 10, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.3, "x2": 10.6, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" },
+        { "type": "arrow", "x1": 6, "y1": 15.3, "x2": 1.4, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-108", "flashingPadding": 1.5, "note": "2 HR PARKING 8:30 AM TO 5:30 PM (green legend), 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "green", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "rect", "x": 3, "y": 3.6, "width": 3.6, "height": 4.6, "cornerRadius": 0.25, "color": "green" },
+        { "type": "text", "text": "2", "font": "D", "size": 3.4, "x": 3, "y": 3.6, "color": "white" },
+        { "type": "text", "text": "HR", "font": "D", "size": 1.5, "x": 7.9, "y": 2.5, "maxWidth": 5, "color": "green" },
+        { "type": "text", "text": "PARKING", "font": "C", "size": 1.5, "x": 7.9, "y": 5, "maxWidth": 5.6, "color": "green" },
+        { "type": "text", "text": "8:30 AM", "font": "C", "size": 1.6, "x": 6, "y": 8.2, "maxWidth": 9.6, "color": "green" },
+        { "type": "text", "text": "TO", "font": "C", "size": 1.2, "x": 6, "y": 10.3, "color": "green" },
+        { "type": "text", "text": "5:30 PM", "font": "C", "size": 1.6, "x": 6, "y": 12.4, "maxWidth": 9.6, "color": "green" },
+        { "type": "arrow", "x1": 6, "y1": 15.6, "x2": 10.6, "y2": 15.6, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "green" },
+        { "type": "arrow", "x1": 6, "y1": 15.6, "x2": 1.4, "y2": 15.6, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "green" }
+      ]
+    },
+    {
+      "id": "R7-111", "flashingPadding": 1.5, "note": "NO PARKING EXCEPT ELECTRIC VEHICLES, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "rect", "x": 3.3, "y": 2.9, "width": 4, "height": 3, "cornerRadius": 0.2, "color": "red" },
+        { "type": "text", "text": "NO", "font": "D", "size": 1.8, "x": 3.3, "y": 2.9, "color": "white" },
+        { "type": "text", "text": "PARKING", "font": "C", "size": 1.6, "x": 8, "y": 2.9, "maxWidth": 5.3, "color": "red" },
+        { "type": "text", "text": "EXCEPT", "font": "C", "size": 1.6, "x": 6, "y": 6.4, "maxWidth": 9.8, "color": "red" },
+        { "type": "text", "text": "ELECTRIC", "font": "C", "size": 1.6, "x": 6, "y": 9, "maxWidth": 9.8, "color": "red" },
+        { "type": "text", "text": "VEHICLES", "font": "C", "size": 1.6, "x": 6, "y": 11.6, "maxWidth": 9.8, "color": "red" },
+        { "type": "arrow", "x1": 1.6, "y1": 15.3, "x2": 10.6, "y2": 15.3, "shaftWidth": 0.9, "headWidth": 2.4, "headLength": 1.8, "color": "red" }
+      ]
+    },
+    {
+      "id": "R7-201aP", "flashingPadding": 1, "note": "TOW-AWAY ZONE plaque, 12 x 6",
+      "shape": "rect", "width": 12, "height": 6, "cornerRadius": 0.5, "background": "white",
+      "border": { "color": "red", "width": 0.3, "inset": 0.25, "radius": 0.4 },
+      "elements": [
+        { "type": "text", "text": "TOW-AWAY", "font": "C", "size": 1.4, "x": 6, "y": 2.15, "maxWidth": 10, "color": "red" },
+        { "type": "text", "text": "ZONE", "font": "C", "size": 1.4, "x": 6, "y": 4.1, "maxWidth": 10, "color": "red" }
+      ]
+    },
+    {
+      "id": "R10-6", "note": "STOP HERE ON RED with arrow, 24 x 36",
+      "shape": "rect", "width": 24, "height": 36, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "STOP", "font": "D", "size": 5.4, "x": 12, "y": 3.64, "maxWidth": 20 },
+        { "type": "text", "text": "HERE ON", "font": "D", "size": 3.6, "x": 12, "y": 11.38, "maxWidth": 20 },
+        { "type": "text", "text": "RED", "font": "D", "size": 5.4, "x": 12, "y": 19.12, "maxWidth": 20 },
+        { "type": "arrow", "x1": 17, "y1": 25.86, "x2": 6.5, "y2": 34.66, "shaftWidth": 2.2, "headWidth": 6.2, "headLength": 4.6 }
+      ]
+    },
+    {
+      "id": "R10-7", "note": "DO NOT BLOCK INTERSECTION, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "DO NOT", "font": "D", "size": 4.4, "x": 12, "y": 7.14, "maxWidth": 20 },
+        { "type": "text", "text": "BLOCK", "font": "D", "size": 5.6, "x": 12, "y": 15.5, "maxWidth": 20 },
+        { "type": "text", "text": "INTERSECTION", "font": "B", "size": 3.4, "x": 12, "y": 23.36, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R10-12", "note": "LEFT TURN YIELD ON GREEN (green ball), 30 x 36",
+      "shape": "rect", "width": 30, "height": 36, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "LEFT TURN", "font": "C", "size": 4, "x": 15, "y": 4.58, "maxWidth": 25.5 },
+        { "type": "text", "text": "YIELD", "font": "D", "size": 5.2, "x": 15, "y": 12.3, "maxWidth": 25.5 },
+        { "type": "text", "text": "ON GREEN", "font": "C", "size": 4, "x": 15, "y": 20.02, "maxWidth": 25.5 },
+        { "type": "ellipse", "x": 15, "y": 28.92, "width": 9, "height": 9, "color": "#1E8C4E" }
+      ]
+    },
+    {
+      "id": "R10-5", "note": "LEFT ON GREEN ARROW ONLY, 30 x 36",
+      "shape": "rect", "width": 30, "height": 36, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "LEFT ON", "font": "D", "size": 4.6, "x": 15, "y": 6.96, "maxWidth": 25.5 },
+        { "type": "text", "text": "GREEN", "font": "D", "size": 4.6, "x": 15, "y": 14.32, "maxWidth": 25.5 },
+        { "type": "text", "text": "ARROW", "font": "D", "size": 4.6, "x": 15, "y": 21.68, "maxWidth": 25.5 },
+        { "type": "text", "text": "ONLY", "font": "D", "size": 4.6, "x": 15, "y": 29.04, "maxWidth": 25.5 }
+      ]
+    },
+    {
+      "id": "R10-18", "note": "TRAFFIC LAWS PHOTO ENFORCED, 36 x 24",
+      "shape": "rect", "width": 36, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "camera", "x": 18, "y": 6.88, "width": 12, "height": 9 },
+        { "type": "text", "text": "TRAFFIC LAWS", "font": "C", "size": 3.2, "x": 18, "y": 14.9, "maxWidth": 32 },
+        { "type": "text", "text": "PHOTO ENFORCED", "font": "C", "size": 3.2, "x": 18, "y": 20.02, "maxWidth": 32 }
+      ]
+    },
+    {
+      "id": "R11-1", "note": "KEEP OFF MEDIAN, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "KEEP", "font": "D", "size": 5.4, "x": 12, "y": 6.56, "maxWidth": 20 },
+        { "type": "text", "text": "OFF", "font": "D", "size": 5.4, "x": 12, "y": 15.2, "maxWidth": 20 },
+        { "type": "text", "text": "MEDIAN", "font": "C", "size": 5, "x": 12, "y": 23.64, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R12-1", "note": "WEIGHT LIMIT 10 TONS, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "WEIGHT", "font": "D", "size": 3.4, "x": 12, "y": 5.125, "maxWidth": 20 },
+        { "type": "text", "text": "LIMIT", "font": "D", "size": 3.4, "x": 12, "y": 10.055, "maxWidth": 20 },
+        { "type": "text", "text": "10", "font": "E", "size": 5.8, "x": 12, "y": 17.265, "maxWidth": 20 },
+        { "type": "text", "text": "TONS", "font": "D", "size": 3.8, "x": 12, "y": 24.675, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R14-1", "note": "TRUCK ROUTE, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "TRUCK", "font": "D", "size": 5, "x": 12, "y": 5, "maxWidth": 20.25 },
+        { "type": "text", "text": "ROUTE", "font": "D", "size": 5, "x": 12, "y": 13, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R14-2", "note": "Hazardous material route (green ring), 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "ellipse", "x": 12, "y": 12, "width": 19.5, "height": 19.5, "color": "none", "strokeColor": "green", "strokeWidth": 2.4 },
+        { "type": "text", "text": "HM", "font": "D", "size": 6.6, "x": 12, "y": 12, "maxWidth": 12 }
+      ]
+    },
+    {
+      "id": "R14-3", "note": "Hazardous material prohibited, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "HM", "font": "D", "size": 6.6, "x": 12, "y": 12, "maxWidth": 12 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 12, "width": 20, "height": 20 }
+      ]
+    },
+    {
+      "id": "R16-15", "note": "STATE LAW NO HAND-HELD PHONE USE BY DRIVER, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "rect", "x": 12, "y": 3.4, "width": 21.6, "height": 4.4, "cornerRadius": 0.6, "color": "black" },
+        { "type": "text", "text": "STATE LAW", "font": "C", "size": 2.4, "x": 12, "y": 3.4, "maxWidth": 19, "color": "white" },
+        { "type": "text", "text": "NO HAND-HELD", "font": "C", "size": 2.8, "x": 12, "y": 9.62, "maxWidth": 20 },
+        { "type": "text", "text": "PHONE USE", "font": "C", "size": 2.8, "x": 12, "y": 14.1, "maxWidth": 20 },
+        { "type": "text", "text": "BY DRIVER", "font": "C", "size": 2.8, "x": 12, "y": 18.58, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R-AuthorizedPersonnelOnly", "note": "NOTICE AUTHORIZED PERSONNEL ONLY, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "rect", "x": 12, "y": 3.275, "width": 21.65, "height": 4.2, "cornerRadius": 0.4, "color": "blue" },
+        { "type": "text", "text": "NOTICE", "font": "D", "size": 2.31, "x": 12, "y": 3.275, "maxWidth": 19.45, "color": "white" },
+        { "type": "text", "text": "AUTHORIZED", "font": "C", "size": 2.4, "x": 12, "y": 7.57, "maxWidth": 20.25 },
+        { "type": "text", "text": "PERSONNEL", "font": "C", "size": 2.4, "x": 12, "y": 11.05, "maxWidth": 20.25 },
+        { "type": "text", "text": "ONLY", "font": "C", "size": 2.4, "x": 12, "y": 14.53, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R-StaffOnly", "note": "STAFF ONLY, 18 x 12",
+      "shape": "rect", "width": 18, "height": 12, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "STAFF", "font": "D", "size": 3.2, "x": 9, "y": 3.44, "maxWidth": 14.75 },
+        { "type": "text", "text": "ONLY", "font": "D", "size": 3.2, "x": 9, "y": 8.56, "maxWidth": 14.75 }
+      ]
+    },
+    {
+      "id": "R-EmployeeParking", "flashingPadding": 1.5, "note": "EMPLOYEE PARKING ONLY, 12 x 18",
+      "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "EMPLOYEE", "font": "C", "size": 1.8, "x": 6, "y": 5.48, "maxWidth": 8.75 },
+        { "type": "text", "text": "PARKING", "font": "D", "size": 2.2, "x": 6, "y": 8.8, "maxWidth": 8.75 },
+        { "type": "text", "text": "ONLY", "font": "D", "size": 2.2, "x": 6, "y": 12.32, "maxWidth": 8.75 }
+      ]
+    },
+    {
+      "id": "R-RestrictedArea", "note": "RESTRICTED AREA KEEP OUT, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "rect", "x": 12, "y": 3.975, "width": 21.65, "height": 5.6, "cornerRadius": 0.4, "color": "red" },
+        { "type": "text", "text": "RESTRICTED AREA", "font": "D", "size": 3, "x": 12, "y": 3.975, "maxWidth": 19.45, "color": "white" },
+        { "type": "text", "text": "KEEP OUT", "font": "D", "size": 4.4, "x": 12, "y": 11.75, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R-NoTrespassing", "note": "NO TRESPASSING, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "red", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 4.4, "x": 12, "y": 4.05, "maxWidth": 20.25, "color": "red" },
+        { "type": "text", "text": "TRESPASSING", "font": "C", "size": 3.6, "x": 12, "y": 10.69, "maxWidth": 20.25, "color": "red" },
+        { "type": "text", "text": "VIOLATORS WILL BE PROSECUTED", "font": "C", "size": 1.5, "x": 12, "y": 15.4, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R-PrivateRoad", "note": "PRIVATE ROAD NO TRESPASSING, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "PRIVATE", "font": "D", "size": 3.8, "x": 12, "y": 3.67, "maxWidth": 20.25 },
+        { "type": "text", "text": "ROAD", "font": "D", "size": 3.8, "x": 12, "y": 9.75, "maxWidth": 20.25 },
+        { "type": "text", "text": "NO TRESPASSING", "font": "C", "size": 2.3, "x": 12, "y": 15.08, "maxWidth": 20.25, "color": "red" }
+      ]
+    },
+    {
+      "id": "R-GovernmentProperty", "note": "RESTRICTED AREA NO TRESPASSING U.S. GOVERNMENT PROPERTY, 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "rect", "x": 15, "y": 4.3, "width": 27.4, "height": 6, "cornerRadius": 0.4, "color": "red" },
+        { "type": "text", "text": "RESTRICTED AREA", "font": "D", "size": 3.4, "x": 15, "y": 4.3, "maxWidth": 25.2, "color": "white" },
+        { "type": "text", "text": "NO TRESPASSING", "font": "C", "size": 3.4, "x": 15, "y": 10.03, "maxWidth": 26 },
+        { "type": "text", "text": "U.S. GOVERNMENT", "font": "C", "size": 3, "x": 15, "y": 15.27, "maxWidth": 26 },
+        { "type": "text", "text": "PROPERTY", "font": "C", "size": 3, "x": 15, "y": 20.07, "maxWidth": 26 }
+      ]
+    },
+    {
+      "id": "R-MilitaryRestrictedArea", "note": "Military installation WARNING RESTRICTED AREA (Internal Security Act), 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "WARNING", "font": "D", "size": 3.8, "x": 15, "y": 3.6, "maxWidth": 25, "color": "red" },
+        { "type": "text", "text": "RESTRICTED AREA", "font": "C", "size": 2.2, "x": 15, "y": 7.4, "maxWidth": 25, "color": "red" },
+        { "type": "text", "text": "IT IS UNLAWFUL TO ENTER THIS AREA WITHOUT", "font": "C", "size": 1, "x": 15, "y": 10.2, "maxWidth": 26 },
+        { "type": "text", "text": "PERMISSION OF THE INSTALLATION COMMANDER", "font": "C", "size": 1, "x": 15, "y": 11.8, "maxWidth": 26 },
+        { "type": "text", "text": "SEC. 21, INTERNAL SECURITY ACT OF 1950; 50 U.S.C. 797", "font": "C", "size": 0.8, "x": 15, "y": 13.6, "maxWidth": 26 },
+        { "type": "text", "text": "WHILE ON THIS INSTALLATION ALL PERSONNEL AND THE", "font": "C", "size": 1, "x": 15, "y": 15.6, "maxWidth": 26 },
+        { "type": "text", "text": "PROPERTY UNDER THEIR CONTROL ARE SUBJECT TO SEARCH", "font": "C", "size": 1, "x": 15, "y": 17.2, "maxWidth": 26 },
+        { "type": "text", "text": "USE OF DEADLY FORCE AUTHORIZED", "font": "C", "size": 1.7, "x": 15, "y": 20, "maxWidth": 25, "color": "red" }
+      ]
+    },
+    {
+      "id": "R-DeadlyForce", "note": "WARNING USE OF DEADLY FORCE AUTHORIZED, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "rect", "x": 12, "y": 3.275, "width": 21.65, "height": 4.2, "cornerRadius": 0.4, "color": "red" },
+        { "type": "text", "text": "WARNING", "font": "D", "size": 2.31, "x": 12, "y": 3.275, "maxWidth": 19.45, "color": "white" },
+        { "type": "text", "text": "USE OF", "font": "C", "size": 2.2, "x": 12, "y": 7.48, "maxWidth": 20.25 },
+        { "type": "text", "text": "DEADLY FORCE", "font": "C", "size": 2.6, "x": 12, "y": 11.05, "maxWidth": 20.25 },
+        { "type": "text", "text": "AUTHORIZED", "font": "C", "size": 2.2, "x": 12, "y": 14.62, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R-SubjectToSearch", "note": "NOTICE ALL VEHICLES AND PERSONS SUBJECT TO SEARCH, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "rect", "x": 12, "y": 4, "width": 21.4, "height": 5.4, "cornerRadius": 0.4, "color": "blue" },
+        { "type": "text", "text": "NOTICE", "font": "D", "size": 2.97, "x": 12, "y": 4, "maxWidth": 19.2, "color": "white" },
+        { "type": "text", "text": "ALL VEHICLES", "font": "C", "size": 2.4, "x": 12, "y": 8.18, "maxWidth": 20 },
+        { "type": "text", "text": "AND PERSONS ENTERING", "font": "C", "size": 2, "x": 12, "y": 11.46, "maxWidth": 20 },
+        { "type": "text", "text": "OR LEAVING THE PREMISES", "font": "C", "size": 2, "x": 12, "y": 14.36, "maxWidth": 20 },
+        { "type": "text", "text": "ARE SUBJECT", "font": "C", "size": 2.4, "x": 12, "y": 17.64, "maxWidth": 20 },
+        { "type": "text", "text": "TO SEARCH", "font": "C", "size": 2.4, "x": 12, "y": 21.12, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R-CheckPoint", "note": "STOP CHECK POINT, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "octagon", "x": 12, "y": 7, "width": 8.6, "height": 8.6 },
+        { "type": "text", "text": "STOP", "font": "C", "size": 2.4, "x": 12, "y": 7, "maxWidth": 6.2, "color": "white" },
+        { "type": "text", "text": "CHECK", "font": "D", "size": 4, "x": 12, "y": 15.3, "maxWidth": 20 },
+        { "type": "text", "text": "POINT", "font": "D", "size": 4, "x": 12, "y": 21.3, "maxWidth": 20 },
+        { "type": "text", "text": "HAVE ID READY", "font": "C", "size": 2, "x": 12, "y": 26.3, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R-IDCheck", "note": "100% ID CARD CHECK IN PROGRESS, 30 x 18",
+      "shape": "rect", "width": 30, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "100%", "font": "E", "size": 4.6, "x": 15, "y": 3.98, "maxWidth": 26.25 },
+        { "type": "text", "text": "ID CARD CHECK", "font": "C", "size": 2.8, "x": 15, "y": 10.44, "maxWidth": 26.25 },
+        { "type": "text", "text": "IN PROGRESS", "font": "C", "size": 2.8, "x": 15, "y": 14.92, "maxWidth": 26.25 }
+      ]
+    },
+    {
+      "id": "R-IDCheckBarricade", "note": "STOP ID CHECK AHEAD, 48 x 24 (barricade)",
+      "shape": "rect", "width": 48, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "STOP", "font": "D", "size": 5.6, "x": 24, "y": 8.12, "maxWidth": 44, "color": "red" },
+        { "type": "text", "text": "ID CHECK AHEAD", "font": "C", "size": 4.4, "x": 24, "y": 16.48, "maxWidth": 44 }
+      ]
+    },
+    {
+      "id": "R-NoPhotography", "note": "NO PHOTOGRAPHY, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "camera", "x": 12, "y": 11, "width": 11.5, "height": 9 },
+        { "type": "symbol", "symbol": "prohibition", "x": 12, "y": 11, "width": 19, "height": 19 },
+        { "type": "text", "text": "NO", "font": "D", "size": 2.8, "x": 12, "y": 23.2, "maxWidth": 20 },
+        { "type": "text", "text": "PHOTOGRAPHY", "font": "C", "size": 2.8, "x": 12, "y": 26.6, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R-GovernmentVehicles", "note": "GOVERNMENT VEHICLES ONLY, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "GOVERNMENT", "font": "C", "size": 3, "x": 12, "y": 4.2, "maxWidth": 20.25 },
+        { "type": "text", "text": "VEHICLES", "font": "C", "size": 3, "x": 12, "y": 9, "maxWidth": 20.25 },
+        { "type": "text", "text": "ONLY", "font": "C", "size": 3, "x": 12, "y": 13.8, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R-PoliceVehicles", "note": "POLICE VEHICLES ONLY, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "POLICE", "font": "D", "size": 3.6, "x": 12, "y": 4.02, "maxWidth": 20.25 },
+        { "type": "text", "text": "VEHICLES", "font": "C", "size": 3, "x": 12, "y": 9.48, "maxWidth": 20.25 },
+        { "type": "text", "text": "ONLY", "font": "C", "size": 3, "x": 12, "y": 14.28, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R-EmergencyVehicles", "note": "EMERGENCY VEHICLES ONLY, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "EMERGENCY", "font": "C", "size": 3.2, "x": 12, "y": 4.14, "maxWidth": 20.25, "color": "red" },
+        { "type": "text", "text": "VEHICLES", "font": "C", "size": 3, "x": 12, "y": 9.16, "maxWidth": 20.25 },
+        { "type": "text", "text": "ONLY", "font": "C", "size": 3, "x": 12, "y": 13.96, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R-DoNotBlockDriveway", "note": "DO NOT BLOCK DRIVEWAY, 24 x 12",
+      "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [
+        { "type": "text", "text": "DO NOT BLOCK", "font": "C", "size": 2.8, "x": 12, "y": 3.76, "maxWidth": 20.75 },
+        { "type": "text", "text": "DRIVEWAY", "font": "C", "size": 2.8, "x": 12, "y": 8.24, "maxWidth": 20.75 }
+      ]
+    },
+    {
+      "id": "R-FiringRange", "note": "DANGER LIVE FIRING RANGE KEEP OUT, 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "rect", "x": 15, "y": 4.3, "width": 27.4, "height": 6, "cornerRadius": 0.4, "color": "black" },
+        { "type": "ellipse", "x": 15, "y": 4.3, "width": 19, "height": 5, "color": "red" },
+        { "type": "text", "text": "DANGER", "font": "D", "size": 3.2, "x": 15, "y": 4.3, "maxWidth": 25.2, "color": "white" },
+        { "type": "text", "text": "LIVE FIRING RANGE", "font": "C", "size": 3.2, "x": 15, "y": 9.9, "maxWidth": 26 },
+        { "type": "text", "text": "KEEP OUT", "font": "D", "size": 4, "x": 15, "y": 15.9, "maxWidth": 26 },
+        { "type": "text", "text": "UNEXPLODED ORDNANCE MAY BE PRESENT", "font": "C", "size": 1.3, "x": 15, "y": 20.95, "maxWidth": 26 }
+      ]
+    },
+    {
+      "id": "R-FPCON", "note": "FORCE PROTECTION CONDITION board (current level BRAVO), 24 x 36",
+      "shape": "rect", "width": 24, "height": 36, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "FORCE PROTECTION", "font": "C", "size": 2.2, "x": 12, "y": 3.4, "maxWidth": 20 },
+        { "type": "text", "text": "CONDITION", "font": "C", "size": 2.2, "x": 12, "y": 6.4, "maxWidth": 20 },
+        { "type": "rect", "x": 13.6, "y": 10.8, "width": 15.6, "height": 3.8, "cornerRadius": 0.3, "color": "green" },
+        { "type": "text", "text": "NORMAL", "font": "D", "size": 2.2, "x": 13.6, "y": 10.8, "maxWidth": 13, "color": "white" },
+        { "type": "rect", "x": 13.6, "y": 15.4, "width": 15.6, "height": 3.8, "cornerRadius": 0.3, "color": "blue" },
+        { "type": "text", "text": "ALPHA", "font": "D", "size": 2.2, "x": 13.6, "y": 15.4, "maxWidth": 13, "color": "white" },
+        { "type": "rect", "x": 13.6, "y": 20, "width": 15.6, "height": 3.8, "cornerRadius": 0.3, "color": "yellow" },
+        { "type": "text", "text": "BRAVO", "font": "D", "size": 2.2, "x": 13.6, "y": 20, "maxWidth": 13, "color": "black" },
+        { "type": "rect", "x": 13.6, "y": 24.6, "width": 15.6, "height": 3.8, "cornerRadius": 0.3, "color": "orange" },
+        { "type": "text", "text": "CHARLIE", "font": "D", "size": 2.2, "x": 13.6, "y": 24.6, "maxWidth": 13, "color": "black" },
+        { "type": "rect", "x": 13.6, "y": 29.2, "width": 15.6, "height": 3.8, "cornerRadius": 0.3, "color": "red" },
+        { "type": "text", "text": "DELTA", "font": "D", "size": 2.2, "x": 13.6, "y": 29.2, "maxWidth": 13, "color": "white" },
+        { "type": "polygon", "points": [ 2, 18, 5, 20, 2, 22 ], "color": "black" }
+      ]
+    },
+    {
+      "id": "R-MilitaryArea", "note": "MILITARY AREA prohibited items, 36 x 24",
+      "shape": "rect", "width": 36, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "MILITARY AREA", "font": "D", "size": 4.2, "x": 18, "y": 4.32, "maxWidth": 32, "color": "red" },
+        { "type": "text", "text": "WEAPONS - EXPLOSIVES", "font": "C", "size": 2.6, "x": 18, "y": 9.61, "maxWidth": 32 },
+        { "type": "text", "text": "RADIO TRANSMITTERS", "font": "C", "size": 2.6, "x": 18, "y": 13.38, "maxWidth": 32 },
+        { "type": "text", "text": "PROHIBITED", "font": "C", "size": 3, "x": 18, "y": 17.53, "maxWidth": 32, "color": "red" },
+        { "type": "text", "text": "ALL VEHICLES AND PASSENGERS SUBJECT TO SEARCH", "font": "C", "size": 1.4, "x": 18, "y": 21.08, "maxWidth": 32 }
       ]
     }
   ]

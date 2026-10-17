@@ -1,46 +1,90 @@
 {
-  "_comment": "Conventional-road guide signs (green, white legend). Place names are fictional.",
+  "_comment": "Conventional-road guide signs (green, white legend).",
   "faces": [
-    { "id": "D1-1R", "note": "Destination with arrow right, 60 x 18", "shape": "rect", "width": 60, "height": 18, "cornerRadius": 1.5, "background": "green",
-      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
-      "elements": [
-        { "type": "text", "text": "Downtown", "font": "EM", "size": 6.0, "x": 5, "y": 9, "align": "left", "maxWidth": 36, "color": "white" },
-        { "type": "arrow", "x1": 43, "y1": 9, "x2": 56, "y2": 9, "shaftWidth": 2.4, "headWidth": 7.0, "headLength": 5.0, "color": "white" }
-      ] },
-    { "id": "D1-1L", "note": "Destination with arrow left, 60 x 18", "shape": "rect", "width": 60, "height": 18, "cornerRadius": 1.5, "background": "green",
-      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
-      "elements": [
-        { "type": "arrow", "x1": 17, "y1": 9, "x2": 4, "y2": 9, "shaftWidth": 2.4, "headWidth": 7.0, "headLength": 5.0, "color": "white" },
-        { "type": "text", "text": "Downtown", "font": "EM", "size": 6.0, "x": 55, "y": 9, "align": "right", "maxWidth": 36, "color": "white" }
-      ] },
-    { "id": "D1-1S", "note": "Destination with arrow straight ahead, 60 x 18", "shape": "rect", "width": 60, "height": 18, "cornerRadius": 1.5, "background": "green",
-      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
-      "elements": [
-        { "type": "arrow", "x1": 9, "y1": 15.2, "x2": 9, "y2": 2.8, "shaftWidth": 2.4, "headWidth": 7.0, "headLength": 5.0, "color": "white" },
-        { "type": "text", "text": "Downtown", "font": "EM", "size": 6.0, "x": 55, "y": 9, "align": "right", "maxWidth": 38, "color": "white" }
-      ] },
-    { "id": "D1-2", "note": "Two destinations (straight and right), 66 x 30", "shape": "rect", "width": 66, "height": 30, "cornerRadius": 1.875, "background": "green",
-      "border": { "color": "white", "width": 0.75, "inset": 0.5, "radius": 1.375 },
-      "elements": [
-        { "type": "arrow", "x1": 8.5, "y1": 13.4, "x2": 8.5, "y2": 2.6, "shaftWidth": 2.2, "headWidth": 6.4, "headLength": 4.4, "color": "white" },
-        { "type": "text", "text": "Airport", "font": "EM", "size": 5.5, "x": 17, "y": 8.2, "align": "left", "maxWidth": 42, "color": "white" },
-        { "type": "text", "text": "Downtown", "font": "EM", "size": 5.5, "x": 5, "y": 21.8, "align": "left", "maxWidth": 42, "color": "white" },
-        { "type": "arrow", "x1": 49, "y1": 21.8, "x2": 61.5, "y2": 21.8, "shaftWidth": 2.2, "headWidth": 6.4, "headLength": 4.4, "color": "white" }
-      ] },
-    { "id": "D3-1", "note": "Street name sign blade, 36 x 9", "shape": "rect", "width": 36, "height": 9, "cornerRadius": 0.5, "background": "green",
-      "border": { "color": "white", "width": 0.3, "inset": 0.25, "radius": 0.35 },
-      "elements": [ { "type": "text", "text": "Main St", "font": "EM", "size": 4.4, "x": 18, "y": 4.7, "maxWidth": 32, "color": "white" } ] },
-    { "id": "I-2", "note": "City limit sign, 48 x 24", "shape": "rect", "width": 48, "height": 24, "cornerRadius": 1.5, "background": "green",
-      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
-      "elements": [
-        { "type": "text", "text": "Maple Grove", "font": "EM", "size": 5.5, "x": 24, "y": 8.4, "maxWidth": 42, "color": "white" },
-        { "type": "text", "text": "CITY LIMIT", "font": "D", "size": 4.0, "x": 24, "y": 17.0, "maxWidth": 40, "color": "white" }
-      ] },
     { "id": "D11-1", "note": "BIKE ROUTE, 24 x 18", "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.5, "background": "green",
       "border": { "color": "white", "width": 0.5, "inset": 0.375, "radius": 1.0 },
       "elements": [
         { "type": "symbol", "symbol": "bicycle", "x": 12, "y": 6.8, "width": 12.5, "height": 7.8, "color": "white" },
         { "type": "text", "text": "BIKE ROUTE", "font": "C", "size": 2.8, "x": 12, "y": 14.4, "maxWidth": 20, "color": "white" }
-      ] }
+      ] },
+    {
+      "id": "EM1-1", "note": "EVACUATION ROUTE, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "elements": [
+        { "type": "ellipse", "x": 12, "y": 12, "width": 21.6, "height": 21.6, "color": "blue" },
+        { "type": "arrow", "x1": 12, "y1": 10.2, "x2": 12, "y2": 2.6, "shaftWidth": 1.8, "headWidth": 4.6, "headLength": 3, "color": "white" },
+        { "type": "text", "text": "EVACUATION", "font": "C", "size": 2.6, "x": 12, "y": 13.115, "maxWidth": 16.5, "color": "white" },
+        { "type": "text", "text": "ROUTE", "font": "C", "size": 2.6, "x": 12, "y": 16.885, "maxWidth": 16.5, "color": "white" }
+      ]
+    },
+    {
+      "id": "EM1-1a", "note": "HURRICANE EVACUATION ROUTE, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "elements": [
+        { "type": "ellipse", "x": 12, "y": 12, "width": 21.6, "height": 21.6, "color": "blue" },
+        { "type": "arrow", "x1": 12, "y1": 10.2, "x2": 12, "y2": 2.6, "shaftWidth": 1.8, "headWidth": 4.6, "headLength": 3, "color": "white" },
+        { "type": "text", "text": "HURRICANE", "font": "C", "size": 2, "x": 12, "y": 12.5, "maxWidth": 16.5, "color": "white" },
+        { "type": "text", "text": "EVACUATION", "font": "C", "size": 2, "x": 12, "y": 15.4, "maxWidth": 15, "color": "white" },
+        { "type": "text", "text": "ROUTE", "font": "C", "size": 2, "x": 12, "y": 18.3, "maxWidth": 16.5, "color": "white" }
+      ]
+    },
+    {
+      "id": "I3-6", "note": "Bus Station (green general information), 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "green",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "symbol", "symbol": "bus-front", "x": 12, "y": 12, "width": 13.5, "height": 15.4, "color": "white" } ]
+    },
+    {
+      "id": "I3-9", "note": "Ferry Terminal (green general information), 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "green",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "symbol", "symbol": "ferry", "x": 12, "y": 12, "width": 17.5, "height": 9.6, "color": "white" } ]
+    },
+    {
+      "id": "I4-1", "note": "Library (green general information), 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "green",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [ { "type": "symbol", "symbol": "book-reader", "x": 12, "y": 12, "width": 16, "height": 17.4, "color": "white" } ]
+    },
+    {
+      "id": "D-MainGateR", "note": "MAIN GATE with arrow right, 36 x 18",
+      "shape": "rect", "width": 36, "height": 18, "cornerRadius": 1.125, "background": "green",
+      "border": { "color": "white", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "MAIN", "font": "D", "size": 4, "x": 13.5, "y": 5.8, "maxWidth": 20, "color": "white" },
+        { "type": "text", "text": "GATE", "font": "D", "size": 4, "x": 13.5, "y": 12.2, "maxWidth": 20, "color": "white" },
+        { "type": "arrow", "x1": 25.2, "y1": 9, "x2": 32.8, "y2": 9, "shaftWidth": 2, "headWidth": 5.6, "headLength": 3.8, "color": "white" }
+      ]
+    },
+    {
+      "id": "D-VisitorCenterR", "note": "VISITOR CONTROL CENTER with arrow right, 36 x 18",
+      "shape": "rect", "width": 36, "height": 18, "cornerRadius": 1.125, "background": "green",
+      "border": { "color": "white", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "VISITOR", "font": "D", "size": 3.2, "x": 13.5, "y": 6.44, "maxWidth": 20, "color": "white" },
+        { "type": "text", "text": "CONTROL CENTER", "font": "D", "size": 3.2, "x": 13.5, "y": 11.56, "maxWidth": 20, "color": "white" },
+        { "type": "arrow", "x1": 25.2, "y1": 9, "x2": 32.8, "y2": 9, "shaftWidth": 2, "headWidth": 5.6, "headLength": 3.8, "color": "white" }
+      ]
+    },
+    {
+      "id": "D-ScenicOverlookL", "note": "SCENIC OVERLOOK with arrow left (brown recreational), 36 x 18",
+      "shape": "rect", "width": 36, "height": 18, "cornerRadius": 1.125, "background": "brown",
+      "border": { "color": "white", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "SCENIC", "font": "D", "size": 4, "x": 22.5, "y": 5.8, "maxWidth": 20, "color": "white" },
+        { "type": "text", "text": "OVERLOOK", "font": "D", "size": 4, "x": 22.5, "y": 12.2, "maxWidth": 20, "color": "white" },
+        { "type": "arrow", "x1": 10.8, "y1": 9, "x2": 3.2, "y2": 9, "shaftWidth": 2, "headWidth": 5.6, "headLength": 3.8, "color": "white" }
+      ]
+    },
+    {
+      "id": "D-HistoricSiteR", "note": "HISTORIC SITE with arrow right (brown recreational), 36 x 18",
+      "shape": "rect", "width": 36, "height": 18, "cornerRadius": 1.125, "background": "brown",
+      "border": { "color": "white", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "HISTORIC", "font": "D", "size": 4, "x": 13.5, "y": 5.8, "maxWidth": 20, "color": "white" },
+        { "type": "text", "text": "SITE", "font": "D", "size": 4, "x": 13.5, "y": 12.2, "maxWidth": 20, "color": "white" },
+        { "type": "arrow", "x1": 25.2, "y1": 9, "x2": 32.8, "y2": 9, "shaftWidth": 2, "headWidth": 5.6, "headLength": 3.8, "color": "white" }
+      ]
+    }
   ]
 }

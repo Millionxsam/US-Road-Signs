@@ -13,3 +13,16 @@ C:\Projects\US Road Signs\tools\SignForge\bin\Release\SignForge.exe.config
 C:\Projects\US Road Signs\tools\SignForge\bin\Release\SignForge.exe
 C:\Projects\US Road Signs\tools\SignForge\bin\Release\SignForge.pdb
 C:\Projects\US Road Signs\tools\SignForge\bin\Release\Newtonsoft.Json.dll
+C:\Projects\us-road-signs\tools\SignForge\bin\Release\SignForge.exe.config
+C:\Projects\us-road-signs\tools\SignForge\bin\Release\SignForge.exe
+C:\Projects\us-road-signs\tools\SignForge\bin\Release\SignForge.pdb
+C:\Projects\us-road-signs\tools\SignForge\bin\Release\Newtonsoft.Json.dll
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.csproj.AssemblyReference.cache
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.AssemblyInfoInputs.cache
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.AssemblyInfo.cs
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.csproj.CoreCompileInputs.cache
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.sourcelink.json
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.csproj.Up2Date
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.exe
+C:\Projects\us-road-signs\tools\SignForge\obj\Release\SignForge.pdb

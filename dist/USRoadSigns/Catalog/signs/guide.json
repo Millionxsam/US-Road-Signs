@@ -1,11 +1,16 @@
 {
   "signs": [
-    { "id": "D1-1R_DestinationRight", "name": "Destination (Right)", "category": "Guide", "code": "D1-1", "panels": [ { "face": "D1-1R" } ], "support": { "type": "twin-square", "spacing": 36 } },
-    { "id": "D1-1L_DestinationLeft", "name": "Destination (Left)", "category": "Guide", "code": "D1-1", "panels": [ { "face": "D1-1L" } ], "support": { "type": "twin-square", "spacing": 36 } },
-    { "id": "D1-1S_DestinationStraight", "name": "Destination (Straight)", "category": "Guide", "code": "D1-1", "panels": [ { "face": "D1-1S" } ], "support": { "type": "twin-square", "spacing": 36 } },
-    { "id": "D1-2_TwoDestinations", "name": "Two Destinations", "category": "Guide", "code": "D1-2", "panels": [ { "face": "D1-2" } ], "support": { "type": "twin-square", "spacing": 40 } },
-    { "id": "D3-1_StreetName", "name": "Street Name Sign", "category": "Guide", "code": "D3-1", "panels": [ { "face": "D3-1" } ], "support": { "type": "post", "mountHeight": 96 } },
-    { "id": "I-2_CityLimit", "name": "City Limit", "category": "Guide", "code": "I-2", "panels": [ { "face": "I-2" } ], "support": { "type": "twin-square", "spacing": 30 } },
-    { "id": "D11-1_BikeRoute", "name": "Bike Route", "category": "Guide", "code": "D11-1", "panels": [ { "face": "D11-1" } ], "support": { "type": "post" } }
+    { "id": "D11-1_BikeRoute", "name": "Bike Route", "category": "Guide", "code": "D11-1", "panels": [ { "face": "D11-1" } ], "support": { "type": "post" } },
+    { "id": "EM1-1_EvacuationRoute", "name": "Evacuation Route", "category": "Guide", "code": "EM1-1", "panels": [ { "face": "EM1-1" } ], "support": { "type": "post" } },
+    { "id": "EM1-1a_HurricaneEvacuationRoute", "name": "Hurricane Evacuation Route", "category": "Guide", "code": "EM1-1a", "panels": [ { "face": "EM1-1a" } ], "support": { "type": "post" } },
+    { "id": "I3-6_BusStation", "name": "Bus Station", "category": "Guide", "code": "I3-6", "panels": [ { "face": "I3-6" } ], "support": { "type": "post" } },
+    { "id": "I3-9_FerryTerminal", "name": "Ferry Terminal", "category": "Guide", "code": "I3-9", "panels": [ { "face": "I3-9" } ], "support": { "type": "post" } },
+    { "id": "I4-1_Library", "name": "Library", "category": "Guide", "code": "I4-1", "panels": [ { "face": "I4-1" } ], "support": { "type": "post" } },
+    { "id": "D_MainGateRight", "name": "Main Gate (Right)", "category": "Guide", "code": "installation",
+      "description": "Wayfinding sign to the main gate of a base or government campus.", "panels": [ { "face": "D-MainGateR" } ], "support": { "type": "post" } },
+    { "id": "D_VisitorControlCenterRight", "name": "Visitor Control Center (Right)", "category": "Guide", "code": "installation",
+      "description": "Directs visitors to the pass and ID office of a military installation.", "panels": [ { "face": "D-VisitorCenterR" } ], "support": { "type": "post" } },
+    { "id": "D_ScenicOverlookLeft", "name": "Scenic Overlook (Left)", "category": "Guide", "code": "recreational", "panels": [ { "face": "D-ScenicOverlookL" } ], "support": { "type": "post" } },
+    { "id": "D_HistoricSiteRight", "name": "Historic Site (Right)", "category": "Guide", "code": "recreational", "panels": [ { "face": "D-HistoricSiteR" } ], "support": { "type": "post" } }
   ]
 }

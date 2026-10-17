@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\US Road Signs\\tools\\SignForge\\SignForge.csproj",
+      "projectUniqueName": "C:\\Projects\\us-road-signs\\tools\\SignForge\\SignForge.csproj",
       "projectName": "SignForge",
-      "projectPath": "C:\\Projects\\US Road Signs\\tools\\SignForge\\SignForge.csproj",
+      "projectPath": "C:\\Projects\\us-road-signs\\tools\\SignForge\\SignForge.csproj",
       "packagesPath": "C:\\Users\\samda\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\US Road Signs\\tools\\SignForge\\obj\\",
+      "outputPath": "C:\\Projects\\us-road-signs\\tools\\SignForge\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
