@@ -1,5 +1,7 @@
 # US Road Signs (Cities: Skylines II mod)
 
+[Install on Paradox Mods](https://mods.paradoxplaza.com/mods/163735/Windows)
+
 730 freely placeable, MUTCD-style American road signs (365 standard signs, each with a flashing variant). Each sign is a complete assembly:
 printed face on a plate with real thickness, bolts, and a galvanized post (or twin posts,
 a Type III barricade, a portable stand, or an in-street flexible base).
@@ -22,12 +24,12 @@ Every category has a **(Flashing)** copy next to it. Each flashing sign has LEDs
 border, like LED-enhanced signs (MUTCD 2A.07). The LEDs are real game lights: they flash together
 about 55 times a minute, day and night. Their color follows the sign's color scheme:
 
-| LEDs | Signs |
-|---|---|
-| Amber | Yellow and fluorescent yellow-green warning, school and pedestrian signs |
-| Red | Regulatory signs: stop, yield, wrong way, speed limits, turn and lane-use signs, restricted-area, government and military signs |
-| Orange | Orange work-zone signs, plus the Type II/III barricades and white closure signs in the Construction category |
-| White | Blue service, green guide and brown recreational signs, parking signs, END signs, the ROAD CLOSED barricade, object markers, the crossbuck, the in-street crosswalk sign and the push-button sign |
+| LEDs   | Signs                                                                                                                                                                                             |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Amber  | Yellow and fluorescent yellow-green warning, school and pedestrian signs                                                                                                                          |
+| Red    | Regulatory signs: stop, yield, wrong way, speed limits, turn and lane-use signs, restricted-area, government and military signs                                                                   |
+| Orange | Orange work-zone signs, plus the Type II/III barricades and white closure signs in the Construction category                                                                                      |
+| White  | Blue service, green guide and brown recreational signs, parking signs, END signs, the ROAD CLOSED barricade, object markers, the crossbuck, the in-street crosswalk sign and the push-button sign |
 
 The LED colors, brightness, flash rate, spacing and size are set under `flashing` in
 `data/catalog.json`. A category or sign can force a color with `"flashingColor"`.
@@ -38,8 +40,8 @@ Where the LEDs would cover lettering or symbols on a small sign, the face sets `
 
 - Signs place anywhere, with no road needed. Rotate them while placing as with any prop.
 - Use the object tool's **line / curve** modes to drop rows of copies.
-- Vanilla CS2 has no vertical offset for props. Use *Move It* to raise or lower a sign, and
-  *Anarchy* if the game refuses placement because a sign overlaps road geometry.
+- Vanilla CS2 has no vertical offset for props. Use _Move It_ to raise or lower a sign, and
+  _Anarchy_ if the game refuses placement because a sign overlaps road geometry.
 
 ## Options
 
@@ -66,12 +68,12 @@ To add a sign, you only edit data:
 
 ## Layout
 
-| Path | Purpose |
-|---|---|
-| `data/` | Catalog: menu, categories, colors, faces, signs, symbols |
-| `src/Shared/Catalog` | Catalog model and loader (shared by mod and tool) |
-| `src/Shared/Geometry` | Plate shapes, posts/brackets/bolts mesh generation |
-| `src/USRoadSigns` | The mod: entry point, settings, localization |
-| `src/USRoadSigns/Runtime` | Texture/surface/mesh asset creation, prefab + menu registration |
-| `tools/SignForge` | Renders face textures, material textures and menu icons from `data/` |
-| `build.ps1` | One-step build into `dist/USRoadSigns` |
+| Path                      | Purpose                                                              |
+| ------------------------- | -------------------------------------------------------------------- |
+| `data/`                   | Catalog: menu, categories, colors, faces, signs, symbols             |
+| `src/Shared/Catalog`      | Catalog model and loader (shared by mod and tool)                    |
+| `src/Shared/Geometry`     | Plate shapes, posts/brackets/bolts mesh generation                   |
+| `src/USRoadSigns`         | The mod: entry point, settings, localization                         |
+| `src/USRoadSigns/Runtime` | Texture/surface/mesh asset creation, prefab + menu registration      |
+| `tools/SignForge`         | Renders face textures, material textures and menu icons from `data/` |
+| `build.ps1`               | One-step build into `dist/USRoadSigns`                               |
