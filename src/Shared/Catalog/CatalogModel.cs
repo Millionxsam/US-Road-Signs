@@ -89,7 +89,7 @@ namespace USRoadSigns.Catalog
     public sealed class FlashingDefaults
     {
         /// <summary>LED colors by name (#RRGGBB). Variants pick one automatically from the sign's color scheme
-        /// (orange signs: orange, yellow and fluorescent yellow-green signs: amber, everything else: red),
+        /// (orange signs: orange, yellow and fluorescent yellow-green signs: amber, green/blue/brown signs: white, everything else: red),
         /// unless the sign sets <see cref="SignDef.FlashingColor"/>.</summary>
         public Dictionary<string, string> Colors = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
         {

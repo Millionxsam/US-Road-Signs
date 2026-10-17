@@ -51,6 +51,217 @@
         { "type": "symbol", "symbol": "fork-knife", "x": 36, "y": 20.5, "width": 14, "height": 14, "color": "blue" },
         { "type": "symbol", "symbol": "bed", "x": 58.5, "y": 20.5, "width": 14.5, "height": 10.2, "color": "blue" },
         { "type": "text", "text": "NEXT EXIT", "font": "D", "size": 5.4, "x": 36, "y": 39.5, "maxWidth": 60, "color": "white" }
-      ] }
+      ] },
+    {
+      "id": "R3-7R", "note": "RIGHT LANE MUST TURN RIGHT, 30 x 30",
+      "shape": "rect", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "RIGHT LANE", "font": "C", "size": 4.4, "x": 15, "y": 7.96, "maxWidth": 25.5 },
+        { "type": "text", "text": "MUST", "font": "C", "size": 4.4, "x": 15, "y": 15, "maxWidth": 25.5 },
+        { "type": "text", "text": "TURN RIGHT", "font": "C", "size": 4.4, "x": 15, "y": 22.04, "maxWidth": 25.5 }
+      ]
+    },
+    {
+      "id": "R3-7L", "note": "LEFT LANE MUST TURN LEFT, 30 x 30",
+      "shape": "rect", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "LEFT LANE", "font": "C", "size": 4.4, "x": 15, "y": 7.96, "maxWidth": 25.5 },
+        { "type": "text", "text": "MUST", "font": "C", "size": 4.4, "x": 15, "y": 15, "maxWidth": 25.5 },
+        { "type": "text", "text": "TURN LEFT", "font": "C", "size": 4.4, "x": 15, "y": 22.04, "maxWidth": 25.5 }
+      ]
+    },
+    {
+      "id": "R3-33R", "note": "RIGHT LANE MUST EXIT, 36 x 18",
+      "shape": "rect", "width": 36, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "RIGHT LANE", "font": "C", "size": 4, "x": 18, "y": 5.8, "maxWidth": 32.25 },
+        { "type": "text", "text": "MUST EXIT", "font": "C", "size": 4, "x": 18, "y": 12.2, "maxWidth": 32.25 }
+      ]
+    },
+    {
+      "id": "R3-10", "note": "HOV 2+ ONLY, 30 x 36",
+      "shape": "rect", "width": 30, "height": 36, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "rect", "x": 15, "y": 6, "width": 27, "height": 9.4, "cornerRadius": 0.8, "color": "black" },
+        { "type": "polygon", "points": [ 15, 2.2, 18.2, 6, 15, 9.8, 11.8, 6 ], "color": "white" },
+        { "type": "text", "text": "HOV 2+ ONLY", "font": "C", "size": 3.4, "x": 15, "y": 15.2, "maxWidth": 25 },
+        { "type": "text", "text": "2 OR MORE", "font": "C", "size": 3.4, "x": 15, "y": 20.6, "maxWidth": 25 },
+        { "type": "text", "text": "PERSONS", "font": "C", "size": 3.4, "x": 15, "y": 26, "maxWidth": 25 },
+        { "type": "text", "text": "PER VEHICLE", "font": "C", "size": 3.4, "x": 15, "y": 31.4, "maxWidth": 25 }
+      ]
+    },
+    {
+      "id": "R2-4a", "note": "SPEED LIMIT 65 MINIMUM 40, 24 x 48",
+      "shape": "rect", "width": 24, "height": 48, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "SPEED", "font": "D", "size": 3.6, "x": 12, "y": 4.6, "maxWidth": 20 },
+        { "type": "text", "text": "LIMIT", "font": "D", "size": 3.6, "x": 12, "y": 9.6, "maxWidth": 20 },
+        { "type": "text", "text": "65", "font": "E", "size": 10, "x": 12, "y": 20, "maxWidth": 20 },
+        { "type": "text", "text": "MINIMUM", "font": "C", "size": 3.4, "x": 12, "y": 31, "maxWidth": 20 },
+        { "type": "text", "text": "40", "font": "E", "size": 8, "x": 12, "y": 40, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R4-3", "note": "SLOWER TRAFFIC KEEP RIGHT, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "SLOWER", "font": "C", "size": 4.2, "x": 12, "y": 4.92, "maxWidth": 20 },
+        { "type": "text", "text": "TRAFFIC", "font": "C", "size": 4.2, "x": 12, "y": 11.64, "maxWidth": 20 },
+        { "type": "text", "text": "KEEP", "font": "C", "size": 4.2, "x": 12, "y": 18.36, "maxWidth": 20 },
+        { "type": "text", "text": "RIGHT", "font": "C", "size": 4.2, "x": 12, "y": 25.08, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R4-5", "note": "TRUCKS USE RIGHT LANE, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "TRUCKS", "font": "C", "size": 4.2, "x": 12, "y": 4.92, "maxWidth": 20 },
+        { "type": "text", "text": "USE", "font": "C", "size": 4.2, "x": 12, "y": 11.64, "maxWidth": 20 },
+        { "type": "text", "text": "RIGHT", "font": "C", "size": 4.2, "x": 12, "y": 18.36, "maxWidth": 20 },
+        { "type": "text", "text": "LANE", "font": "C", "size": 4.2, "x": 12, "y": 25.08, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R4-9", "note": "STAY IN LANE, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "STAY", "font": "D", "size": 5.4, "x": 12, "y": 6.36, "maxWidth": 20 },
+        { "type": "text", "text": "IN", "font": "D", "size": 5.4, "x": 12, "y": 15, "maxWidth": 20 },
+        { "type": "text", "text": "LANE", "font": "D", "size": 5.4, "x": 12, "y": 23.64, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R4-16", "note": "KEEP RIGHT EXCEPT TO PASS, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "KEEP", "font": "C", "size": 4, "x": 12, "y": 5.4, "maxWidth": 20 },
+        { "type": "text", "text": "RIGHT", "font": "C", "size": 4, "x": 12, "y": 11.8, "maxWidth": 20 },
+        { "type": "text", "text": "EXCEPT", "font": "C", "size": 4, "x": 12, "y": 18.2, "maxWidth": 20 },
+        { "type": "text", "text": "TO PASS", "font": "C", "size": 4, "x": 12, "y": 24.6, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R4-17", "note": "DO NOT DRIVE ON SHOULDER, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "DO NOT", "font": "C", "size": 3.8, "x": 12, "y": 5.88, "maxWidth": 20 },
+        { "type": "text", "text": "DRIVE", "font": "C", "size": 3.8, "x": 12, "y": 11.96, "maxWidth": 20 },
+        { "type": "text", "text": "ON", "font": "C", "size": 3.8, "x": 12, "y": 18.04, "maxWidth": 20 },
+        { "type": "text", "text": "SHOULDER", "font": "C", "size": 3.8, "x": 12, "y": 24.12, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R8-4", "note": "EMERGENCY PARKING ONLY, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "EMERGENCY", "font": "C", "size": 3, "x": 12, "y": 4.2, "maxWidth": 20.25 },
+        { "type": "text", "text": "PARKING", "font": "C", "size": 3, "x": 12, "y": 9, "maxWidth": 20.25 },
+        { "type": "text", "text": "ONLY", "font": "C", "size": 3, "x": 12, "y": 13.8, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R8-7", "note": "EMERGENCY STOPPING ONLY, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "EMERGENCY", "font": "C", "size": 3, "x": 12, "y": 4.2, "maxWidth": 20.25 },
+        { "type": "text", "text": "STOPPING", "font": "C", "size": 3, "x": 12, "y": 9, "maxWidth": 20.25 },
+        { "type": "text", "text": "ONLY", "font": "C", "size": 3, "x": 12, "y": 13.8, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "R5-10c", "note": "PEDESTRIANS, BICYCLES, MOTOR-DRIVEN CYCLES PROHIBITED, 30 x 30",
+      "shape": "rect", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "PEDESTRIANS", "font": "C", "size": 3, "x": 15, "y": 6.3, "maxWidth": 25.5 },
+        { "type": "text", "text": "BICYCLES", "font": "C", "size": 3, "x": 15, "y": 10.65, "maxWidth": 25.5 },
+        { "type": "text", "text": "MOTOR-DRIVEN", "font": "C", "size": 3, "x": 15, "y": 15, "maxWidth": 25.5 },
+        { "type": "text", "text": "CYCLES", "font": "C", "size": 3, "x": 15, "y": 19.35, "maxWidth": 25.5 },
+        { "type": "text", "text": "PROHIBITED", "font": "C", "size": 3, "x": 15, "y": 23.7, "maxWidth": 25.5, "color": "red" }
+      ]
+    },
+    {
+      "id": "R13-1", "note": "TRUCKS MUST ENTER WEIGH STATION, 36 x 24",
+      "shape": "rect", "width": 36, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "TRUCKS", "font": "C", "size": 2.6, "x": 18, "y": 4.46, "maxWidth": 32 },
+        { "type": "text", "text": "OVER 10 TONS", "font": "C", "size": 2.6, "x": 18, "y": 8.23, "maxWidth": 32 },
+        { "type": "text", "text": "MUST ENTER", "font": "C", "size": 2.6, "x": 18, "y": 12, "maxWidth": 32 },
+        { "type": "text", "text": "WEIGH STATION", "font": "C", "size": 2.6, "x": 18, "y": 15.77, "maxWidth": 32 },
+        { "type": "text", "text": "NEXT RIGHT", "font": "C", "size": 2.6, "x": 18, "y": 19.54, "maxWidth": 32 }
+      ]
+    },
+    {
+      "id": "W19-1", "note": "FREEWAY ENDS 1 MILE, 48 x 18",
+      "shape": "rect", "width": 48, "height": 18, "cornerRadius": 1.125, "background": "yellow",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "FREEWAY ENDS", "font": "C", "size": 4.4, "x": 24, "y": 5.48, "maxWidth": 44.25 },
+        { "type": "text", "text": "1 MILE", "font": "C", "size": 4.4, "x": 24, "y": 12.52, "maxWidth": 44.25 }
+      ]
+    },
+    {
+      "id": "W19-5", "note": "ALL TRAFFIC MUST EXIT, 48 x 24",
+      "shape": "rect", "width": 48, "height": 24, "cornerRadius": 1.5, "background": "yellow",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "ALL TRAFFIC", "font": "C", "size": 5.4, "x": 24, "y": 7.68, "maxWidth": 44 },
+        { "type": "text", "text": "MUST EXIT", "font": "C", "size": 5.4, "x": 24, "y": 16.32, "maxWidth": 44 }
+      ]
+    },
+    {
+      "id": "W3-7", "note": "RAMP METER AHEAD, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "RAMP", "font": "C", "size": 5.8, "x": 25.456, "y": 16.466, "maxWidth": 19.932 },
+        { "type": "text", "text": "METER", "font": "C", "size": 5.8, "x": 25.456, "y": 25.456, "maxWidth": 37.912 },
+        { "type": "text", "text": "AHEAD", "font": "C", "size": 5.8, "x": 25.456, "y": 34.446, "maxWidth": 19.932 }
+      ]
+    },
+    {
+      "id": "W5-4", "note": "RAMP NARROWS, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "RAMP", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "NARROWS", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W13-2", "note": "EXIT 15 MPH advisory speed, 30 x 36",
+      "shape": "rect", "width": 30, "height": 36, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "EXIT", "font": "D", "size": 5, "x": 15, "y": 5.4, "maxWidth": 25 },
+        { "type": "rect", "x": 15, "y": 10.4, "width": 27.2, "height": 0.75, "color": "black" },
+        { "type": "text", "text": "15", "font": "E", "size": 11, "x": 15, "y": 20.4, "maxWidth": 25 },
+        { "type": "text", "text": "MPH", "font": "D", "size": 4.2, "x": 15, "y": 31, "maxWidth": 25 }
+      ]
+    },
+    {
+      "id": "W13-3", "note": "RAMP 25 MPH advisory speed, 30 x 36",
+      "shape": "rect", "width": 30, "height": 36, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "RAMP", "font": "D", "size": 5, "x": 15, "y": 5.4, "maxWidth": 25 },
+        { "type": "rect", "x": 15, "y": 10.4, "width": 27.2, "height": 0.75, "color": "black" },
+        { "type": "text", "text": "25", "font": "E", "size": 11, "x": 15, "y": 20.4, "maxWidth": 25 },
+        { "type": "text", "text": "MPH", "font": "D", "size": 4.2, "x": 15, "y": 31, "maxWidth": 25 }
+      ]
+    }
   ]
 }

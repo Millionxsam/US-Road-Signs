@@ -215,7 +215,7 @@ namespace USRoadSigns.Catalog
 
         /// <summary>LED color matching the sign's color scheme, judged by the panel that carries the LEDs:
         /// orange work-zone signs get orange LEDs, yellow and fluorescent yellow-green warning signs amber,
-        /// and regulatory signs (red, white or black) red.</summary>
+        /// green, blue and brown guide/information signs white, and regulatory signs (red, white or black) red.</summary>
         private string AutomaticLedColor(SignDef sign)
         {
             FaceDef face = m_Faces[sign.Panels[Geometry.BorderLights.LitPanelIndex(this, sign)].Face];
@@ -227,6 +227,10 @@ namespace USRoadSigns.Catalog
                 case "yellow":
                 case "fyg":
                     return "amber";
+                case "green":
+                case "blue":
+                case "brown":
+                    return "white";
                 default:
                     return "red";
             }

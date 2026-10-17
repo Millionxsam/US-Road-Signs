@@ -11,6 +11,26 @@
     { "id": "E5-1_ExitGore", "name": "Highway Exit: Gore Sign", "category": "Highway", "code": "E5-1",
       "description": "EXIT sign placed in the gore where the ramp leaves the freeway.", "panels": [ { "face": "E5-1" } ], "support": { "type": "twin-square", "spacing": 28, "mountHeight": 60 }, "flashingColor": "white" },
     { "id": "D9-18_ServicesNextExit", "name": "Service Signs: Gas Food Lodging Next Exit", "category": "Highway", "code": "D9-18",
-      "description": "Motorist services sign for the next interchange.", "panels": [ { "face": "D9-18" } ], "support": { "type": "twin-square", "spacing": 40 }, "flashingColor": "white" }
+      "description": "Motorist services sign for the next interchange.", "panels": [ { "face": "D9-18" } ], "support": { "type": "twin-square", "spacing": 40 }, "flashingColor": "white" },
+    { "id": "R3-7R_RightLaneMustTurn", "name": "Right Lane Must Turn Right", "category": "Highway", "code": "R3-7", "panels": [ { "face": "R3-7R" } ], "support": { "type": "post" } },
+    { "id": "R3-7L_LeftLaneMustTurn", "name": "Left Lane Must Turn Left", "category": "Highway", "code": "R3-7", "panels": [ { "face": "R3-7L" } ], "support": { "type": "post" } },
+    { "id": "R3-33R_RightLaneMustExit", "name": "Right Lane Must Exit", "category": "Highway", "code": "R3-33", "panels": [ { "face": "R3-33R" } ], "support": { "type": "twin-square", "spacing": 22 } },
+    { "id": "R3-10_HOVLane", "name": "HOV 2+ Only", "category": "Highway", "code": "R3-10", "panels": [ { "face": "R3-10" } ], "support": { "type": "post" } },
+    { "id": "R2-4a_SpeedLimit65Minimum40", "name": "Speed Limit 65 Minimum 40", "category": "Highway", "code": "R2-4a", "panels": [ { "face": "R2-4a" } ], "support": { "type": "post" } },
+    { "id": "R4-3_SlowerTrafficKeepRight", "name": "Slower Traffic Keep Right", "category": "Highway", "code": "R4-3", "panels": [ { "face": "R4-3" } ], "support": { "type": "post" } },
+    { "id": "R4-5_TrucksUseRightLane", "name": "Trucks Use Right Lane", "category": "Highway", "code": "R4-5", "panels": [ { "face": "R4-5" } ], "support": { "type": "post" } },
+    { "id": "R4-9_StayInLane", "name": "Stay In Lane", "category": "Highway", "code": "R4-9", "panels": [ { "face": "R4-9" } ], "support": { "type": "post" } },
+    { "id": "R4-16_KeepRightExceptToPass", "name": "Keep Right Except To Pass", "category": "Highway", "code": "R4-16", "panels": [ { "face": "R4-16" } ], "support": { "type": "post" } },
+    { "id": "R4-17_DoNotDriveOnShoulder", "name": "Do Not Drive On Shoulder", "category": "Highway", "code": "R4-17", "panels": [ { "face": "R4-17" } ], "support": { "type": "post" } },
+    { "id": "R8-4_EmergencyParkingOnly", "name": "Emergency Parking Only", "category": "Highway", "code": "R8-4", "panels": [ { "face": "R8-4" } ], "support": { "type": "post" } },
+    { "id": "R8-7_EmergencyStoppingOnly", "name": "Emergency Stopping Only", "category": "Highway", "code": "R8-7", "panels": [ { "face": "R8-7" } ], "support": { "type": "post" } },
+    { "id": "R5-10_FreewayProhibitions", "name": "Pedestrians, Bicycles, Motor-Driven Cycles Prohibited", "category": "Highway", "code": "R5-10c", "panels": [ { "face": "R5-10c" } ], "support": { "type": "post" } },
+    { "id": "R13-1_WeighStation", "name": "Trucks Must Enter Weigh Station", "category": "Highway", "code": "R13-1", "panels": [ { "face": "R13-1" } ], "support": { "type": "twin-square", "spacing": 22 } },
+    { "id": "W19-1_FreewayEnds1Mile", "name": "Freeway Ends 1 Mile", "category": "Highway", "code": "W19-1", "panels": [ { "face": "W19-1" } ], "support": { "type": "twin-square", "spacing": 30 } },
+    { "id": "W19-5_AllTrafficMustExit", "name": "All Traffic Must Exit", "category": "Highway", "code": "W19-5", "panels": [ { "face": "W19-5" } ], "support": { "type": "twin-square", "spacing": 30 } },
+    { "id": "W3-7_RampMeterAhead", "name": "Ramp Meter Ahead", "category": "Highway", "code": "W3-7", "panels": [ { "face": "W3-7" } ], "support": { "type": "post" } },
+    { "id": "W5-4_RampNarrows", "name": "Ramp Narrows", "category": "Highway", "code": "W5-4", "panels": [ { "face": "W5-4" } ], "support": { "type": "post" } },
+    { "id": "W13-2_Exit15MPH", "name": "Exit 15 MPH (Advisory Speed)", "category": "Highway", "code": "W13-2", "panels": [ { "face": "W13-2" } ], "support": { "type": "post" } },
+    { "id": "W13-3_Ramp25MPH", "name": "Ramp 25 MPH (Advisory Speed)", "category": "Highway", "code": "W13-3", "panels": [ { "face": "W13-3" } ], "support": { "type": "post" } }
   ]
 }

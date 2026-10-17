@@ -5,25 +5,25 @@
       "id": "W1-1R", "note": "Turn right",
       "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
       "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
-      "elements": [ { "type": "symbol", "symbol": "turn-arrow", "x": 21.21, "y": 21.21, "width": 22.95, "height": 22.95 } ]
+      "elements": [ { "type": "symbol", "symbol": "turn-arrow", "x": 21.213, "y": 21.213, "width": 30, "height": 30 } ]
     },
     {
       "id": "W1-1L", "note": "Turn left",
       "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
       "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
-      "elements": [ { "type": "symbol", "symbol": "turn-arrow", "x": 21.21, "y": 21.21, "width": 22.95, "height": 22.95, "mirrorX": true } ]
+      "elements": [ { "type": "symbol", "symbol": "turn-arrow", "x": 21.213, "y": 21.213, "width": 30, "height": 30, "mirrorX": true } ]
     },
     {
       "id": "W1-2R", "note": "Curve right",
       "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
       "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
-      "elements": [ { "type": "symbol", "symbol": "curve-arrow", "x": 21.21, "y": 21.21, "width": 21.76, "height": 23.04 } ]
+      "elements": [ { "type": "symbol", "symbol": "curve-arrow", "x": 21.213, "y": 21.213, "width": 28, "height": 28 } ]
     },
     {
       "id": "W1-2L", "note": "Curve left",
       "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
       "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
-      "elements": [ { "type": "symbol", "symbol": "curve-arrow", "x": 21.21, "y": 21.21, "width": 21.76, "height": 23.04, "mirrorX": true } ]
+      "elements": [ { "type": "symbol", "symbol": "curve-arrow", "x": 21.213, "y": 21.213, "width": 28, "height": 28, "mirrorX": true } ]
     },
     {
       "id": "W1-6R", "note": "One-direction large arrow (sharp turn), 48 x 24",
@@ -205,6 +205,596 @@
       "shape": "rect", "width": 24, "height": 12, "cornerRadius": 1.5, "background": "yellow",
       "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
       "elements": [ { "type": "text", "text": "AHEAD", "font": "C", "size": 5.0, "x": 12, "y": 6, "maxWidth": 19 } ]
+    },
+    {
+      "id": "W4-1R", "note": "Merge (traffic entering from the right)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "merge", "x": 21.213, "y": 21.213, "width": 30, "height": 30 } ]
+    },
+    {
+      "id": "W4-3R", "note": "Added lane (right)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "added-lane", "x": 21.213, "y": 21.213, "width": 30, "height": 30 } ]
+    },
+    {
+      "id": "W4-5R", "note": "Merge, entering roadway (right)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "entering-merge", "x": 21.213, "y": 21.213, "width": 30, "height": 30 } ]
+    },
+    {
+      "id": "W4-6R", "note": "Added lane, entering roadway (right)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "entering-added-lane", "x": 21.213, "y": 21.213, "width": 30, "height": 30 } ]
+    },
+    {
+      "id": "W4-7R", "note": "HEAVY MERGE FROM RIGHT",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "HEAVY", "font": "C", "size": 4.9, "x": 25.456, "y": 14.063, "maxWidth": 16.027 },
+        { "type": "text", "text": "MERGE", "font": "C", "size": 4.9, "x": 25.456, "y": 21.658, "maxWidth": 31.217 },
+        { "type": "text", "text": "FROM", "font": "C", "size": 4.9, "x": 25.456, "y": 29.253, "maxWidth": 31.217 },
+        { "type": "text", "text": "RIGHT", "font": "C", "size": 4.9, "x": 25.456, "y": 36.848, "maxWidth": 16.027 }
+      ]
+    },
+    {
+      "id": "W9-2R", "note": "LANE ENDS MERGE RIGHT",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "LANE ENDS", "font": "C", "size": 5.4, "x": 25.456, "y": 17.086, "maxWidth": 21.572 },
+        { "type": "text", "text": "MERGE", "font": "C", "size": 5.4, "x": 25.456, "y": 25.456, "maxWidth": 38.312 },
+        { "type": "text", "text": "RIGHT", "font": "C", "size": 5.4, "x": 25.456, "y": 33.826, "maxWidth": 21.572 }
+      ]
+    },
+    {
+      "id": "W4-1L", "note": "Merge (traffic entering from the left)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "merge", "x": 21.213, "y": 21.213, "width": 30, "height": 30, "mirrorX": true } ]
+    },
+    {
+      "id": "W4-3L", "note": "Added lane (left)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "added-lane", "x": 21.213, "y": 21.213, "width": 30, "height": 30, "mirrorX": true } ]
+    },
+    {
+      "id": "W4-5L", "note": "Merge, entering roadway (left)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "entering-merge", "x": 21.213, "y": 21.213, "width": 30, "height": 30, "mirrorX": true } ]
+    },
+    {
+      "id": "W4-6L", "note": "Added lane, entering roadway (left)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "entering-added-lane", "x": 21.213, "y": 21.213, "width": 30, "height": 30, "mirrorX": true } ]
+    },
+    {
+      "id": "W4-7L", "note": "HEAVY MERGE FROM LEFT",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "HEAVY", "font": "C", "size": 4.9, "x": 25.456, "y": 14.063, "maxWidth": 16.027 },
+        { "type": "text", "text": "MERGE", "font": "C", "size": 4.9, "x": 25.456, "y": 21.658, "maxWidth": 31.217 },
+        { "type": "text", "text": "FROM", "font": "C", "size": 4.9, "x": 25.456, "y": 29.253, "maxWidth": 31.217 },
+        { "type": "text", "text": "LEFT", "font": "C", "size": 4.9, "x": 25.456, "y": 36.848, "maxWidth": 16.027 }
+      ]
+    },
+    {
+      "id": "W9-2L", "note": "LANE ENDS MERGE LEFT",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "LANE ENDS", "font": "C", "size": 5.4, "x": 25.456, "y": 17.086, "maxWidth": 21.572 },
+        { "type": "text", "text": "MERGE", "font": "C", "size": 5.4, "x": 25.456, "y": 25.456, "maxWidth": 38.312 },
+        { "type": "text", "text": "LEFT", "font": "C", "size": 5.4, "x": 25.456, "y": 33.826, "maxWidth": 21.572 }
+      ]
+    },
+    {
+      "id": "W4-5aP", "note": "NO MERGE AREA plaque, 18 x 24",
+      "shape": "rect", "width": 18, "height": 24, "cornerRadius": 1.125, "background": "yellow",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "D", "size": 4.4, "x": 9, "y": 4.96, "maxWidth": 14.25 },
+        { "type": "text", "text": "MERGE", "font": "D", "size": 4.4, "x": 9, "y": 12, "maxWidth": 14.25 },
+        { "type": "text", "text": "AREA", "font": "D", "size": 4.4, "x": 9, "y": 19.04, "maxWidth": 14.25 }
+      ]
+    },
+    {
+      "id": "W1-3R", "note": "Reverse turn (right)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "reverse-turn", "x": 21.213, "y": 21.213, "width": 18.5, "height": 23 } ]
+    },
+    {
+      "id": "W1-4R", "note": "Reverse curve (right)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "reverse-curve", "x": 21.213, "y": 21.213, "width": 18.5, "height": 23 } ]
+    },
+    {
+      "id": "W1-5R", "note": "Winding road (right)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "winding-road", "x": 21.213, "y": 21.213, "width": 13, "height": 23.5 } ]
+    },
+    {
+      "id": "W1-11R", "note": "Hairpin curve (right)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "hairpin", "x": 21.213, "y": 21.6, "width": 22, "height": 19.5 } ]
+    },
+    {
+      "id": "W1-3L", "note": "Reverse turn (left)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "reverse-turn", "x": 21.213, "y": 21.213, "width": 18.5, "height": 23, "mirrorX": true } ]
+    },
+    {
+      "id": "W1-4L", "note": "Reverse curve (left)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "reverse-curve", "x": 21.213, "y": 21.213, "width": 18.5, "height": 23, "mirrorX": true } ]
+    },
+    {
+      "id": "W1-5L", "note": "Winding road (left)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "winding-road", "x": 21.213, "y": 21.213, "width": 13, "height": 23.5, "mirrorX": true } ]
+    },
+    {
+      "id": "W1-11L", "note": "Hairpin curve (left)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "hairpin", "x": 21.213, "y": 21.6, "width": 22, "height": 19.5, "mirrorX": true } ]
+    },
+    {
+      "id": "W1-7", "note": "Two-direction large arrow, 48 x 24",
+      "shape": "rect", "width": 48, "height": 24, "cornerRadius": 1.5, "background": "yellow",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "arrow", "x1": 24, "y1": 12, "x2": 43.5, "y2": 12, "shaftWidth": 6, "headWidth": 16, "headLength": 11 },
+        { "type": "arrow", "x1": 24, "y1": 12, "x2": 4.5, "y2": 12, "shaftWidth": 6, "headWidth": 16, "headLength": 11 }
+      ]
+    },
+    {
+      "id": "W13-1P-25", "note": "Advisory speed plaque 25 MPH, 18 x 18",
+      "shape": "rect", "width": 18, "height": 18, "cornerRadius": 1.125, "background": "yellow",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "25", "font": "E", "size": 7, "x": 9, "y": 5.3, "maxWidth": 14.25 },
+        { "type": "text", "text": "MPH", "font": "D", "size": 3.2, "x": 9, "y": 14.6, "maxWidth": 14.25 }
+      ]
+    },
+    {
+      "id": "W13-Curve15", "note": "CURVE 15 MPH advisory speed sign, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "yellow",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "CURVE", "font": "D", "size": 4, "x": 12, "y": 4.7, "maxWidth": 20 },
+        { "type": "rect", "x": 12, "y": 8.6, "width": 21.2, "height": 0.6, "color": "black" },
+        { "type": "text", "text": "15", "font": "E", "size": 9, "x": 12, "y": 16.6, "maxWidth": 20 },
+        { "type": "text", "text": "MPH", "font": "D", "size": 3.6, "x": 12, "y": 25.4, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "W13-Curve35", "note": "CURVE 35 MPH advisory speed sign, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "yellow",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "CURVE", "font": "D", "size": 4, "x": 12, "y": 4.7, "maxWidth": 20 },
+        { "type": "rect", "x": 12, "y": 8.6, "width": 21.2, "height": 0.6, "color": "black" },
+        { "type": "text", "text": "35", "font": "E", "size": 9, "x": 12, "y": 16.6, "maxWidth": 20 },
+        { "type": "text", "text": "MPH", "font": "D", "size": 3.6, "x": 12, "y": 25.4, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "W2-5", "note": "Y intersection",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "y-intersection", "x": 21.213, "y": 21.213, "width": 22, "height": 22.5 } ]
+    },
+    {
+      "id": "W3-4", "note": "BE PREPARED TO STOP, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "BE", "font": "C", "size": 5.8, "x": 25.456, "y": 16.466, "maxWidth": 19.932 },
+        { "type": "text", "text": "PREPARED", "font": "C", "size": 5.8, "x": 25.456, "y": 25.456, "maxWidth": 37.912 },
+        { "type": "text", "text": "TO STOP", "font": "C", "size": 5.8, "x": 25.456, "y": 34.446, "maxWidth": 19.932 }
+      ]
+    },
+    {
+      "id": "W3-5", "note": "Reduced speed limit ahead (SPEED LIMIT 35 inset), 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "arrow", "x1": 25.456, "y1": 14.8, "x2": 25.456, "y2": 4.4, "shaftWidth": 2.6, "headWidth": 7.6, "headLength": 5 },
+        { "type": "rect", "x": 25.456, "y": 28.9, "width": 15.2, "height": 19, "cornerRadius": 0.8, "color": "white", "strokeColor": "black", "strokeWidth": 0.4 },
+        { "type": "text", "text": "SPEED", "font": "D", "size": 2.3, "x": 25.456, "y": 22.5, "maxWidth": 12.5 },
+        { "type": "text", "text": "LIMIT", "font": "D", "size": 2.3, "x": 25.456, "y": 25.6, "maxWidth": 12.5 },
+        { "type": "text", "text": "35", "font": "E", "size": 6, "x": 25.456, "y": 32.9, "maxWidth": 12.5 }
+      ]
+    },
+    {
+      "id": "W5-1", "note": "ROAD NARROWS",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "ROAD", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "NARROWS", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W5-1S", "note": "Road narrows (symbol)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "road-narrows", "x": 21.213, "y": 21.213, "width": 30, "height": 30 } ]
+    },
+    {
+      "id": "W5-2", "note": "NARROW BRIDGE",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "NARROW", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "BRIDGE", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W5-3", "note": "ONE LANE BRIDGE",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "ONE LANE", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "BRIDGE", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W7-1a", "note": "Hill with 8% grade",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "symbol", "symbol": "truck", "x": 22, "y": 17.4, "width": 15.5, "height": 8.4, "rotation": 19.8 },
+        { "type": "symbol", "symbol": "slope", "x": 21.21, "y": 21.6, "width": 21, "height": 7.5 },
+        { "type": "text", "text": "8%", "font": "D", "size": 4.6, "x": 21.213, "y": 30.2, "maxWidth": 12 }
+      ]
+    },
+    {
+      "id": "W8-1", "note": "BUMP, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "text": "BUMP", "font": "C", "size": 9.5, "x": 25.456, "y": 25.456, "maxWidth": 34.212 } ]
+    },
+    {
+      "id": "W8-2", "note": "DIP, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "text": "DIP", "font": "C", "size": 9.5, "x": 25.456, "y": 25.456, "maxWidth": 34.212 } ]
+    },
+    {
+      "id": "W8-3", "note": "PAVEMENT ENDS, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "PAVEMENT", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "ENDS", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-4", "note": "SOFT SHOULDER, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "SOFT", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "SHOULDER", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-7", "note": "LOOSE GRAVEL, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "LOOSE", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "GRAVEL", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-8", "note": "ROUGH ROAD, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "ROUGH", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "ROAD", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-9", "note": "LOW SHOULDER, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "LOW", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "SHOULDER", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-11", "note": "UNEVEN LANES, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "UNEVEN", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "LANES", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-12", "note": "NO CENTER LINE, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "C", "size": 5.8, "x": 25.456, "y": 16.466, "maxWidth": 19.932 },
+        { "type": "text", "text": "CENTER", "font": "C", "size": 5.8, "x": 25.456, "y": 25.456, "maxWidth": 37.912 },
+        { "type": "text", "text": "LINE", "font": "C", "size": 5.8, "x": 25.456, "y": 34.446, "maxWidth": 19.932 }
+      ]
+    },
+    {
+      "id": "W8-14", "note": "FALLEN ROCKS, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "FALLEN", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "ROCKS", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-15", "note": "GROOVED PAVEMENT, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "GROOVED", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "PAVEMENT", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-18", "note": "ROAD MAY FLOOD, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "ROAD", "font": "C", "size": 5.8, "x": 25.456, "y": 16.466, "maxWidth": 19.932 },
+        { "type": "text", "text": "MAY", "font": "C", "size": 5.8, "x": 25.456, "y": 25.456, "maxWidth": 37.912 },
+        { "type": "text", "text": "FLOOD", "font": "C", "size": 5.8, "x": 25.456, "y": 34.446, "maxWidth": 19.932 }
+      ]
+    },
+    {
+      "id": "W8-21", "note": "GUSTY WINDS AREA, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "GUSTY", "font": "C", "size": 5.8, "x": 25.456, "y": 16.466, "maxWidth": 19.932 },
+        { "type": "text", "text": "WINDS", "font": "C", "size": 5.8, "x": 25.456, "y": 25.456, "maxWidth": 37.912 },
+        { "type": "text", "text": "AREA", "font": "C", "size": 5.8, "x": 25.456, "y": 34.446, "maxWidth": 19.932 }
+      ]
+    },
+    {
+      "id": "W8-22", "note": "FOG AREA, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "FOG", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "AREA", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-23", "note": "NO SHOULDER, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "SHOULDER", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-25", "note": "SHOULDER ENDS, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "SHOULDER", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "ENDS", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W8-6", "note": "TRUCK CROSSING, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "TRUCK", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "CROSSING", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W17-1", "note": "SPEED HUMP, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "SPEED", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "HUMP", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W18-1", "note": "NO TRAFFIC SIGNS, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "C", "size": 5.8, "x": 25.456, "y": 16.466, "maxWidth": 19.932 },
+        { "type": "text", "text": "TRAFFIC", "font": "C", "size": 5.8, "x": 25.456, "y": 25.456, "maxWidth": 37.912 },
+        { "type": "text", "text": "SIGNS", "font": "C", "size": 5.8, "x": 25.456, "y": 34.446, "maxWidth": 19.932 }
+      ]
+    },
+    {
+      "id": "W23-2", "note": "NEW TRAFFIC PATTERN AHEAD, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "NEW", "font": "C", "size": 4.9, "x": 25.456, "y": 14.063, "maxWidth": 16.027 },
+        { "type": "text", "text": "TRAFFIC", "font": "C", "size": 4.9, "x": 25.456, "y": 21.658, "maxWidth": 31.217 },
+        { "type": "text", "text": "PATTERN", "font": "C", "size": 4.9, "x": 25.456, "y": 29.253, "maxWidth": 31.217 },
+        { "type": "text", "text": "AHEAD", "font": "C", "size": 4.9, "x": 25.456, "y": 36.848, "maxWidth": 16.027 }
+      ]
+    },
+    {
+      "id": "W26-1", "note": "WATCH FOR STOPPED TRAFFIC, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "WATCH FOR", "font": "C", "size": 5.8, "x": 25.456, "y": 16.466, "maxWidth": 19.932 },
+        { "type": "text", "text": "STOPPED", "font": "C", "size": 5.8, "x": 25.456, "y": 25.456, "maxWidth": 37.912 },
+        { "type": "text", "text": "TRAFFIC", "font": "C", "size": 5.8, "x": 25.456, "y": 34.446, "maxWidth": 19.932 }
+      ]
+    },
+    {
+      "id": "W-Slow", "note": "SLOW, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "text": "SLOW", "font": "C", "size": 9.5, "x": 25.456, "y": 25.456, "maxWidth": 34.212 } ]
+    },
+    {
+      "id": "W-Tunnel", "note": "TUNNEL, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [ { "type": "text", "text": "TUNNEL", "font": "C", "size": 9.5, "x": 25.456, "y": 25.456, "maxWidth": 34.212 } ]
+    },
+    {
+      "id": "W-BlindCurve", "note": "BLIND CURVE, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "BLIND", "font": "C", "size": 7.2, "x": 25.456, "y": 19.876, "maxWidth": 25.352 },
+        { "type": "text", "text": "CURVE", "font": "C", "size": 7.2, "x": 25.456, "y": 31.036, "maxWidth": 25.352 }
+      ]
+    },
+    {
+      "id": "W25-1", "note": "ONCOMING TRAFFIC HAS EXTENDED GREEN, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "yellow",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "ONCOMING", "font": "C", "size": 3.6, "x": 12, "y": 4.2, "maxWidth": 20 },
+        { "type": "text", "text": "TRAFFIC", "font": "C", "size": 3.6, "x": 12, "y": 9.6, "maxWidth": 20 },
+        { "type": "text", "text": "HAS", "font": "C", "size": 3.6, "x": 12, "y": 15, "maxWidth": 20 },
+        { "type": "text", "text": "EXTENDED", "font": "C", "size": 3.6, "x": 12, "y": 20.4, "maxWidth": 20 },
+        { "type": "text", "text": "GREEN", "font": "C", "size": 3.6, "x": 12, "y": 25.8, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "W11-4", "note": "Cattle Crossing",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "cow", "x": 21.21, "y": 22, "width": 24, "height": 15.6 } ]
+    },
+    {
+      "id": "W11-7", "note": "Equestrian Crossing",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "horse-rider", "x": 20.6, "y": 20.6, "width": 22, "height": 19.2 } ]
+    },
+    {
+      "id": "W11-8", "note": "Emergency Vehicles (Fire Station)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "fire-truck", "x": 21.21, "y": 21.6, "width": 26, "height": 10.6 } ]
+    },
+    {
+      "id": "W11-10", "note": "Truck Crossing (Symbol)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "truck", "x": 21.21, "y": 21.6, "width": 24, "height": 12.9 } ]
+    },
+    {
+      "id": "W11-16", "note": "Bear Crossing",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "bear", "x": 21.21, "y": 21.6, "width": 24, "height": 15 } ]
+    },
+    {
+      "id": "W11-21", "note": "Moose Crossing",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "moose", "x": 20.8, "y": 20.6, "width": 19.5, "height": 21.6 } ]
+    },
+    {
+      "id": "W11-14", "note": "Horse-drawn vehicles",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "symbol", "symbol": "horse", "x": 12.4, "y": 21.9, "width": 13.4, "height": 10.4 },
+        { "type": "symbol", "symbol": "buggy", "x": 28, "y": 21, "width": 12.8, "height": 11.4 }
+      ]
+    },
+    {
+      "id": "W-Tank", "note": "Military tank crossing",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "tank", "x": 21.213, "y": 22, "width": 27, "height": 10.5 } ]
+    },
+    {
+      "id": "W-XingP", "note": "X-ING plaque, 24 x 12",
+      "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "yellow",
+      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [ { "type": "text", "text": "X-ING", "font": "D", "size": 6, "x": 12, "y": 6, "maxWidth": 20.75 } ]
+    },
+    {
+      "id": "W-Aircraft", "note": "Low flying aircraft",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "airplane", "x": 21.213, "y": 21.213, "width": 20, "height": 20 } ]
+    },
+    {
+      "id": "W-LowFlyingP", "note": "LOW FLYING AIRCRAFT plaque, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "yellow",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "LOW", "font": "C", "size": 3.2, "x": 12, "y": 3.88, "maxWidth": 20.25 },
+        { "type": "text", "text": "FLYING", "font": "C", "size": 3.2, "x": 12, "y": 9, "maxWidth": 20.25 },
+        { "type": "text", "text": "AIRCRAFT", "font": "C", "size": 3.2, "x": 12, "y": 14.12, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "W-Checkpoint", "note": "SECURITY CHECKPOINT AHEAD, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "SECURITY", "font": "C", "size": 5, "x": 25.456, "y": 17.706, "maxWidth": 23.212 },
+        { "type": "text", "text": "CHECKPOINT", "font": "C", "size": 5, "x": 25.456, "y": 25.456, "maxWidth": 38.712 },
+        { "type": "text", "text": "AHEAD", "font": "C", "size": 5, "x": 25.456, "y": 33.206, "maxWidth": 23.212 }
+      ]
+    },
+    {
+      "id": "W12-1", "note": "Double arrow (pass either side)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "arrow", "x1": 17.6, "y1": 14, "x2": 7.4, "y2": 24.2, "shaftWidth": 3, "headWidth": 8.4, "headLength": 6 },
+        { "type": "arrow", "x1": 24.8, "y1": 14, "x2": 35, "y2": 24.2, "shaftWidth": 3, "headWidth": 8.4, "headLength": 6 }
+      ]
+    },
+    {
+      "id": "W12-2", "note": "LOW CLEARANCE 12'-6\"",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "polygon", "points": [ 19.956, 10.8, 30.956, 10.8, 25.456, 4.8 ], "color": "black" },
+        { "type": "text", "text": "12'-6\"", "font": "D", "size": 7, "x": 25.456, "y": 25.456, "maxWidth": 30 },
+        { "type": "polygon", "points": [ 19.956, 40.1, 30.956, 40.1, 25.456, 46.1 ], "color": "black" }
+      ]
+    },
+    {
+      "id": "W11-5", "note": "Farm vehicles (tractor)",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "tractor", "x": 21.6, "y": 20.6, "width": 24, "height": 19.2 } ]
     }
   ]
 }

@@ -10,6 +10,21 @@
     { "id": "D9-10_Information", "name": "Information", "category": "Services", "code": "D9-10", "panels": [ { "face": "D9-10" } ], "support": { "type": "post" } },
     { "id": "D9_Parking", "name": "Parking", "category": "Services", "code": "D4-1 style", "panels": [ { "face": "D9-P" } ], "support": { "type": "post" } },
     { "id": "I-5_Airport", "name": "Airport", "category": "Services", "code": "I-5", "panels": [ { "face": "I-5" } ], "support": { "type": "post" } },
-    { "id": "D9-6_Accessible", "name": "Accessible Facilities", "category": "Services", "code": "D9-6", "panels": [ { "face": "D9-6" } ], "support": { "type": "post" } }
+    { "id": "D9-6_Accessible", "name": "Accessible Facilities", "category": "Services", "code": "D9-6", "panels": [ { "face": "D9-6" } ], "support": { "type": "post" } },
+    { "id": "D9-2_HospitalSymbol", "name": "Hospital (H Symbol)", "category": "Services", "code": "D9-2", "panels": [ { "face": "D9-2H" } ], "support": { "type": "post" } },
+    { "id": "D9-3_Camping", "name": "Camping", "category": "Services", "code": "D9-3", "panels": [ { "face": "D9-3" } ], "support": { "type": "post" } },
+    { "id": "D9-11_Diesel", "name": "Diesel Fuel", "category": "Services", "code": "D9-11", "panels": [ { "face": "D9-11" } ], "support": { "type": "post" } },
+    { "id": "D9-11b_EVCharging", "name": "Electric Vehicle Charging", "category": "Services", "code": "D9-11b", "panels": [ { "face": "D9-11b" } ], "support": { "type": "post" } },
+    { "id": "D9-13_EmergencyMedicalServices", "name": "Emergency Medical Services", "category": "Services", "code": "D9-13", "panels": [ { "face": "D9-13" } ], "support": { "type": "post" } },
+    { "id": "D9-14_Police", "name": "Police", "category": "Services", "code": "D9-14", "panels": [ { "face": "D9-14" } ], "support": { "type": "post" } },
+    { "id": "D9-16_TruckParking", "name": "Truck Parking", "category": "Services", "code": "D9-16", "panels": [ { "face": "D9-16" } ], "support": { "type": "post" } },
+    { "id": "D9-20_Pharmacy", "name": "Pharmacy", "category": "Services", "code": "D9-20", "panels": [ { "face": "D9-20" } ], "support": { "type": "post" } },
+    { "id": "D12-4_EmergencyCall911", "name": "Emergency Call 911", "category": "Services", "code": "D12-4", "panels": [ { "face": "D12-4" } ], "support": { "type": "post" } },
+    { "id": "D12-5_TravelInfo511", "name": "Travel Info Call 511", "category": "Services", "code": "D12-5", "panels": [ { "face": "D12-5" } ], "support": { "type": "post" } },
+    { "id": "EM4-1b_FalloutShelter", "name": "Fallout Shelter", "category": "Services", "code": "EM4-1b",
+      "description": "Civil defense emergency management sign.", "panels": [ { "face": "EM4-1b" } ], "support": { "type": "post" } },
+    { "id": "EM4-1_EmergencyShelter", "name": "Emergency Shelter", "category": "Services", "code": "EM4-1", "panels": [ { "face": "EM4-1" } ], "support": { "type": "post" } },
+    { "id": "EM_FalloutShelterSymbol", "name": "Fallout Shelter (Building Marker)", "category": "Services", "code": "civil defense",
+      "description": "Yellow and black civil defense marker posted at designated shelter buildings.", "panels": [ { "face": "EM-FalloutSymbol" } ], "support": { "type": "post", "mountHeight": 72 } }
   ]
 }

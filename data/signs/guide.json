@@ -1,5 +1,16 @@
 {
   "signs": [
-    { "id": "D11-1_BikeRoute", "name": "Bike Route", "category": "Guide", "code": "D11-1", "panels": [ { "face": "D11-1" } ], "support": { "type": "post" } }
+    { "id": "D11-1_BikeRoute", "name": "Bike Route", "category": "Guide", "code": "D11-1", "panels": [ { "face": "D11-1" } ], "support": { "type": "post" } },
+    { "id": "EM1-1_EvacuationRoute", "name": "Evacuation Route", "category": "Guide", "code": "EM1-1", "panels": [ { "face": "EM1-1" } ], "support": { "type": "post" } },
+    { "id": "EM1-1a_HurricaneEvacuationRoute", "name": "Hurricane Evacuation Route", "category": "Guide", "code": "EM1-1a", "panels": [ { "face": "EM1-1a" } ], "support": { "type": "post" } },
+    { "id": "I3-6_BusStation", "name": "Bus Station", "category": "Guide", "code": "I3-6", "panels": [ { "face": "I3-6" } ], "support": { "type": "post" } },
+    { "id": "I3-9_FerryTerminal", "name": "Ferry Terminal", "category": "Guide", "code": "I3-9", "panels": [ { "face": "I3-9" } ], "support": { "type": "post" } },
+    { "id": "I4-1_Library", "name": "Library", "category": "Guide", "code": "I4-1", "panels": [ { "face": "I4-1" } ], "support": { "type": "post" } },
+    { "id": "D_MainGateRight", "name": "Main Gate (Right)", "category": "Guide", "code": "installation",
+      "description": "Wayfinding sign to the main gate of a base or government campus.", "panels": [ { "face": "D-MainGateR" } ], "support": { "type": "post" } },
+    { "id": "D_VisitorControlCenterRight", "name": "Visitor Control Center (Right)", "category": "Guide", "code": "installation",
+      "description": "Directs visitors to the pass and ID office of a military installation.", "panels": [ { "face": "D-VisitorCenterR" } ], "support": { "type": "post" } },
+    { "id": "D_ScenicOverlookLeft", "name": "Scenic Overlook (Left)", "category": "Guide", "code": "recreational", "panels": [ { "face": "D-ScenicOverlookL" } ], "support": { "type": "post" } },
+    { "id": "D_HistoricSiteRight", "name": "Historic Site (Right)", "category": "Guide", "code": "recreational", "panels": [ { "face": "D-HistoricSiteR" } ], "support": { "type": "post" } }
   ]
 }

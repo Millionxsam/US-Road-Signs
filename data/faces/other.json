@@ -39,6 +39,140 @@
         { "type": "rect", "x": 6, "y": 40.0, "width": 3, "height": 22, "rotation": -45, "color": "black" }
       ] },
     { "id": "OM4-3", "note": "End-of-roadway marker (Type 4, red diamond), 18 in", "shape": "diamond", "width": 18, "height": 18, "cornerRadius": 1.0, "background": "red",
-      "elements": [] }
+      "elements": [] },
+    {
+      "id": "R8-8", "note": "DO NOT STOP ON TRACKS, 24 x 30",
+      "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "DO NOT", "font": "D", "size": 4, "x": 12, "y": 6, "maxWidth": 20 },
+        { "type": "text", "text": "STOP", "font": "D", "size": 4, "x": 12, "y": 12, "maxWidth": 20 },
+        { "type": "text", "text": "ON", "font": "D", "size": 4, "x": 12, "y": 18, "maxWidth": 20 },
+        { "type": "text", "text": "TRACKS", "font": "D", "size": 4, "x": 12, "y": 24, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R8-9", "note": "TRACKS OUT OF SERVICE, 24 x 24",
+      "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "white",
+      "border": { "color": "black", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "text", "text": "TRACKS", "font": "D", "size": 4.2, "x": 12, "y": 5.28, "maxWidth": 20 },
+        { "type": "text", "text": "OUT OF", "font": "D", "size": 4.2, "x": 12, "y": 12, "maxWidth": 20 },
+        { "type": "text", "text": "SERVICE", "font": "D", "size": 4.2, "x": 12, "y": 18.72, "maxWidth": 20 }
+      ]
+    },
+    {
+      "id": "R15-8", "note": "LOOK both ways at track, 36 x 18",
+      "shape": "rect", "width": 36, "height": 18, "cornerRadius": 1.125, "background": "white",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "arrow", "x1": 18, "y1": 6.6, "x2": 33, "y2": 6.6, "shaftWidth": 2.2, "headWidth": 6, "headLength": 4.2 },
+        { "type": "arrow", "x1": 18, "y1": 6.6, "x2": 3, "y2": 6.6, "shaftWidth": 2.2, "headWidth": 6, "headLength": 4.2 },
+        { "type": "text", "text": "LOOK", "font": "D", "size": 4.4, "x": 18, "y": 13.4, "maxWidth": 30 }
+      ]
+    },
+    {
+      "id": "R15-3P", "note": "EXEMPT plaque, 24 x 12",
+      "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "white",
+      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
+      "elements": [ { "type": "text", "text": "EXEMPT", "font": "D", "size": 5, "x": 12, "y": 6, "maxWidth": 20.75 } ]
+    },
+    {
+      "id": "W10-7", "note": "Light rail transit / trolley crossing",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [ { "type": "symbol", "symbol": "trolley", "x": 21.213, "y": 21.6, "width": 26, "height": 12.5 } ]
+    },
+    {
+      "id": "W10-9", "note": "NO TRAIN HORN",
+      "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "yellow",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "NO", "font": "C", "size": 5, "x": 21.213, "y": 13.463, "maxWidth": 15.526 },
+        { "type": "text", "text": "TRAIN", "font": "C", "size": 5, "x": 21.213, "y": 21.213, "maxWidth": 31.026 },
+        { "type": "text", "text": "HORN", "font": "C", "size": 5, "x": 21.213, "y": 28.963, "maxWidth": 15.526 }
+      ]
+    },
+    {
+      "id": "W10-8", "note": "TRAINS MAY EXCEED 80 MPH, 36 in",
+      "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "yellow",
+      "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
+      "elements": [
+        { "type": "text", "text": "TRAINS", "font": "C", "size": 5.4, "x": 25.456, "y": 17.086, "maxWidth": 21.572 },
+        { "type": "text", "text": "MAY EXCEED", "font": "C", "size": 5.4, "x": 25.456, "y": 25.456, "maxWidth": 38.312 },
+        { "type": "text", "text": "80 MPH", "font": "C", "size": 5.4, "x": 25.456, "y": 33.826, "maxWidth": 21.572 }
+      ]
+    },
+    {
+      "id": "W10-13P", "note": "NO GATES OR LIGHTS plaque, 24 x 18",
+      "shape": "rect", "width": 24, "height": 18, "cornerRadius": 1.125, "background": "yellow",
+      "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 0.75 },
+      "elements": [
+        { "type": "text", "text": "NO GATES", "font": "C", "size": 4, "x": 12, "y": 5.8, "maxWidth": 20.25 },
+        { "type": "text", "text": "OR LIGHTS", "font": "C", "size": 4, "x": 12, "y": 12.2, "maxWidth": 20.25 }
+      ]
+    },
+    {
+      "id": "OM1-2", "note": "Type 1 object marker: black diamond with nine yellow reflectors, 18 in",
+      "shape": "diamond", "width": 18, "height": 18, "cornerRadius": 1, "background": "black",
+      "elements": [
+        { "type": "ellipse", "x": 12.728, "y": 5.528, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 9.128, "y": 9.128, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 16.328, "y": 9.128, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 5.528, "y": 12.728, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 12.728, "y": 12.728, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 19.928, "y": 12.728, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 9.128, "y": 16.328, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 16.328, "y": 16.328, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 12.728, "y": 19.928, "width": 3, "height": 3, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 }
+      ]
+    },
+    {
+      "id": "OM1-3", "note": "Type 1 object marker: plain yellow diamond, 18 in",
+      "shape": "diamond", "width": 18, "height": 18, "cornerRadius": 1, "background": "yellow",
+      "elements": []
+    },
+    {
+      "id": "OM4-2", "note": "End-of-roadway marker: black diamond with nine red reflectors, 18 in",
+      "shape": "diamond", "width": 18, "height": 18, "cornerRadius": 1, "background": "black",
+      "elements": [
+        { "type": "ellipse", "x": 12.728, "y": 5.528, "width": 3, "height": 3, "color": "#D0202A" },
+        { "type": "ellipse", "x": 9.128, "y": 9.128, "width": 3, "height": 3, "color": "#D0202A" },
+        { "type": "ellipse", "x": 16.328, "y": 9.128, "width": 3, "height": 3, "color": "#D0202A" },
+        { "type": "ellipse", "x": 5.528, "y": 12.728, "width": 3, "height": 3, "color": "#D0202A" },
+        { "type": "ellipse", "x": 12.728, "y": 12.728, "width": 3, "height": 3, "color": "#D0202A" },
+        { "type": "ellipse", "x": 19.928, "y": 12.728, "width": 3, "height": 3, "color": "#D0202A" },
+        { "type": "ellipse", "x": 9.128, "y": 16.328, "width": 3, "height": 3, "color": "#D0202A" },
+        { "type": "ellipse", "x": 16.328, "y": 16.328, "width": 3, "height": 3, "color": "#D0202A" },
+        { "type": "ellipse", "x": 12.728, "y": 19.928, "width": 3, "height": 3, "color": "#D0202A" }
+      ]
+    },
+    {
+      "id": "OM2-1V", "note": "Type 2 vertical marker with three yellow reflectors, 6 x 12",
+      "shape": "rect", "width": 6, "height": 12, "cornerRadius": 0.4, "background": "white",
+      "elements": [
+        { "type": "ellipse", "x": 3, "y": 2.4, "width": 3.2, "height": 3.2, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 3, "y": 6, "width": 3.2, "height": 3.2, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 },
+        { "type": "ellipse", "x": 3, "y": 9.6, "width": 3.2, "height": 3.2, "color": "yellow", "strokeColor": "#B98A08", "strokeWidth": 0.25 }
+      ]
+    },
+    {
+      "id": "OM3-C", "note": "Type 3 center object marker (chevron stripes), 12 x 36",
+      "shape": "rect", "width": 12, "height": 36, "cornerRadius": 0.5, "background": "yellow",
+      "elements": [
+        { "type": "rect", "x": 3, "y": -2, "width": 3, "height": 11, "color": "black", "rotation": 45 },
+        { "type": "rect", "x": 9, "y": -2, "width": 3, "height": 11, "color": "black", "rotation": -45 },
+        { "type": "rect", "x": 3, "y": 6.5, "width": 3, "height": 11, "color": "black", "rotation": 45 },
+        { "type": "rect", "x": 9, "y": 6.5, "width": 3, "height": 11, "color": "black", "rotation": -45 },
+        { "type": "rect", "x": 3, "y": 15, "width": 3, "height": 11, "color": "black", "rotation": 45 },
+        { "type": "rect", "x": 9, "y": 15, "width": 3, "height": 11, "color": "black", "rotation": -45 },
+        { "type": "rect", "x": 3, "y": 23.5, "width": 3, "height": 11, "color": "black", "rotation": 45 },
+        { "type": "rect", "x": 9, "y": 23.5, "width": 3, "height": 11, "color": "black", "rotation": -45 },
+        { "type": "rect", "x": 3, "y": 32, "width": 3, "height": 11, "color": "black", "rotation": 45 },
+        { "type": "rect", "x": 9, "y": 32, "width": 3, "height": 11, "color": "black", "rotation": -45 },
+        { "type": "rect", "x": 3, "y": 40.5, "width": 3, "height": 11, "color": "black", "rotation": 45 },
+        { "type": "rect", "x": 9, "y": 40.5, "width": 3, "height": 11, "color": "black", "rotation": -45 }
+      ]
+    }
   ]
 }

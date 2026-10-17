@@ -9,6 +9,20 @@
     { "id": "OM3-R_ObjectMarkerRight", "name": "Object Marker (Pass Right)", "category": "Other", "code": "OM3-R",
       "description": "Type 3 object marker for obstructions; stripes slope down toward the side traffic passes.", "panels": [ { "face": "OM3-R" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" },
     { "id": "OM4-3_EndOfRoadway", "name": "End Of Roadway Marker", "category": "Other", "code": "OM4-3",
-      "panels": [ { "face": "OM4-3" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" }
+      "panels": [ { "face": "OM4-3" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" },
+    { "id": "R8-8_DoNotStopOnTracks", "name": "Do Not Stop On Tracks", "category": "Other", "code": "R8-8", "panels": [ { "face": "R8-8" } ], "support": { "type": "post" } },
+    { "id": "R8-9_TracksOutOfService", "name": "Tracks Out Of Service", "category": "Other", "code": "R8-9", "panels": [ { "face": "R8-9" } ], "support": { "type": "post" } },
+    { "id": "R15-8_Look", "name": "Look (Both Ways)", "category": "Other", "code": "R15-8",
+      "description": "Mounted under the crossbuck at crossings.", "panels": [ { "face": "R15-8" } ], "support": { "type": "post" } },
+    { "id": "R15-1_RailroadCrossbuckExempt", "name": "Railroad Crossbuck (Exempt)", "category": "Other", "code": "R15-1 + R15-3P", "panels": [ { "face": "R15-1" }, { "face": "R15-3P", "gapAbove": 2 } ], "support": { "type": "round-pipe" }, "flashingColor": "white" },
+    { "id": "W10-7_LightRailCrossing", "name": "Light Rail Crossing", "category": "Other", "code": "W10-7", "panels": [ { "face": "W10-7" } ], "support": { "type": "post" } },
+    { "id": "W10-9_NoTrainHorn", "name": "No Train Horn", "category": "Other", "code": "W10-9", "panels": [ { "face": "W10-9" } ], "support": { "type": "post" } },
+    { "id": "W10-8_TrainsMayExceed80", "name": "Trains May Exceed 80 MPH", "category": "Other", "code": "W10-8", "panels": [ { "face": "W10-8" } ], "support": { "type": "post" } },
+    { "id": "W10-1_RailroadAheadNoGates", "name": "Railroad Crossing Ahead (No Gates Or Lights)", "category": "Other", "code": "W10-1 + W10-13P", "panels": [ { "face": "W10-1" }, { "face": "W10-13P" } ], "support": { "type": "post" } },
+    { "id": "OM1-2_ObjectMarkerReflectors", "name": "Object Marker (Type 1, Reflectors)", "category": "Other", "code": "OM1-2", "panels": [ { "face": "OM1-2" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" },
+    { "id": "OM1-3_ObjectMarkerYellow", "name": "Object Marker (Type 1, Yellow)", "category": "Other", "code": "OM1-3", "panels": [ { "face": "OM1-3" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" },
+    { "id": "OM4-2_EndOfRoadwayReflectors", "name": "End Of Roadway Marker (Reflectors)", "category": "Other", "code": "OM4-2", "panels": [ { "face": "OM4-2" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" },
+    { "id": "OM2-1V_CulvertMarker", "name": "Object Marker (Type 2, Vertical)", "category": "Other", "code": "OM2-1V", "panels": [ { "face": "OM2-1V" } ], "support": { "type": "post", "mountHeight": 36 }, "flashingColor": "white" },
+    { "id": "OM3-C_ObjectMarkerCenter", "name": "Object Marker (Pass Either Side)", "category": "Other", "code": "OM3-C", "panels": [ { "face": "OM3-C" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" }
   ]
 }
