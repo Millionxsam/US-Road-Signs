@@ -25,11 +25,14 @@ namespace SignForge.Rendering
             public Vec2 Size;
             public double Left;
             public double Top;
+            /// <summary>LED color name when this panel carries flashing LEDs, else null.</summary>
+            public string LedColor;
         }
 
         public PixelBuffer RenderSign(SignDef sign, int size)
         {
             var boxes = new List<PanelBox>();
+            int litPanel = sign.IsFlashing ? BorderLights.LitPanelIndex(m_Catalog, sign) : -1;
             double cursor = 0;
             double minX = double.MaxValue, maxX = double.MinValue;
             for (int i = 0; i < sign.Panels.Count; i++)
@@ -39,7 +42,7 @@ namespace SignForge.Rendering
                 Vec2 s = ShapeLibrary.BoundingSize(face);
                 if (i > 0)
                     cursor += panel.GapAbove >= 0 ? panel.GapAbove : m_Catalog.Root.Mounting.PanelGap;
-                var box = new PanelBox { Face = face, Size = s, Left = panel.OffsetX - s.X * 0.5, Top = cursor };
+                var box = new PanelBox { Face = face, Size = s, Left = panel.OffsetX - s.X * 0.5, Top = cursor, LedColor = i == litPanel ? sign.LedColor : null };
                 boxes.Add(box);
                 cursor += s.Y;
                 minX = Math.Min(minX, box.Left);
@@ -48,10 +51,10 @@ namespace SignForge.Rendering
             return RenderBoxes(boxes, cursor, minX, maxX, size, postStub: true);
         }
 
-        public PixelBuffer RenderFace(FaceDef face, int size, bool postStub)
+        public PixelBuffer RenderFace(FaceDef face, int size, bool postStub, string ledColor = null)
         {
             Vec2 s = ShapeLibrary.BoundingSize(face);
-            var boxes = new List<PanelBox> { new PanelBox { Face = face, Size = s, Left = -s.X * 0.5, Top = 0 } };
+            var boxes = new List<PanelBox> { new PanelBox { Face = face, Size = s, Left = -s.X * 0.5, Top = 0, LedColor = ledColor } };
             return RenderBoxes(boxes, s.Y, -s.X * 0.5, s.X * 0.5, size, postStub);
         }
 
@@ -85,12 +88,37 @@ namespace SignForge.Rendering
                     dc.PushTransform(new TranslateTransform(box.Left, box.Top));
                     m_Faces.DrawFace(dc, box.Face, fillCanvas: false);
                     dc.DrawGeometry(null, outlinePen, FaceRenderer.OutlineGeometry(box.Face, 0f, box.Face.CornerRadius, box.Size));
+                    if (box.LedColor != null)
+                        DrawLights(dc, box, scale);
                     dc.Pop();
                 }
 
                 dc.Pop();
                 dc.Pop();
             }, size, size, 3);
+        }
+
+        /// <summary>LEDs shown lit, enlarged so they stay readable at icon size.</summary>
+        private void DrawLights(DrawingContext dc, PanelBox box, double scale)
+        {
+            FlashingDefaults settings = m_Catalog.Root.Flashing ?? new FlashingDefaults();
+            RgbaColor c = settings.GetColor(box.LedColor);
+            Color led = Color.FromRgb(c.R, c.G, c.B);
+            double radius = Math.Max(settings.LampDiameter * 0.75, 2.6 / scale);
+
+            var glow = new RadialGradientBrush(Color.FromArgb(170, led.R, led.G, led.B), Color.FromArgb(0, led.R, led.G, led.B));
+            glow.Freeze();
+            var lens = new RadialGradientBrush(Color.FromRgb(0xFF, 0xF6, 0xC8), led) { GradientOrigin = new Point(0.4, 0.35) };
+            lens.Freeze();
+            var bezel = new Pen(new SolidColorBrush(Color.FromRgb(0x1A, 0x1A, 0x1A)), radius * 0.35);
+            bezel.Freeze();
+
+            foreach (Vec2 p in BorderLights.Positions(box.Face, settings))
+            {
+                var center = new Point(box.Size.X * 0.5 + p.X, box.Size.Y * 0.5 - p.Y);
+                dc.DrawEllipse(glow, null, center, radius * 2.3, radius * 2.3);
+                dc.DrawEllipse(lens, bezel, center, radius, radius);
+            }
         }
     }
 }

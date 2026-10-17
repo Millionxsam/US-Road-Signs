@@ -78,6 +78,8 @@ namespace SignForge.Preview
                     return Path.GetFullPath(Path.Combine(contentFolder, "Textures", "Materials", "Aluminum_BaseColor.png"));
                 case MaterialSlot.DarkPlastic:
                     return Path.GetFullPath(Path.Combine(contentFolder, "Textures", "Materials", "DarkPlastic_BaseColor.png"));
+                case MaterialSlot.Lamp:
+                    return Path.GetFullPath(Path.Combine(contentFolder, "Textures", "Materials", "Lamp_Emissive.png"));
                 default:
                     return null;
             }

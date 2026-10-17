@@ -151,11 +151,14 @@ namespace SignForge
             foreach (CategoryDef category in catalog.Root.Categories)
             {
                 string faceId = category.IconFace;
+                string iconCategory = category.FlashingOf ?? category.Id;
                 if (string.IsNullOrEmpty(faceId) || !catalog.Faces.ContainsKey(faceId))
-                    faceId = catalog.Signs.Where(s => s.Category == category.Id).Select(s => s.Panels[0].Face).FirstOrDefault();
+                    faceId = catalog.Signs.Where(s => s.Category == iconCategory).Select(s => s.Panels[0].Face).FirstOrDefault();
                 if (faceId == null)
                     continue;
-                icons.RenderFace(catalog.Faces[faceId], 96, postStub: false).SavePng(Path.Combine(outFolder, category.Icon));
+                string ledColor = category.FlashingOf == null ? null
+                    : catalog.Signs.Where(s => s.Category == category.Id).Select(s => s.LedColor).FirstOrDefault() ?? "amber";
+                icons.RenderFace(catalog.Faces[faceId], 96, postStub: false, ledColor: ledColor).SavePng(Path.Combine(outFolder, category.Icon));
             }
             MenuDef menu = catalog.Root.Menu;
             string menuFace = !string.IsNullOrEmpty(menu.IconFace) && catalog.Faces.ContainsKey(menu.IconFace) ? menu.IconFace : catalog.Signs[0].Panels[0].Face;

@@ -67,6 +67,7 @@ namespace USRoadSigns.Geometry
             public Vec2 Size;          // bounding box, inches
             public float CenterX;      // inches, viewer-right positive
             public float CenterY;      // inches above ground
+            public float FrontZ = float.NaN;   // inches, printed face plane (set when the plate is built)
             public float Top => CenterY + Size.Y * 0.5f;
             public float Bottom => CenterY - Size.Y * 0.5f;
         }
@@ -82,6 +83,7 @@ namespace USRoadSigns.Geometry
             public MeshPart Perforated = new MeshPart(MaterialSlot.Perforated);
             public MeshPart Aluminum = new MeshPart(MaterialSlot.Aluminum);
             public MeshPart Dark = new MeshPart(MaterialSlot.DarkPlastic);
+            public MeshPart Lamp = new MeshPart(MaterialSlot.Lamp);
             public Dictionary<string, MeshPart> Faces = new Dictionary<string, MeshPart>(StringComparer.Ordinal);
             public List<string> FaceOrder = new List<string>();
             public AssemblyMesh Result = new AssemblyMesh();
@@ -138,6 +140,9 @@ namespace USRoadSigns.Geometry
                     BuildSinglePost(ctx, PostKind.SquareTube);
                     break;
             }
+
+            if (sign.IsFlashing)
+                AddBorderLights(ctx);
 
             Finish(ctx);
             return ctx.Result;
@@ -228,6 +233,7 @@ namespace USRoadSigns.Geometry
             FaceDef face = panel.Face;
             float thickness = ctx.Mounting.PlateThickness;
             float zFront = zBack + thickness;
+            panel.FrontZ = zFront;
             List<Vec2> outline = ShapeLibrary.Outline(face, 0f, face.CornerRadius);
             Vec2 size = panel.Size;
 
@@ -273,6 +279,32 @@ namespace USRoadSigns.Geometry
                     ToObject(panel.CenterX + a.X, panel.CenterY + a.Y, zBack),
                     normal, new Vec2(u0, v1), new Vec2(u1, v1), new Vec2(u1, 0f), new Vec2(u0, 0f));
                 perimeter += len;
+            }
+        }
+
+        /// <summary>
+        /// Flashing variant: LED units on the border of the lit panel. Each is a black bezel ring around a
+        /// domed lens; the lenses form their own sub-mesh so the game can drive them as one flashing light.
+        /// </summary>
+        private static void AddBorderLights(Context ctx)
+        {
+            FlashingDefaults settings = ctx.Catalog.Root.Flashing ?? new FlashingDefaults();
+            int index = BorderLights.LitPanelIndex(ctx.Catalog, ctx.Sign);
+            PanelLayout panel = ctx.Panels[index];
+            if (float.IsNaN(panel.FrontZ))
+                return;
+
+            float lensRadius = settings.LampDiameter * 0.5f;
+            float bezelRadius = lensRadius + 0.22f;
+            const float bezelDepth = 0.22f;
+            const float lensDepth = 0.12f;
+            foreach (Vec2 p in BorderLights.Positions(panel.Face, settings))
+            {
+                Vec3 basePoint = ToObject(panel.CenterX + p.X, panel.CenterY + p.Y, panel.FrontZ);
+                ctx.Dark.AddCylinder(basePoint, Vec3.Forward, bezelDepth * K, bezelRadius * K, 12, capStart: false, capEnd: true, smooth: true);
+                Vec3 lensBase = basePoint + new Vec3(0f, 0f, bezelDepth * K);
+                ctx.Lamp.AddCylinder(lensBase, Vec3.Forward, lensDepth * K, lensRadius * K, 12, capStart: false, capEnd: true, smooth: true);
+                ctx.Lamp.AddCylinder(lensBase + new Vec3(0f, 0f, lensDepth * K), Vec3.Forward, 0.08f * K, lensRadius * 0.7f * K, 12, capStart: false, capEnd: true, smooth: true);
             }
         }
 
@@ -704,6 +736,7 @@ namespace USRoadSigns.Geometry
             AddIfUsed(ctx.Dark);
             foreach (string faceId in ctx.FaceOrder)
                 AddIfUsed(ctx.Faces[faceId]);
+            AddIfUsed(ctx.Lamp);
 
             var min = new Vec3(float.MaxValue, float.MaxValue, float.MaxValue);
             var max = new Vec3(float.MinValue, float.MinValue, float.MinValue);

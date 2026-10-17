@@ -1,53 +1,6 @@
 {
-  "_comment": "Route markers, route-sign auxiliaries, lane-use signs and freeway guide signs. Guide legends use mixed-case Series EM.",
+  "_comment": "Lane-use signs and freeway guide signs.",
   "faces": [
-    { "id": "M1-1-5", "note": "Interstate 5 shield, 24 x 24", "shape": "shield-interstate", "width": 24, "height": 24, "background": "blue",
-      "elements": [ { "type": "shield", "kind": "interstate", "text": "5", "x": 12, "y": 12, "width": 24, "height": 24 } ] },
-    { "id": "M1-1-80", "note": "Interstate 80 shield, 24 x 24", "shape": "shield-interstate", "width": 24, "height": 24, "background": "blue",
-      "elements": [ { "type": "shield", "kind": "interstate", "text": "80", "x": 12, "y": 12, "width": 24, "height": 24 } ] },
-    { "id": "M1-1-95", "note": "Interstate 95 shield, 24 x 24", "shape": "shield-interstate", "width": 24, "height": 24, "background": "blue",
-      "elements": [ { "type": "shield", "kind": "interstate", "text": "95", "x": 12, "y": 12, "width": 24, "height": 24 } ] },
-    { "id": "M1-1-405", "note": "Interstate 405 shield, 30 x 24", "shape": "shield-interstate", "width": 30, "height": 24, "background": "blue",
-      "elements": [ { "type": "shield", "kind": "interstate", "text": "405", "x": 15, "y": 12, "width": 30, "height": 24 } ] },
-
-    { "id": "M1-4-66", "note": "US Route 66 marker, 24 x 24", "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "black",
-      "elements": [ { "type": "shield", "kind": "us", "text": "66", "x": 12, "y": 12, "width": 21, "height": 21 } ] },
-    { "id": "M1-4-101", "note": "US Route 101 marker, 30 x 24", "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.5, "background": "black",
-      "elements": [ { "type": "shield", "kind": "us", "text": "101", "x": 15, "y": 12, "width": 27, "height": 21 } ] },
-
-    { "id": "M1-5-27", "note": "State Route 27 marker (generic circle), 24 x 24", "shape": "rect", "width": 24, "height": 24, "cornerRadius": 1.5, "background": "black",
-      "elements": [ { "type": "shield", "kind": "state", "text": "27", "x": 12, "y": 12, "width": 21, "height": 21 } ] },
-    { "id": "M1-5-128", "note": "State Route 128 marker (generic ellipse), 30 x 24", "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.5, "background": "black",
-      "elements": [ { "type": "shield", "kind": "state", "text": "128", "x": 15, "y": 12, "width": 27, "height": 21 } ] },
-
-    { "id": "M3-1", "note": "NORTH, 24 x 12", "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "text", "text": "NORTH", "font": "D", "size": 5.0, "x": 12, "y": 6, "maxWidth": 20 } ] },
-    { "id": "M3-2", "note": "EAST, 24 x 12", "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "text", "text": "EAST", "font": "D", "size": 5.0, "x": 12, "y": 6, "maxWidth": 20 } ] },
-    { "id": "M3-3", "note": "SOUTH, 24 x 12", "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "text", "text": "SOUTH", "font": "D", "size": 5.0, "x": 12, "y": 6, "maxWidth": 20 } ] },
-    { "id": "M3-4", "note": "WEST, 24 x 12", "shape": "rect", "width": 24, "height": 12, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "text", "text": "WEST", "font": "D", "size": 5.0, "x": 12, "y": 6, "maxWidth": 20 } ] },
-    { "id": "M2-1", "note": "JCT, 21 x 15", "shape": "rect", "width": 21, "height": 15, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "text", "text": "JCT", "font": "D", "size": 6.0, "x": 10.5, "y": 7.5, "maxWidth": 17 } ] },
-    { "id": "M4-5", "note": "TO, 21 x 15", "shape": "rect", "width": 21, "height": 15, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "text", "text": "TO", "font": "D", "size": 6.0, "x": 10.5, "y": 7.5, "maxWidth": 17 } ] },
-    { "id": "M6-1L", "note": "Directional arrow auxiliary, left, 21 x 15", "shape": "rect", "width": 21, "height": 15, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "arrow", "x1": 17.5, "y1": 7.5, "x2": 3.2, "y2": 7.5, "shaftWidth": 2.6, "headWidth": 7.2, "headLength": 5.2 } ] },
-    { "id": "M6-1R", "note": "Directional arrow auxiliary, right, 21 x 15", "shape": "rect", "width": 21, "height": 15, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "arrow", "x1": 3.5, "y1": 7.5, "x2": 17.8, "y2": 7.5, "shaftWidth": 2.6, "headWidth": 7.2, "headLength": 5.2 } ] },
-    { "id": "M6-3", "note": "Directional arrow auxiliary, straight, 21 x 15", "shape": "rect", "width": 21, "height": 15, "cornerRadius": 0.75, "background": "white",
-      "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [ { "type": "arrow", "x1": 10.5, "y1": 13.2, "x2": 10.5, "y2": 1.8, "shaftWidth": 2.6, "headWidth": 7.2, "headLength": 5.0 } ] },
-
     { "id": "R3-5L", "note": "Left turn only lane-use sign, 30 x 36", "shape": "rect", "width": 30, "height": 36, "cornerRadius": 1.875, "background": "white",
       "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
       "elements": [
@@ -73,36 +26,6 @@
       "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
       "elements": [ { "type": "symbol", "symbol": "arrow-straight-left", "x": 15, "y": 18, "width": 24, "height": 26, "mirrorX": true } ] },
 
-    { "id": "D2-2", "note": "Two-destination distance sign, 78 x 30", "shape": "rect", "width": 78, "height": 30, "cornerRadius": 2.25, "background": "green",
-      "border": { "color": "white", "width": 0.75, "inset": 0.5, "radius": 1.75 },
-      "elements": [
-        { "type": "text", "text": "Oak Park", "font": "EM", "size": 6.0, "x": 5, "y": 9.2, "align": "left", "color": "white" },
-        { "type": "text", "text": "5", "font": "EM", "size": 6.0, "x": 73, "y": 9.2, "align": "right", "color": "white" },
-        { "type": "text", "text": "Riverside", "font": "EM", "size": 6.0, "x": 5, "y": 21.2, "align": "left", "color": "white" },
-        { "type": "text", "text": "17", "font": "EM", "size": 6.0, "x": 73, "y": 21.2, "align": "right", "color": "white" }
-      ] },
-    { "id": "D10-1", "note": "Mile marker (reference location sign), 12 x 30", "shape": "rect", "width": 12, "height": 30, "cornerRadius": 0.75, "background": "green",
-      "border": { "color": "white", "width": 0.375, "inset": 0.25, "radius": 0.5 },
-      "elements": [
-        { "type": "text", "text": "MILE", "font": "C", "size": 2.6, "x": 6, "y": 4.8, "maxWidth": 9.5, "color": "white" },
-        { "type": "text", "lines": [ "1", "2" ], "font": "D", "size": 7.0, "lineSpacing": 10.5, "x": 6, "y": 18.6, "color": "white" }
-      ] },
-
-    { "id": "E1-5P-23", "note": "EXIT 23 tab, 48 x 15", "shape": "rect", "width": 48, "height": 15, "cornerRadius": 1.5, "background": "green",
-      "border": { "color": "white", "width": 0.625, "inset": 0.5, "radius": 1.0 },
-      "elements": [ { "type": "text", "text": "EXIT 23", "font": "E", "size": 7.0, "x": 24, "y": 7.5, "maxWidth": 40, "color": "white" } ] },
-    { "id": "E1-AdvMain", "note": "Advance exit guide sign: Main St 1 MILE, 108 x 54", "shape": "rect", "width": 108, "height": 54, "cornerRadius": 3, "background": "green",
-      "border": { "color": "white", "width": 1.0, "inset": 0.75, "radius": 2.25 },
-      "elements": [
-        { "type": "text", "text": "Main St", "font": "EM", "size": 12, "x": 54, "y": 19, "maxWidth": 94, "color": "white" },
-        { "type": "text", "text": "1 MILE", "font": "E", "size": 8.5, "x": 54, "y": 39.5, "maxWidth": 90, "color": "white" }
-      ] },
-    { "id": "E1-ExitMain", "note": "Exit direction sign: Main St with up-right arrow, 108 x 54", "shape": "rect", "width": 108, "height": 54, "cornerRadius": 3, "background": "green",
-      "border": { "color": "white", "width": 1.0, "inset": 0.75, "radius": 2.25 },
-      "elements": [
-        { "type": "text", "text": "Main St", "font": "EM", "size": 12, "x": 48, "y": 19, "maxWidth": 80, "color": "white" },
-        { "type": "symbol", "symbol": "diagonal-arrow", "x": 90, "y": 38, "width": 19, "height": 19, "color": "white" }
-      ] },
     { "id": "E5-1", "note": "Exit gore sign, 48 x 36", "shape": "rect", "width": 48, "height": 36, "cornerRadius": 2.25, "background": "green",
       "border": { "color": "white", "width": 0.75, "inset": 0.5, "radius": 1.75 },
       "elements": [

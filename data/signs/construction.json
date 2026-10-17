@@ -21,12 +21,12 @@
     { "id": "R11-2_RoadClosedBarricade", "name": "Road Closed (Type III Barricade)", "category": "Construction", "code": "R11-2",
       "description": "ROAD CLOSED sign mounted on a Type III barricade with three striped rails.",
       "panels": [ { "face": "R11-2" }, { "face": "BarricadeRailR", "gapAbove": 1 }, { "face": "BarricadeRailR", "gapAbove": 10 }, { "face": "BarricadeRailR", "gapAbove": 10 } ],
-      "support": { "type": "barricade", "mountHeight": 10, "spacing": 50 } },
+      "support": { "type": "barricade", "mountHeight": 10, "spacing": 50 }, "flashingColor": "white" },
     { "id": "R11-4_RoadClosedThruTraffic", "name": "Road Closed To Thru Traffic", "category": "Construction", "code": "R11-4",
       "panels": [ { "face": "R11-4" } ], "support": { "type": "twin-square", "mountHeight": 60, "spacing": 36 } },
     { "id": "W20-7_Flagger", "name": "Flagger Ahead", "category": "Construction", "code": "W20-7", "panels": [ { "face": "W20-7" } ], "support": { "type": "u-channel" } },
     { "id": "W20-7_FlaggerPortable", "name": "Flagger Ahead (Portable Stand)", "category": "Construction", "code": "W20-7",
       "panels": [ { "face": "W20-7" } ], "support": { "type": "portable-stand" } },
-    { "id": "G20-2_EndRoadWork", "name": "End Road Work", "category": "Construction", "code": "G20-2", "panels": [ { "face": "G20-2" } ], "support": { "type": "u-channel" } }
+    { "id": "G20-2_EndRoadWork", "name": "End Road Work", "category": "Construction", "code": "G20-2", "panels": [ { "face": "G20-2" } ], "support": { "type": "u-channel" }, "flashingColor": "white" }
   ]
 }

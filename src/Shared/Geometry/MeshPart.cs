@@ -17,6 +17,8 @@ namespace USRoadSigns.Geometry
         DarkPlastic = 3,
         /// <summary>Printed retroreflective sign face, textured per face id.</summary>
         Face = 4,
+        /// <summary>Flashing LED lenses (emissive, animated by the game's light system).</summary>
+        Lamp = 5,
     }
 
     /// <summary>

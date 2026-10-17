@@ -44,13 +44,23 @@
       "id": "R4-7", "note": "Keep Right symbol sign, 24 x 30 conventional road",
       "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
       "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 1.125 },
-      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 15, "width": 17, "height": 24 } ]
+      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 14.4, "width": 20.1, "height": 25.8 } ]
+    },
+    {
+      "id": "R6-3", "note": "DIVIDED HIGHWAY crossing, 30 x 24",
+      "shape": "rect", "width": 30, "height": 24, "cornerRadius": 1.875, "background": "white",
+      "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
+      "elements": [
+        { "type": "text", "text": "DIVIDED", "font": "E", "size": 2.6, "x": 15, "y": 5.0, "maxWidth": 14.5 },
+        { "type": "symbol", "symbol": "divided-highway-crossing", "x": 15, "y": 12.06, "width": 24.5, "height": 9.875 },
+        { "type": "text", "text": "HIGHWAY", "font": "E", "size": 2.6, "x": 15, "y": 19.2, "maxWidth": 16.5 }
+      ]
     },
     {
       "id": "R4-8", "note": "Keep Left symbol sign (mirror of R4-7)",
       "shape": "rect", "width": 24, "height": 30, "cornerRadius": 1.5, "background": "white",
       "border": { "color": "black", "width": 0.5, "inset": 0.375, "radius": 1.125 },
-      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 15, "width": 17, "height": 24, "mirrorX": true } ]
+      "elements": [ { "type": "symbol", "symbol": "keep-right", "x": 12, "y": 14.4, "width": 20.1, "height": 25.8, "mirrorX": true } ]
     },
     {
       "id": "R6-1R", "note": "ONE WAY, arrow pointing right, 36 x 12",
@@ -134,7 +144,7 @@
       ]
     },
     {
-      "id": "R7-1B", "note": "NO PARKING ANY TIME with double arrow, 12 x 18",
+      "id": "R7-1B", "flashingPadding": 1.5, "note": "NO PARKING ANY TIME with double arrow, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -146,7 +156,7 @@
       ]
     },
     {
-      "id": "R7-1R", "note": "NO PARKING ANY TIME, arrow right, 12 x 18",
+      "id": "R7-1R", "flashingPadding": 1.5, "note": "NO PARKING ANY TIME, arrow right, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -157,7 +167,7 @@
       ]
     },
     {
-      "id": "R7-1L", "note": "NO PARKING ANY TIME, arrow left, 12 x 18",
+      "id": "R7-1L", "flashingPadding": 1.5, "note": "NO PARKING ANY TIME, arrow left, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -168,7 +178,7 @@
       ]
     },
     {
-      "id": "R7-7R", "note": "NO PARKING BUS STOP, arrow right, 12 x 18",
+      "id": "R7-7R", "flashingPadding": 1.5, "note": "NO PARKING BUS STOP, arrow right, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -178,7 +188,7 @@
       ]
     },
     {
-      "id": "R7-7L", "note": "NO PARKING BUS STOP, arrow left, 12 x 18",
+      "id": "R7-7L", "flashingPadding": 1.5, "note": "NO PARKING BUS STOP, arrow left, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -188,7 +198,7 @@
       ]
     },
     {
-      "id": "R7-8", "note": "RESERVED PARKING with International Symbol of Access, 12 x 18",
+      "id": "R7-8", "flashingPadding": 1.5, "note": "RESERVED PARKING with International Symbol of Access, 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "green", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
@@ -198,7 +208,7 @@
       ]
     },
     {
-      "id": "R-FireLane", "note": "FIRE LANE NO PARKING (common local sign), 12 x 18",
+      "id": "R-FireLane", "flashingPadding": 1.5, "note": "FIRE LANE NO PARKING (common local sign), 12 x 18",
       "shape": "rect", "width": 12, "height": 18, "cornerRadius": 0.75, "background": "white",
       "border": { "color": "red", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [

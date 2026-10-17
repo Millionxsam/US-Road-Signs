@@ -5,7 +5,7 @@ namespace SignForge.Rendering
 {
     /// <summary>
     /// Procedurally generates the small shared material textures (galvanized steel, perforated steel,
-    /// aluminum, dark plastic, sign-face mask maps). Cities: Skylines II conventions:
+    /// aluminum, dark plastic, LED lens, sign-face mask maps). Cities: Skylines II conventions:
     ///   _MaskMap:     R = metallic, G = coat, B = unused (black), A = glossiness   (linear)
     ///   _ControlMask: R/G/B = color variation masks, A = snow removal (white = no snow)  (linear)
     /// </summary>
@@ -29,6 +29,11 @@ namespace SignForge.Rendering
             (PixelBuffer darkColor, PixelBuffer darkMask) = DarkPlastic(64, 64, 31);
             darkColor.SavePng(Path.Combine(folder, "DarkPlastic_BaseColor.png"));
             darkMask.SavePng(Path.Combine(folder, "DarkPlastic_MaskMap.png"));
+
+            // Flashing LED lens: smoky clear when off (the light system adds the colored glow), glossy, white emissive mask.
+            Uniform(16, 16, 0x4A, 0x48, 0x44, 255).SavePng(Path.Combine(folder, "Lamp_BaseColor.png"));
+            Uniform(16, 16, 0, 0, 0, 235).SavePng(Path.Combine(folder, "Lamp_MaskMap.png"));
+            Uniform(16, 16, 255, 255, 255, 255).SavePng(Path.Combine(folder, "Lamp_Emissive.png"));
 
             Uniform(64, 64, 0, 92, 0, 150).SavePng(Path.Combine(folder, "Face_MaskMap.png"));
             Uniform(64, 64, 0, 0, 0, 255).SavePng(Path.Combine(folder, "ControlMask.png"));

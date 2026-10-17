@@ -1,6 +1,6 @@
 {
   "faces": [
-    { "id": "R15-1", "note": "Railroad crossbuck, blades 48 x 9 (bounding 40.3, center 20.15)", "shape": "crossbuck", "width": 48, "height": 9, "background": "white",
+    { "id": "R15-1", "flashingPadding": 2.5, "note": "Railroad crossbuck, blades 48 x 9 (bounding 40.3, center 20.15)", "shape": "crossbuck", "width": 48, "height": 9, "background": "white",
       "elements": [
         { "type": "rect", "x": 20.15, "y": 20.15, "width": 47.4, "height": 8.4, "rotation": 45, "color": "none", "strokeColor": "black", "strokeWidth": 0.5 },
         { "type": "rect", "x": 20.15, "y": 20.15, "width": 47.4, "height": 8.4, "rotation": -45, "color": "none", "strokeColor": "black", "strokeWidth": 0.5 },

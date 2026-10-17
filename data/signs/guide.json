@@ -1,11 +1,5 @@
 {
   "signs": [
-    { "id": "D1-1R_DestinationRight", "name": "Destination (Right)", "category": "Guide", "code": "D1-1", "panels": [ { "face": "D1-1R" } ], "support": { "type": "twin-square", "spacing": 36 } },
-    { "id": "D1-1L_DestinationLeft", "name": "Destination (Left)", "category": "Guide", "code": "D1-1", "panels": [ { "face": "D1-1L" } ], "support": { "type": "twin-square", "spacing": 36 } },
-    { "id": "D1-1S_DestinationStraight", "name": "Destination (Straight)", "category": "Guide", "code": "D1-1", "panels": [ { "face": "D1-1S" } ], "support": { "type": "twin-square", "spacing": 36 } },
-    { "id": "D1-2_TwoDestinations", "name": "Two Destinations", "category": "Guide", "code": "D1-2", "panels": [ { "face": "D1-2" } ], "support": { "type": "twin-square", "spacing": 40 } },
-    { "id": "D3-1_StreetName", "name": "Street Name Sign", "category": "Guide", "code": "D3-1", "panels": [ { "face": "D3-1" } ], "support": { "type": "post", "mountHeight": 96 } },
-    { "id": "I-2_CityLimit", "name": "City Limit", "category": "Guide", "code": "I-2", "panels": [ { "face": "I-2" } ], "support": { "type": "twin-square", "spacing": 30 } },
     { "id": "D11-1_BikeRoute", "name": "Bike Route", "category": "Guide", "code": "D11-1", "panels": [ { "face": "D11-1" } ], "support": { "type": "post" } }
   ]
 }

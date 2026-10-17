@@ -84,8 +84,19 @@ namespace SignForge.Rendering
             if (!fillCanvas)
                 dc.PushClip(plate);
 
+            bool shifted = face.ContentOffsetX != 0f || face.ContentOffsetY != 0f;
+            if (shifted)
+                dc.PushTransform(new TranslateTransform(face.ContentOffsetX, face.ContentOffsetY));
+            // Padded LED faces: keep the artwork inside the original plate (stripes, outlines that ran to its edge).
+            FaceDef original = face.PaddedFrom;
+            if (original != null)
+                dc.PushClip(OutlineGeometry(original, 0f, original.CornerRadius, ShapeLibrary.BoundingSize(original)));
             foreach (ElementDef element in face.Elements)
                 DrawElement(dc, face, element, background);
+            if (original != null)
+                dc.Pop();
+            if (shifted)
+                dc.Pop();
 
             if (face.Border != null && face.Border.Width > 0f && ShapeLibrary.SupportsBorderOutline(face.Shape))
             {

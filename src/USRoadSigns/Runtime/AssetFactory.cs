@@ -32,6 +32,7 @@ namespace USRoadSigns.Runtime
         public const string MaskMap = "_MaskMap";
         public const string ControlMask = "_ControlMask";
         public const string NormalMap = "_NormalMap";
+        public const string EmissiveColorMap = "_EmissiveColorMap";
 
         private readonly ILocalAssetDatabase m_Database;
         private readonly Task m_Registration;

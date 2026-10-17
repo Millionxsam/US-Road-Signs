@@ -116,6 +116,8 @@ namespace USRoadSigns.Catalog
                 }
             }
 
+            catalog.AddFlashingVariants(signIds);
+
             if (loadSymbols)
             {
                 foreach (string file in EnumerateJson(Path.Combine(rootFolder, "symbols")))
@@ -135,6 +137,99 @@ namespace USRoadSigns.Catalog
             }
 
             return catalog;
+        }
+
+        /// <summary>
+        /// For every category with "flashing": true, adds a "&lt;Name&gt; (Flashing)" category right after it and a
+        /// flashing copy of each of its signs (id + "_Flashing").
+        /// </summary>
+        private void AddFlashingVariants(HashSet<string> signIds)
+        {
+            var categories = new List<CategoryDef>();
+            var variants = new List<SignDef>();
+            foreach (CategoryDef source in Root.Categories)
+            {
+                categories.Add(source);
+                if (!source.Flashing)
+                    continue;
+
+                var flashing = new CategoryDef
+                {
+                    Id = source.Id + "Flashing",
+                    Name = source.Name + " (Flashing)",
+                    Description = source.Name + " signs with flashing LED lights built into the border.",
+                    Icon = "Icons/Categories/" + source.Id + "Flashing.png",
+                    IconFace = source.IconFace,
+                    Priority = source.Priority + 5,
+                    FlashingOf = source.Id,
+                };
+                if (m_Categories.ContainsKey(flashing.Id))
+                {
+                    m_Warnings.Add("catalog.json: category '" + flashing.Id + "' already exists; flashing variants of '" + source.Id + "' skipped");
+                    continue;
+                }
+
+                int added = 0;
+                foreach (SignDef sign in m_Signs)
+                {
+                    if (sign.Category != source.Id)
+                        continue;
+                    SignDef variant = sign.CloneAsFlashing(flashing.Id, sign.FlashingColor ?? source.FlashingColor ?? AutomaticLedColor(sign));
+                    UsePaddedFace(variant);
+                    if (!signIds.Add(variant.Id))
+                    {
+                        m_Warnings.Add("sign '" + variant.Id + "' already exists; flashing variant skipped");
+                        continue;
+                    }
+                    variants.Add(variant);
+                    added++;
+                }
+                if (added == 0)
+                    continue;
+                categories.Add(flashing);
+                m_Categories[flashing.Id] = flashing;
+            }
+            Root.Categories = categories;
+            m_Signs.AddRange(variants);
+        }
+
+        /// <summary>Points the variant's lit panel at the enlarged "-LED" face when its face asks for padding.</summary>
+        private void UsePaddedFace(SignDef variant)
+        {
+            int lit = Geometry.BorderLights.LitPanelIndex(this, variant);
+            FaceDef face = m_Faces[variant.Panels[lit].Face];
+            if (face.FlashingPadding <= 0f)
+                return;
+            string paddedId = face.Id + "-LED";
+            if (!m_Faces.ContainsKey(paddedId))
+            {
+                m_Faces[paddedId] = face.Padded(face.FlashingPadding);
+            }
+            var panels = new List<PanelDef>(variant.Panels.Count);
+            foreach (PanelDef panel in variant.Panels)
+                panels.Add(new PanelDef { Face = panel.Face, OffsetX = panel.OffsetX, GapAbove = panel.GapAbove });
+            panels[lit].Face = paddedId;
+            variant.Panels = panels;
+            variant.FlashingPanel = lit;
+        }
+
+        /// <summary>LED color matching the sign's color scheme, judged by the panel that carries the LEDs:
+        /// orange work-zone signs get orange LEDs, yellow and fluorescent yellow-green warning signs amber,
+        /// and regulatory signs (red, white or black) red.</summary>
+        private string AutomaticLedColor(SignDef sign)
+        {
+            FaceDef face = m_Faces[sign.Panels[Geometry.BorderLights.LitPanelIndex(this, sign)].Face];
+            string background = (face.Background ?? "").Trim().ToLowerInvariant();
+            switch (background)
+            {
+                case "orange":
+                    return "orange";
+                case "yellow":
+                case "fyg":
+                    return "amber";
+                default:
+                    return "red";
+            }
         }
 
         public string GetPrefabName(SignDef sign) => Root.PrefabPrefix + sign.Id;

@@ -22,6 +22,7 @@ namespace USRoadSigns.Catalog
         public List<CategoryDef> Categories = new List<CategoryDef>();
         public Dictionary<string, string> Colors = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         public MountingDefaults Mounting = new MountingDefaults();
+        public FlashingDefaults Flashing = new FlashingDefaults();
     }
 
     /// <summary>The top-level toolbar menu ("US Road Signs").</summary>
@@ -48,6 +49,18 @@ namespace USRoadSigns.Catalog
         /// <summary>Face rendered by the build tool to create the icon.</summary>
         public string IconFace;
         public int Priority;
+
+        /// <summary>When true, a "(Flashing)" copy of this category is generated holding a flashing-light
+        /// variant of every sign in it.</summary>
+        public bool Flashing;
+
+        /// <summary>LED color for every sign of this category's flashing copy (sign-level FlashingColor still wins).
+        /// Null = automatic from each sign's color scheme.</summary>
+        public string FlashingColor;
+
+        /// <summary>Set on generated flashing categories: id of the category they were copied from.</summary>
+        [Newtonsoft.Json.JsonIgnore]
+        public string FlashingOf;
     }
 
     /// <summary>Default mounting rules (MUTCD section 2A.18 urban mounting unless overridden).</summary>
@@ -67,6 +80,42 @@ namespace USRoadSigns.Catalog
 
         /// <summary>Aluminum sign blank thickness (0.080 in - 0.125 in in practice).</summary>
         public float PlateThickness = 0.125f;
+    }
+
+    /// <summary>
+    /// Flashing LED border lights (MUTCD 2A.07): small LEDs set into the sign border that flash together
+    /// 50-60 times per minute. Used by the generated "(Flashing)" sign variants.
+    /// </summary>
+    public sealed class FlashingDefaults
+    {
+        /// <summary>LED colors by name (#RRGGBB). Variants pick one automatically from the sign's color scheme
+        /// (orange signs: orange, yellow and fluorescent yellow-green signs: amber, everything else: red),
+        /// unless the sign sets <see cref="SignDef.FlashingColor"/>.</summary>
+        public Dictionary<string, string> Colors = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+        {
+            { "amber", "#FFB21E" },
+            { "red", "#FF2414" },
+            { "orange", "#FF7414" },
+            { "white", "#FFF4E0" },
+        };
+
+        public RgbaColor GetColor(string name)
+        {
+            if (!string.IsNullOrEmpty(name) && Colors != null && Colors.TryGetValue(name, out string hex) && RgbaColor.TryParseHex(hex, out RgbaColor color))
+                return color;
+            return RgbaColor.TryParseHex(name, out RgbaColor direct) ? direct : new RgbaColor(0xFF, 0xB2, 0x1E);
+        }
+
+        /// <summary>Glow strength (game EmissiveProperties intensity).</summary>
+        public float Intensity = 8f;
+        /// <summary>Length of one on/off cycle in seconds (1.1 s = about 55 flashes per minute).</summary>
+        public float Period = 1.1f;
+        /// <summary>Fraction of the cycle the LEDs are lit (MUTCD: one-half to two-thirds).</summary>
+        public float OnFraction = 0.5f;
+        /// <summary>Largest distance between neighboring LEDs along the border (inches). Corners always get one.</summary>
+        public float MaxSpacing = 16f;
+        /// <summary>Diameter of one LED lens (inches).</summary>
+        public float LampDiameter = 1.1f;
     }
 
     // ------------------------------------------------------------------------------------------
@@ -108,6 +157,39 @@ namespace USRoadSigns.Catalog
 
         /// <summary>Optional free-form note for maintainers.</summary>
         public string Note;
+
+        /// <summary>Flashing variants: extra plate margin (inches, each side) so the border LEDs clear the
+        /// artwork. The variant then uses an enlarged copy of this face ("&lt;id&gt;-LED") with the same artwork centered.</summary>
+        public float FlashingPadding;
+
+        /// <summary>Shift applied to every element when drawing (inches); set on generated padded faces.</summary>
+        [Newtonsoft.Json.JsonIgnore]
+        public float ContentOffsetX;
+        [Newtonsoft.Json.JsonIgnore]
+        public float ContentOffsetY;
+
+        /// <summary>On generated padded faces: the original face. Artwork is clipped to its plate outline.</summary>
+        [Newtonsoft.Json.JsonIgnore]
+        public FaceDef PaddedFrom;
+
+        /// <summary>Copy of this face grown by <paramref name="padding"/> on every side, artwork unchanged and centered.</summary>
+        public FaceDef Padded(float padding)
+        {
+            var copy = (FaceDef)MemberwiseClone();
+            copy.Id = Id + "-LED";
+            copy.Width = Width + padding * 2f;
+            copy.Height = Height + padding * 2f;
+            copy.FlashingPadding = 0f;
+            copy.TextureWidth = 0;
+            copy.TextureHeight = 0;
+            Geometry.Vec2 before = Geometry.ShapeLibrary.BoundingSize(this);
+            Geometry.Vec2 after = Geometry.ShapeLibrary.BoundingSize(copy);
+            copy.ContentOffsetX = ContentOffsetX + (after.X - before.X) * 0.5f;
+            copy.ContentOffsetY = ContentOffsetY + (after.Y - before.Y) * 0.5f;
+            copy.PaddedFrom = this;
+            copy.Note = "Generated: " + Id + " enlarged for flashing LEDs";
+            return copy;
+        }
     }
 
     public sealed class BorderDef
@@ -211,6 +293,36 @@ namespace USRoadSigns.Catalog
 
         /// <summary>In-game construction cost. -1 = automatic from sign area.</summary>
         public int ConstructionCost = -1;
+
+        /// <summary>LED color of the flashing variant (a name from catalog "flashing.colors"). Null = automatic
+        /// from the sign's color scheme.</summary>
+        public string FlashingColor;
+
+        /// <summary>Panel that carries the LEDs on the flashing variant. -1 = the largest panel (so supplemental
+        /// plaques stay unlit).</summary>
+        public int FlashingPanel = -1;
+
+        /// <summary>True for the generated flashing variant.</summary>
+        [Newtonsoft.Json.JsonIgnore]
+        public bool IsFlashing;
+
+        /// <summary>Resolved LED color name of the flashing variant.</summary>
+        [Newtonsoft.Json.JsonIgnore]
+        public string LedColor;
+
+        public SignDef CloneAsFlashing(string category, string ledColor)
+        {
+            var copy = (SignDef)MemberwiseClone();
+            copy.Id = Id + "_Flashing";
+            copy.Name = Name + " (Flashing)";
+            copy.Category = category;
+            copy.IsFlashing = true;
+            copy.LedColor = ledColor;
+            copy.Description = string.IsNullOrEmpty(Description)
+                ? "With flashing LED lights in the border."
+                : Description + " With flashing LED lights in the border.";
+            return copy;
+        }
     }
 
     public sealed class PanelDef

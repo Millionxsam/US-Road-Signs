@@ -4,7 +4,7 @@
       "description": "School advance warning at the start of a school zone.", "panels": [ { "face": "S1-1" }, { "face": "W16-9P" } ], "support": { "type": "post" } },
     { "id": "S5-1_SchoolZoneSpeedLimit20", "name": "School Zone Speed Limit 20", "category": "SchoolPedestrian", "code": "S5-1",
       "description": "School zone speed limit of 20 mph when the beacons are flashing.", "panels": [ { "face": "S5-1" } ], "support": { "type": "post" } },
-    { "id": "S5-2_EndSchoolZone", "name": "End School Zone", "category": "SchoolPedestrian", "code": "S5-2", "panels": [ { "face": "S5-2" } ], "support": { "type": "post" } },
+    { "id": "S5-2_EndSchoolZone", "name": "End School Zone", "category": "SchoolPedestrian", "code": "S5-2", "panels": [ { "face": "S5-2" } ], "support": { "type": "post" }, "flashingColor": "white" },
     { "id": "S1-1_SchoolCrossing", "name": "School Crossing", "category": "SchoolPedestrian", "code": "S1-1 + W16-7P",
       "description": "School crossing sign with a diagonal arrow plaque pointing at the crosswalk.", "panels": [ { "face": "S1-1" }, { "face": "W16-7PL" } ], "support": { "type": "post" } },
     { "id": "W11-2_PedestrianCrossing", "name": "Pedestrian Crossing", "category": "SchoolPedestrian", "code": "W11-2 + W16-7P",
@@ -14,11 +14,11 @@
     { "id": "W11-1_ShareTheRoad", "name": "Share The Road", "category": "SchoolPedestrian", "code": "W11-1 + W16-1P",
       "panels": [ { "face": "W11-1G" }, { "face": "W16-1P" } ], "support": { "type": "post" } },
     { "id": "R1-6_InStreetCrosswalk", "name": "Crosswalk (In-Street Yield To Pedestrians)", "category": "SchoolPedestrian", "code": "R1-6",
-      "description": "In-street sign on a flexible base, placed on the centerline at a crosswalk.", "panels": [ { "face": "R1-6" } ], "support": { "type": "flex-post" } },
+      "description": "In-street sign on a flexible base, placed on the centerline at a crosswalk.", "panels": [ { "face": "R1-6" } ], "support": { "type": "flex-post" }, "flashingColor": "white" },
     { "id": "R9-2_CrossOnlyAtCrosswalks", "name": "Cross Only At Crosswalks", "category": "SchoolPedestrian", "code": "R9-2", "panels": [ { "face": "R9-2" } ], "support": { "type": "post", "mountHeight": 72 } },
     { "id": "R9-9_SidewalkClosed", "name": "Sidewalk Closed", "category": "SchoolPedestrian", "code": "R9-9", "panels": [ { "face": "R9-9" } ], "support": { "type": "post", "mountHeight": 60 } },
     { "id": "R9-11a_SidewalkClosedUseOtherSide", "name": "Sidewalk Closed Use Other Side", "category": "SchoolPedestrian", "code": "R9-11a", "panels": [ { "face": "R9-11a" } ], "support": { "type": "post", "mountHeight": 60 } },
     { "id": "R10-4b_PushButtonForWalk", "name": "Push Button For Walk Signal", "category": "SchoolPedestrian", "code": "R10-4b",
-      "description": "Pedestrian push-button sign on a short post.", "panels": [ { "face": "R10-4b" } ], "support": { "type": "round-pipe", "mountHeight": 40 } }
+      "description": "Pedestrian push-button sign on a short post.", "panels": [ { "face": "R10-4b" } ], "support": { "type": "round-pipe", "mountHeight": 40 }, "flashingColor": "white" }
   ]
 }

@@ -5,7 +5,7 @@
       "id": "S1-1", "note": "School crossing / school zone symbol, 36 in pentagon",
       "shape": "pentagon", "width": 36, "height": 36, "cornerRadius": 1.5, "background": "fyg",
       "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.0 },
-      "elements": [ { "type": "symbol", "symbol": "school-children", "x": 18, "y": 21.4, "width": 22, "height": 20.8 } ]
+      "elements": [ { "type": "symbol", "symbol": "school-children", "x": 17.76, "y": 20.4, "width": 18.46, "height": 24.86 } ]
     },
     {
       "id": "S5-1", "note": "School Speed Limit sign, 24 x 48",
@@ -29,13 +29,13 @@
       "id": "W11-2", "note": "Pedestrian warning, 30 in diamond, fluorescent yellow-green",
       "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "fyg",
       "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
-      "elements": [ { "type": "symbol", "symbol": "pedestrian", "x": 21.21, "y": 21.4, "width": 13, "height": 19.5 } ]
+      "elements": [ { "type": "symbol", "symbol": "pedestrian", "x": 19.7, "y": 20.8, "width": 14.3, "height": 25.9 } ]
     },
     {
       "id": "W11-1G", "note": "Bicycle warning, 30 in diamond, fluorescent yellow-green",
       "shape": "diamond", "width": 30, "height": 30, "cornerRadius": 1.875, "background": "fyg",
       "border": { "color": "black", "width": 0.75, "inset": 0.5, "radius": 1.375 },
-      "elements": [ { "type": "symbol", "symbol": "bicycle", "x": 21.21, "y": 21.6, "width": 21, "height": 13.2 } ]
+      "elements": [ { "type": "symbol", "symbol": "bicycle", "x": 21.21, "y": 21.6, "width": 24.15, "height": 15.18 } ]
     },
     {
       "id": "W16-7PL", "note": "Diagonal downward arrow plaque, pointing down-left, 24 x 12",
@@ -56,16 +56,17 @@
       "elements": [ { "type": "text", "lines": [ "SHARE", "THE", "ROAD" ], "font": "C", "size": 3.8, "lineSpacing": 6.2, "x": 9, "y": 12, "maxWidth": 15 } ]
     },
     {
-      "id": "R1-6", "note": "In-street pedestrian crossing sign, 12 x 36",
-      "shape": "rect", "width": 12, "height": 36, "cornerRadius": 0.75, "background": "white",
+      "id": "R1-6", "flashingPadding": 1.5, "note": "In-street pedestrian crossing sign, 12 x 36",
+      "shape": "rect", "width": 12, "height": 36, "cornerRadius": 0.75, "background": "fyg",
       "border": { "color": "black", "width": 0.375, "inset": 0.25, "radius": 0.5 },
       "elements": [
-        { "type": "text", "lines": [ "STATE", "LAW" ], "font": "C", "size": 1.8, "lineSpacing": 2.7, "x": 6, "y": 3.2, "maxWidth": 10 },
-        { "type": "symbol", "symbol": "yield-triangle", "x": 6, "y": 9.8, "width": 8, "height": 7 },
-        { "type": "text", "text": "TO", "font": "D", "size": 2.0, "x": 6, "y": 15.4 },
-        { "type": "symbol", "symbol": "pedestrian", "x": 6, "y": 21.6, "width": 5.2, "height": 8.4 },
-        { "type": "text", "lines": [ "WITHIN", "CROSSWALK" ], "font": "C", "size": 1.6, "lineSpacing": 2.6, "x": 6, "y": 30.3, "maxWidth": 10.4 },
-        { "type": "rect", "x": 6, "y": 34.2, "width": 10.6, "height": 1.2, "color": "black" }
+        { "type": "text", "lines": [ "STATE", "LAW" ], "font": "D", "size": 1.8, "lineSpacing": 2.5, "x": 6, "y": 3.05, "maxWidth": 10 },
+        { "type": "rect", "x": 6, "y": 18.45, "width": 10.2, "height": 24.3, "cornerRadius": 0.6, "color": "white", "strokeColor": "black", "strokeWidth": 0.3 },
+        { "type": "symbol", "symbol": "yield-triangle", "x": 6, "y": 10.5, "width": 9, "height": 7.8 },
+        { "type": "text", "text": "YIELD", "font": "C", "size": 0.95, "x": 6, "y": 8.7, "maxWidth": 4.0, "color": "red" },
+        { "type": "text", "text": "TO", "font": "D", "size": 2.0, "x": 6, "y": 16.5 },
+        { "type": "symbol", "symbol": "pedestrian", "x": 5.9, "y": 24.4, "width": 6.2, "height": 10.6 },
+        { "type": "text", "lines": [ "WITHIN", "CROSSWALK" ], "font": "D", "size": 1.6, "lineSpacing": 2.4, "x": 6, "y": 33.0, "maxWidth": 10.2 }
       ]
     },
     {
@@ -90,7 +91,7 @@
       "elements": [ { "type": "text", "lines": [ "CROSS", "ONLY", "AT", "CROSS", "WALKS" ], "font": "C", "size": 1.9, "lineSpacing": 3.1, "x": 6, "y": 9, "maxWidth": 10 } ]
     },
     {
-      "id": "R10-4b", "note": "PUSH BUTTON FOR WALK SIGNAL with arrow, 9 x 12",
+      "id": "R10-4b", "flashingPadding": 1.5, "note": "PUSH BUTTON FOR WALK SIGNAL with arrow, 9 x 12",
       "shape": "rect", "width": 9, "height": 12, "cornerRadius": 0.5, "background": "white",
       "border": { "color": "black", "width": 0.25, "inset": 0.2, "radius": 0.3 },
       "elements": [

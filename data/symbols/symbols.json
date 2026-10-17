@@ -3,57 +3,50 @@
   "symbols": [
     {
       "id": "keep-right",
-      "viewBox": [ 0, 0, 100, 140 ],
+      "viewBox": [ 165, 50, 670, 860 ],
       "parts": [
-        { "path": "M 9 114 A 15 15 0 1 1 39 114 A 15 15 0 1 1 9 114 Z" },
-        { "path": "M 29 4 L 29 34 C 29 62 74 52 74 82 L 74 98", "fill": "none", "stroke": "fg", "strokeWidth": 16, "lineCap": "flat", "lineJoin": "round" },
-        { "path": "M 50 92 L 98 92 L 74 134 Z" }
+        { "path": "M 176 162 L 440 162 C 438 300 410 420 372 522 C 352 578 262 578 242 522 C 204 420 178 300 176 162 Z" },
+        { "path": "M 500 905 L 500 780 C 500 650 654 600 654 470 L 654 330", "fill": "none", "stroke": "fg", "strokeWidth": 133, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 654 56 L 826 322 C 838 342 826 358 806 352 L 720 330 L 588 330 L 502 352 C 482 358 470 342 482 322 Z" }
       ]
     },
     {
       "id": "pedestrian",
-      "viewBox": [ 0, 0, 100, 170 ],
+      "viewBox": [ 155, 104, 157, 284 ],
       "parts": [
-        { "path": "M 39 17 A 14 14 0 1 1 67 17 A 14 14 0 1 1 39 17 Z" },
-        { "path": "M 52 43 L 56 84", "fill": "none", "stroke": "fg", "strokeWidth": 23 },
-        { "path": "M 49 45 L 37 66 L 30 88", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
-        { "path": "M 60 45 L 72 64 L 82 82", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
-        { "path": "M 58 90 L 70 121 L 84 150 L 94 158", "fill": "none", "stroke": "fg", "strokeWidth": 17.5 },
-        { "path": "M 54 90 L 42 122 L 33 154 L 19 158", "fill": "none", "stroke": "fg", "strokeWidth": 17.5 }
+        { "path": "M 199 127 A 21 21 0 1 1 241 127 A 21 21 0 1 1 199 127 Z" },
+        { "path": "M 222 150 L 250 152 L 270 160 L 292 173 L 306 187 L 307 250 L 291 252 L 289 206 L 278 204 L 283 240 L 284 272 L 287 290 L 296 322 L 303 352 L 307 384 L 288 386 L 277 356 L 264 322 L 251 294 L 231 322 L 218 354 L 213 380 L 190 380 L 192 350 L 201 318 L 211 286 L 220 268 L 229 246 L 228 232 L 167 246 L 160 238 L 165 229 L 205 198 L 209 175 L 216 158 Z", "stroke": "fg", "strokeWidth": 2, "lineJoin": "round" }
       ]
     },
     {
       "id": "school-children",
-      "viewBox": [ 0, 0, 180, 170 ],
+      "viewBox": [ 238, 230, 196, 264 ],
       "parts": [
-        { "path": "M 39 17 A 14 14 0 1 1 67 17 A 14 14 0 1 1 39 17 Z" },
-        { "path": "M 52 43 L 56 84", "fill": "none", "stroke": "fg", "strokeWidth": 23 },
-        { "path": "M 49 45 L 37 66 L 30 88", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
-        { "path": "M 60 45 L 76 62 L 100 74", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
-        { "path": "M 58 90 L 70 121 L 84 150 L 94 158", "fill": "none", "stroke": "fg", "strokeWidth": 17.5 },
-        { "path": "M 54 90 L 42 122 L 33 154 L 19 158", "fill": "none", "stroke": "fg", "strokeWidth": 17.5 },
-
-        { "path": "M 126.4 48.1 A 10.9 10.9 0 1 1 148.2 48.1 A 10.9 10.9 0 1 1 126.4 48.1 Z" },
-        { "path": "M 136.6 68.3 L 139.7 100.3", "fill": "none", "stroke": "fg", "strokeWidth": 17.9 },
-        { "path": "M 134.2 69.9 L 118 80 L 104 76", "fill": "none", "stroke": "fg", "strokeWidth": 9.75 },
-        { "path": "M 142.8 69.9 L 152.2 84.7 L 160 98.8", "fill": "none", "stroke": "fg", "strokeWidth": 9.75 },
-        { "path": "M 141.2 105 L 150.6 129.2 L 161.5 151.8 L 169.3 158", "fill": "none", "stroke": "fg", "strokeWidth": 13.65 },
-        { "path": "M 138.1 105 L 128.8 130 L 121.7 154.9 L 110.8 158", "fill": "none", "stroke": "fg", "strokeWidth": 13.65 }
+        { "path": "M 272 294 A 16 16 0 1 1 304 294 A 16 16 0 1 1 272 294 Z" },
+        { "path": "M 276 318 L 308 318 Q 316 320 316 330 L 312 378 L 322 418 L 262 418 L 272 378 L 268 330 Q 268 320 276 318 Z" },
+        { "path": "M 272 330 L 248 370", "fill": "none", "stroke": "fg", "strokeWidth": 12, "lineCap": "round", "lineJoin": "round" },
+        { "path": "M 310 330 L 340 342", "fill": "none", "stroke": "fg", "strokeWidth": 11, "lineCap": "round", "lineJoin": "round" },
+        { "path": "M 278 412 L 258 479", "fill": "none", "stroke": "fg", "strokeWidth": 13, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 300 412 L 321 477", "fill": "none", "stroke": "fg", "strokeWidth": 13, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 312 348 L 332 348 L 334 378 L 310 378 Z", "stroke": "fg", "strokeWidth": 2, "lineJoin": "round" },
+        { "path": "M 346 253 A 18 18 0 1 1 382 253 A 18 18 0 1 1 346 253 Z" },
+        { "path": "M 360 276 L 388 276 Q 404 280 410 300 L 414 322 L 402 324 L 400 378 L 401 412 L 347 412 L 356 372 L 356 344 L 350 320 Q 348 290 360 276 Z" },
+        { "path": "M 404 296 L 414 344", "fill": "none", "stroke": "fg", "strokeWidth": 14, "lineCap": "round", "lineJoin": "round" },
+        { "path": "M 357 298 L 336 338", "fill": "none", "stroke": "fg", "strokeWidth": 14, "lineCap": "round", "lineJoin": "round" },
+        { "path": "M 360 408 L 350 489", "fill": "none", "stroke": "fg", "strokeWidth": 17, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 388 408 L 415 487", "fill": "none", "stroke": "fg", "strokeWidth": 18, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 408 344 L 430 344 L 432 372 L 406 372 Z", "stroke": "fg", "strokeWidth": 2, "lineJoin": "round" }
       ]
     },
     {
       "id": "flagger",
-      "viewBox": [ 0, 0, 110, 170 ],
+      "viewBox": [ 200, 215, 580, 590 ],
       "parts": [
-        { "path": "M 29 17 A 14 14 0 1 1 57 17 A 14 14 0 1 1 29 17 Z" },
-        { "path": "M 42 43 L 43 92", "fill": "none", "stroke": "fg", "strokeWidth": 24 },
-        { "path": "M 36 47 L 27 72 L 26 96", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
-        { "path": "M 50 47 L 70 62 L 84 58", "fill": "none", "stroke": "fg", "strokeWidth": 12.5 },
-        { "path": "M 86 66 L 86 30", "fill": "none", "stroke": "fg", "strokeWidth": 5, "lineCap": "flat" },
-        { "path": "M 79 4 L 93 4 L 103 14 L 103 28 L 93 38 L 79 38 L 69 28 L 69 14 Z" },
-        { "path": "M 47 94 L 50 130 L 52 162", "fill": "none", "stroke": "fg", "strokeWidth": 16 },
-        { "path": "M 38 94 L 34 130 L 32 162", "fill": "none", "stroke": "fg", "strokeWidth": 16 },
-        { "path": "M 22 164 L 42 164 M 42 164 L 64 164", "fill": "none", "stroke": "fg", "strokeWidth": 8 }
+        { "path": "M 498 282 A 60 60 0 1 1 618 282 A 60 60 0 1 1 498 282 Z" },
+        { "path": "M 208 362 L 329 362 L 329 513 L 208 513 Z" },
+        { "path": "M 342 361 L 632 361 L 636 595 L 649 797 L 622 797 L 572 600 L 566 600 L 534 797 L 508 797 L 506 595 L 505 422 L 342 391 Z" },
+        { "path": "M 626 361 L 742 378 L 750 428 L 632 432 Z" },
+        { "path": "M 746 333 L 775 336 L 768 430 L 738 428 Z" }
       ]
     },
     {
@@ -69,10 +62,13 @@
     },
     {
       "id": "deer",
-      "viewBox": [ 0, 0, 100, 100 ],
+      "viewBox": [ 290, 170, 400, 575 ],
       "parts": [
-        { "path": "M 22 50 C 32 38 56 38 66 42 L 74 30 C 72 26 73 21 77 18 L 84 17 C 88 19 91 21 91 25 L 87 28 L 81 34 L 77 48 C 75 54 71 56 67 57 L 83 70 L 91 79 L 88 83 L 77 75 L 61 63 C 54 63 45 63 39 61 L 17 80 L 11 84 L 9 80 L 26 61 C 20 61 14 59 11 55 L 7 47 C 13 49 18 51 22 50 Z" },
-        { "path": "M 80 18 L 73 5 M 76 12 L 68 9 M 85 17 L 88 3 M 87 10 L 95 7", "fill": "none", "stroke": "fg", "strokeWidth": 3.2 }
+        { "path": "M 356 291 C 362 280 378 272 400 268 L 430 262 C 440 258 448 252 452 246 L 470 236 L 466 256 C 470 262 468 272 460 280 C 456 300 455 330 457 370 C 460 395 468 408 482 420 C 520 445 580 460 620 480 C 632 486 640 490 644 496 C 648 480 652 462 660 452 C 668 460 668 480 664 500 C 662 510 652 520 642 528 C 636 545 630 570 630 590 C 640 615 658 640 664 670 C 666 690 668 705 680 722 C 684 730 684 736 676 738 L 662 738 C 654 720 650 700 644 680 C 638 660 620 640 596 618 C 570 598 548 580 532 548 C 500 535 460 525 430 515 C 400 505 382 495 372 480 C 368 474 366 468 366 462 C 352 462 340 460 330 458 C 324 480 330 505 340 525 C 344 532 342 536 334 536 C 326 520 316 500 310 480 C 304 465 298 452 302 440 C 318 434 340 434 360 438 C 368 420 380 400 388 380 C 392 350 392 330 390 316 C 382 310 372 306 366 304 C 358 302 352 298 356 291 Z" },
+        { "path": "M 452 250 C 466 230 474 210 478 182", "fill": "none", "stroke": "fg", "strokeWidth": 8, "lineCap": "round", "lineJoin": "round" },
+        { "path": "M 462 230 C 456 220 450 210 446 196", "fill": "none", "stroke": "fg", "strokeWidth": 7, "lineCap": "round", "lineJoin": "round" },
+        { "path": "M 440 254 C 428 246 418 240 410 228", "fill": "none", "stroke": "fg", "strokeWidth": 7, "lineCap": "round", "lineJoin": "round" },
+        { "path": "M 424 244 C 414 242 404 238 396 232", "fill": "none", "stroke": "fg", "strokeWidth": 6, "lineCap": "round", "lineJoin": "round" }
       ]
     },
     {
@@ -91,7 +87,9 @@
     {
       "id": "slope",
       "viewBox": [ 0, 0, 100, 36 ],
-      "parts": [ { "path": "M 0 0 L 100 36 L 0 36 Z" } ]
+      "parts": [
+        { "path": "M 0 0 L 100 36 L 0 36 Z" }
+      ]
     },
     {
       "id": "traffic-signal",
@@ -172,30 +170,14 @@
       ]
     },
     {
-      "id": "merge",
-      "viewBox": [ 0, 0, 100, 100 ],
-      "parts": [
-        { "path": "M 38 98 L 38 34", "fill": "none", "stroke": "fg", "strokeWidth": 15, "lineCap": "flat" },
-        { "path": "M 16 38 L 38 4 L 60 38 Z" },
-        { "path": "M 88 96 C 84 74 50 72 44 50", "fill": "none", "stroke": "fg", "strokeWidth": 11, "lineCap": "flat" }
-      ]
-    },
-    {
-      "id": "lane-ends",
-      "viewBox": [ 0, 0, 100, 100 ],
-      "parts": [
-        { "path": "M 32 98 L 32 34", "fill": "none", "stroke": "fg", "strokeWidth": 13, "lineCap": "flat" },
-        { "path": "M 12 38 L 32 6 L 52 38 Z" },
-        { "path": "M 72 98 L 72 72 C 72 54 44 54 40 38", "fill": "none", "stroke": "fg", "strokeWidth": 13, "lineCap": "flat" }
-      ]
-    },
-    {
       "id": "divided-highway",
-      "viewBox": [ 0, 0, 100, 100 ],
+      "viewBox": [ 278.5, 233, 910, 1000 ],
       "parts": [
-        { "path": "M 32 98 L 32 62 C 32 48 20 44 20 30 L 20 2", "fill": "none", "stroke": "fg", "strokeWidth": 10, "lineCap": "flat" },
-        { "path": "M 68 98 L 68 62 C 68 48 80 44 80 30 L 80 2", "fill": "none", "stroke": "fg", "strokeWidth": 10, "lineCap": "flat" },
-        { "path": "M 50 54 C 44 46 41 36 41 24 L 41 2 L 59 2 L 59 24 C 59 36 56 46 50 54 Z" }
+        { "path": "M 624 293 L 850 293 C 849 420 822 560 784 618 C 764 654 710 654 690 618 C 652 560 625 420 624 293 Z" },
+        { "path": "M 456 452 L 456 520 C 456 640 582 700 582 830 L 582 985", "fill": "none", "stroke": "fg", "strokeWidth": 115, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 582 1218 L 742 988 C 752 968 742 958 728 960 L 640 985 L 524 985 L 436 960 C 422 958 412 968 422 988 Z" },
+        { "path": "M 885 1138 L 885 1060 C 885 940 1010 880 1010 760 L 1010 612", "fill": "none", "stroke": "fg", "strokeWidth": 115, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 1010 382 L 1170 614 C 1180 634 1170 644 1156 640 L 1068 612 L 953 612 L 864 640 C 850 644 840 634 850 614 Z" }
       ]
     },
     {
@@ -222,14 +204,14 @@
     },
     {
       "id": "slippery-car",
-      "viewBox": [ 0, 0, 100, 112 ],
+      "viewBox": [ 318, 330, 712, 800 ],
       "parts": [
-        { "path": "M 24 44 L 31 21 C 32 17 35 15 39 15 L 61 15 C 65 15 68 17 69 21 L 76 44 C 81 46 84 50 84 55 L 84 70 L 16 70 L 16 55 C 16 50 19 46 24 44 Z" },
-        { "path": "M 32 42 L 37 24 C 38 22 39 21 41 21 L 59 21 C 61 21 62 22 63 24 L 68 42 Z", "fill": "bg" },
-        { "path": "M 19 68 L 33 68 L 33 80 L 19 80 Z M 67 68 L 81 68 L 81 80 L 67 80 Z" },
-        { "path": "M 22 52 A 4 4 0 1 1 30 52 A 4 4 0 1 1 22 52 Z M 70 52 A 4 4 0 1 1 78 52 A 4 4 0 1 1 70 52 Z", "fill": "bg" },
-        { "path": "M 26 86 C 14 94 38 100 22 110", "fill": "none", "stroke": "fg", "strokeWidth": 5 },
-        { "path": "M 74 86 C 62 94 86 100 70 110", "fill": "none", "stroke": "fg", "strokeWidth": 5 }
+        { "path": "M 545 340 L 935 340 Q 950 340 952 356 L 966 470 Q 990 485 991 520 L 991 595 Q 998 615 996 635 L 993 657 L 958 657 L 958 700 L 892 700 L 892 657 L 588 657 L 588 700 L 522 700 L 522 657 L 487 657 L 484 635 Q 482 615 489 595 L 489 520 Q 490 485 514 470 L 528 356 Q 530 340 545 340 Z" },
+        { "path": "M 557 366 L 923 366 L 931 458 L 549 458 Z", "fill": "bg" },
+        { "path": "M 621 394 A 24 24 0 1 1 669 394 A 24 24 0 1 1 621 394 Z" },
+        { "path": "M 588 458 Q 592 432 616 430 L 676 430 Q 700 432 704 458 Z" },
+        { "path": "M 556 700 C 470 712 345 728 345 795 C 345 850 470 880 560 910 C 640 935 655 990 620 1040 C 600 1070 580 1090 556 1115", "fill": "none", "stroke": "fg", "strokeWidth": 38, "lineCap": "flat", "lineJoin": "round" },
+        { "path": "M 926 700 C 840 712 715 728 715 795 C 715 850 840 880 930 910 C 1010 935 1025 990 990 1040 C 970 1070 950 1090 926 1115", "fill": "none", "stroke": "fg", "strokeWidth": 38, "lineCap": "flat", "lineJoin": "round" }
       ]
     },
     {
@@ -360,6 +342,25 @@
       "viewBox": [ 0, 0, 100, 100 ],
       "parts": [
         { "path": "M 14 14 L 86 86 M 86 14 L 14 86", "fill": "none", "stroke": "fg", "strokeWidth": 11, "lineCap": "flat" }
+      ]
+    },
+    {
+      "id": "lane-reduction",
+      "viewBox": [ 237, 202, 248, 324 ],
+      "parts": [
+        { "path": "M 237 202 L 287 202 L 287 526 L 237 526 Z" },
+        { "path": "M 380 202 L 431 202 L 431 280 L 485 348 L 485 526 L 435 526 L 435 366 L 380 300 Z" },
+        { "path": "M 380 378 L 398 378 L 398 411 L 380 411 Z M 380 436 L 398 436 L 398 468 L 380 468 Z M 380 493 L 398 493 L 398 526 L 380 526 Z" }
+      ]
+    },
+    {
+      "id": "divided-highway-crossing",
+      "viewBox": [ 110, 255, 980, 395 ],
+      "parts": [
+        { "path": "M 117 363 L 272 262 C 284 254 292 262 288 274 L 277 326 L 847 326 L 847 398 L 277 400 L 288 452 C 292 464 284 472 272 464 Z" },
+        { "path": "M 1083 538 L 928 437 C 916 429 908 437 912 449 L 921 504 L 343 504 L 343 572 L 921 572 L 912 627 C 908 639 916 647 928 639 Z" },
+        { "path": "M 558 398 L 632 398 L 632 504 L 558 504 Z M 558 572 L 632 572 L 632 640 L 558 640 Z" },
+        { "path": "M 516 398 L 558 398 L 558 440 Q 556 400 516 398 Z M 632 572 L 674 572 Q 634 574 632 614 Z" }
       ]
     }
   ]

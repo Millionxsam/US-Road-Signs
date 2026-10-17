@@ -35,19 +35,19 @@
       "id": "W4-2R-TTC", "note": "Right lane ends (merge left), orange 36 in diamond",
       "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
       "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
-      "elements": [ { "type": "symbol", "symbol": "lane-ends", "x": 25.46, "y": 25.46, "width": 23, "height": 23 } ]
+      "elements": [ { "type": "symbol", "symbol": "lane-reduction", "x": 25.46, "y": 25.46, "width": 18.41, "height": 24.05 } ]
     },
     {
       "id": "W4-2L-TTC", "note": "Left lane ends (merge right), orange 36 in diamond",
       "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
       "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
-      "elements": [ { "type": "symbol", "symbol": "lane-ends", "x": 25.46, "y": 25.46, "width": 23, "height": 23, "mirrorX": true } ]
+      "elements": [ { "type": "symbol", "symbol": "lane-reduction", "x": 25.46, "y": 25.46, "width": 18.41, "height": 24.05, "mirrorX": true } ]
     },
     {
       "id": "W20-7", "note": "Flagger symbol, 36 in diamond",
       "shape": "diamond", "width": 36, "height": 36, "cornerRadius": 2.25, "background": "orange",
       "border": { "color": "black", "width": 0.875, "inset": 0.625, "radius": 1.625 },
-      "elements": [ { "type": "symbol", "symbol": "flagger", "x": 25.9, "y": 25.9, "width": 16, "height": 24.5 } ]
+      "elements": [ { "type": "symbol", "symbol": "flagger", "x": 24.96, "y": 25.96, "width": 29.2, "height": 29.7 } ]
     },
     {
       "id": "M4-9R", "note": "DETOUR with arrow right, 30 x 24",

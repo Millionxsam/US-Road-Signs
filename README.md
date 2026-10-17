@@ -1,6 +1,6 @@
 # US Road Signs (Cities: Skylines II mod)
 
-142 freely placeable, MUTCD-style American road signs. Each sign is a complete assembly:
+236 freely placeable, MUTCD-style American road signs (118 standard signs, each with a flashing variant). Each sign is a complete assembly:
 printed face on a plate with real thickness, bolts, and a galvanized post (or twin posts,
 a Type III barricade, a portable stand, or an in-street flexible base).
 
@@ -14,7 +14,25 @@ a Type III barricade, a portable stand, or an in-street flexible base).
    to confirm it loaded).
 4. In a city, open the toolbar menu **US Road Signs** (next to the other service menus) and
    pick a category: Regulatory, Warning, Guide, Highway, Services, School & Pedestrian,
-   Construction, Other.
+   Construction, Other. Each one also has a **(Flashing)** category next to it.
+
+## Flashing signs
+
+Every category has a **(Flashing)** copy next to it. Each flashing sign has LEDs built into the
+border, like LED-enhanced signs (MUTCD 2A.07). The LEDs are real game lights: they flash together
+about 55 times a minute, day and night. Their color follows the sign's color scheme:
+
+| LEDs | Signs |
+|---|---|
+| Amber | Yellow and fluorescent yellow-green warning, school and pedestrian signs |
+| Red | Regulatory signs: stop, yield, wrong way, speed limits, turn and lane-use signs |
+| Orange | Orange work-zone signs |
+| White | Blue service and green guide signs, parking signs, END signs, the barricade, object markers, the crossbuck, the in-street crosswalk sign and the push-button sign |
+
+The LED colors, brightness, flash rate, spacing and size are set under `flashing` in
+`data/catalog.json`. A category or sign can force a color with `"flashingColor"`.
+Where the LEDs would cover lettering or symbols on a small sign, the face sets `"flashingPadding"`
+(inches): the flashing version uses a larger plate with the same artwork centered inside.
 
 ## Placing signs
 

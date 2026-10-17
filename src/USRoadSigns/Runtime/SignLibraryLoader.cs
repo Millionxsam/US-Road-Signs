@@ -80,6 +80,7 @@ namespace USRoadSigns.Runtime
                 requests.Add(new TextureRequest(spec.Name + "_BaseColor", MaterialTexturePath(spec.Name + "_BaseColor"), srgb: true, TextureWrapMode.Repeat, 4));
                 requests.Add(new TextureRequest(spec.Name + "_MaskMap", MaterialTexturePath(spec.Name + "_MaskMap"), srgb: false, TextureWrapMode.Repeat, 4));
             }
+            requests.Add(new TextureRequest("Lamp_Emissive", MaterialTexturePath("Lamp_Emissive"), srgb: true, TextureWrapMode.Repeat, 0));
             requests.Add(new TextureRequest("Face_MaskMap", MaterialTexturePath("Face_MaskMap"), srgb: false, TextureWrapMode.Repeat, 0));
             requests.Add(new TextureRequest("ControlMask", MaterialTexturePath("ControlMask"), srgb: false, TextureWrapMode.Repeat, 0));
 
@@ -172,12 +173,16 @@ namespace USRoadSigns.Runtime
             var slotSurfaces = new Dictionary<MaterialSlot, SurfaceAsset>();
             foreach (MaterialSpec spec in s_Materials)
             {
-                slotSurfaces[spec.Slot] = m_Factory.CreateSurface("USRS_" + spec.Name, new Dictionary<string, TextureAsset>
+                var maps = new Dictionary<string, TextureAsset>
                 {
                     { AssetFactory.BaseColorMap, Get(textureAssets, spec.Name + "_BaseColor") },
                     { AssetFactory.MaskMap, Get(textureAssets, spec.Name + "_MaskMap") },
                     { AssetFactory.ControlMask, Get(textureAssets, "ControlMask") },
-                });
+                };
+                // LED lenses glow through the emissive map; EmissiveProperties on each sign switches them on and off.
+                if (spec.Slot == MaterialSlot.Lamp)
+                    maps[AssetFactory.EmissiveColorMap] = Get(textureAssets, "Lamp_Emissive");
+                slotSurfaces[spec.Slot] = m_Factory.CreateSurface("USRS_" + spec.Name, maps);
             }
 
             // One surface per sign face, created on first use.
@@ -307,6 +312,9 @@ namespace USRoadSigns.Runtime
                 surfaces.Add(part.Slot == MaterialSlot.Face ? faceSurface(part.FaceId) : slotSurfaces[part.Slot]);
 
             RenderPrefab render = m_Factory.CreateRenderPrefab(prefabName + "_Mesh", assembly, surfaces);
+            int lampIndex = assembly.Parts.FindIndex(p => p.Slot == MaterialSlot.Lamp);
+            if (lampIndex >= 0)
+                AddFlashingLights(render, lampIndex, sign);
             prefabSystem.AddPrefab(render);
 
             var prefab = ScriptableObject.CreateInstance<StaticObjectPrefab>();
@@ -333,6 +341,67 @@ namespace USRoadSigns.Runtime
             ui.active = true;
 
             prefabSystem.AddPrefab(prefab);
+        }
+
+        /// <summary>
+        /// Makes the LED sub-mesh a real game light: one single-light mapping (sub-mesh index = materialId) with
+        /// an on/off animation curve. DecorativeLight is evaluated every frame for standalone objects and is
+        /// always powered when the object has no owning building, so the LEDs flash day and night.
+        /// </summary>
+        private void AddFlashingLights(RenderPrefab render, int lampSubMesh, SignDef sign)
+        {
+            FlashingDefaults settings = Catalog.Root.Flashing ?? new FlashingDefaults();
+            RgbaColor c = settings.GetColor(sign.LedColor);
+
+            EmissiveProperties emissive = render.AddComponent<EmissiveProperties>();
+            emissive.m_MultiLights = new List<EmissiveProperties.MultiLightMapping>();
+            emissive.m_SignalGroupAnimations = new List<EmissiveProperties.SignalGroupAnimation>();
+            emissive.m_SingleLights = new List<EmissiveProperties.SingleLightMapping>
+            {
+                new EmissiveProperties.SingleLightMapping
+                {
+                    purpose = EmissiveProperties.Purpose.DecorativeLight,
+                    color = new Color(c.R / 255f, c.G / 255f, c.B / 255f, 1f),
+                    colorOff = Color.black,
+                    intensity = settings.Intensity,
+                    luminance = 0f,
+                    responseTime = 0.03f,   // LEDs snap on and off
+                    animationIndex = 0,
+                    materialId = lampSubMesh,
+                },
+            };
+            emissive.m_AnimationCurves = new List<EmissiveProperties.AnimationProperties>
+            {
+                new EmissiveProperties.AnimationProperties
+                {
+                    m_Duration = Math.Max(0.2f, settings.Period),
+                    m_Curve = BlinkCurve(settings.OnFraction),
+                },
+            };
+        }
+
+        /// <summary>Square wave over one cycle (time 0-1): on for <paramref name="onFraction"/>, then off.</summary>
+        private static AnimationCurve BlinkCurve(float onFraction)
+        {
+            float on = Mathf.Clamp(onFraction, 0.1f, 0.9f);
+            const float ramp = 0.02f;
+            var keys = new[]
+            {
+                new Keyframe(0f, 0f),
+                new Keyframe(ramp, 1f),
+                new Keyframe(on, 1f),
+                new Keyframe(on + ramp, 0f),
+                new Keyframe(1f, 0f),
+            };
+            // Linear segments, so the curve cannot overshoot between keys.
+            for (int i = 0; i < keys.Length; i++)
+            {
+                float inSlope = i > 0 ? (keys[i].value - keys[i - 1].value) / (keys[i].time - keys[i - 1].time) : 0f;
+                float outSlope = i < keys.Length - 1 ? (keys[i + 1].value - keys[i].value) / (keys[i + 1].time - keys[i].time) : 0f;
+                keys[i].inTangent = inSlope;
+                keys[i].outTangent = outSlope;
+            }
+            return new AnimationCurve(keys);
         }
 
         private static uint DefaultCost(AssemblyMesh assembly)
@@ -409,6 +478,7 @@ namespace USRoadSigns.Runtime
             new MaterialSpec("Perforated", MaterialSlot.Perforated),
             new MaterialSpec("Aluminum", MaterialSlot.Aluminum),
             new MaterialSpec("DarkPlastic", MaterialSlot.DarkPlastic),
+            new MaterialSpec("Lamp", MaterialSlot.Lamp),
         };
     }
 }

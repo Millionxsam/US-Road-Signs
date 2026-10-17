@@ -83,12 +83,21 @@
       ]
     },
     {
-      "id": "D5-1", "note": "REST AREA with arrow, 36 x 24",
+      "id": "D5-1R", "note": "REST AREA with arrow up-right, 36 x 24",
       "shape": "rect", "width": 36, "height": 24, "cornerRadius": 1.5, "background": "blue",
       "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
       "elements": [
         { "type": "text", "lines": [ "REST", "AREA" ], "font": "D", "size": 5.0, "lineSpacing": 7.6, "x": 14, "y": 12, "maxWidth": 20, "color": "white" },
         { "type": "symbol", "symbol": "diagonal-arrow", "x": 29, "y": 12, "width": 9, "height": 9, "color": "white" }
+      ]
+    },
+    {
+      "id": "D5-1L", "note": "REST AREA with arrow up-left, 36 x 24",
+      "shape": "rect", "width": 36, "height": 24, "cornerRadius": 1.5, "background": "blue",
+      "border": { "color": "white", "width": 0.625, "inset": 0.375, "radius": 1.125 },
+      "elements": [
+        { "type": "symbol", "symbol": "diagonal-arrow", "x": 7, "y": 12, "width": 9, "height": 9, "color": "white", "mirrorX": true },
+        { "type": "text", "lines": [ "REST", "AREA" ], "font": "D", "size": 5.0, "lineSpacing": 7.6, "x": 22, "y": 12, "maxWidth": 20, "color": "white" }
       ]
     }
   ]

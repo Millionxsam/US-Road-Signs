@@ -2,13 +2,13 @@
   "signs": [
     { "id": "R15-1_RailroadCrossbuck", "name": "Railroad Crossbuck", "category": "Other", "code": "R15-1 + R15-2P",
       "description": "Highway-rail grade crossing crossbuck with a number-of-tracks plaque.",
-      "panels": [ { "face": "R15-1" }, { "face": "R15-2P", "gapAbove": 2 } ], "support": { "type": "round-pipe" } },
+      "panels": [ { "face": "R15-1" }, { "face": "R15-2P", "gapAbove": 2 } ], "support": { "type": "round-pipe" }, "flashingColor": "white" },
     { "id": "W10-1_RailroadAhead", "name": "Railroad Crossing Ahead", "category": "Other", "code": "W10-1", "panels": [ { "face": "W10-1" } ], "support": { "type": "post" } },
     { "id": "OM3-L_ObjectMarkerLeft", "name": "Object Marker (Pass Left)", "category": "Other", "code": "OM3-L",
-      "description": "Type 3 object marker for obstructions; stripes slope down toward the side traffic passes.", "panels": [ { "face": "OM3-L" } ], "support": { "type": "post", "mountHeight": 48 } },
+      "description": "Type 3 object marker for obstructions; stripes slope down toward the side traffic passes.", "panels": [ { "face": "OM3-L" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" },
     { "id": "OM3-R_ObjectMarkerRight", "name": "Object Marker (Pass Right)", "category": "Other", "code": "OM3-R",
-      "description": "Type 3 object marker for obstructions; stripes slope down toward the side traffic passes.", "panels": [ { "face": "OM3-R" } ], "support": { "type": "post", "mountHeight": 48 } },
+      "description": "Type 3 object marker for obstructions; stripes slope down toward the side traffic passes.", "panels": [ { "face": "OM3-R" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" },
     { "id": "OM4-3_EndOfRoadway", "name": "End Of Roadway Marker", "category": "Other", "code": "OM4-3",
-      "panels": [ { "face": "OM4-3" } ], "support": { "type": "post", "mountHeight": 48 } }
+      "panels": [ { "face": "OM4-3" } ], "support": { "type": "post", "mountHeight": 48 }, "flashingColor": "white" }
   ]
 }

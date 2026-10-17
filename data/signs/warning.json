@@ -15,10 +15,10 @@
     { "id": "W2-2L_SideRoadLeft", "name": "Side Road (Left)", "category": "Warning", "code": "W2-2L", "panels": [ { "face": "W2-2L" } ], "support": { "type": "post" } },
     { "id": "W2-4_TIntersection", "name": "T-Intersection", "category": "Warning", "code": "W2-4", "panels": [ { "face": "W2-4" } ], "support": { "type": "post" } },
     { "id": "W2-6_Roundabout", "name": "Roundabout", "category": "Warning", "code": "W2-6", "panels": [ { "face": "W2-6" } ], "support": { "type": "post" } },
-    { "id": "W4-1R_MergeRight", "name": "Merge (From Right)", "category": "Warning", "code": "W4-1", "panels": [ { "face": "W4-1R" } ], "support": { "type": "post" } },
-    { "id": "W4-1L_MergeLeft", "name": "Merge (From Left)", "category": "Warning", "code": "W4-1", "panels": [ { "face": "W4-1L" } ], "support": { "type": "post" } },
-    { "id": "W4-2R_RightLaneEnds", "name": "Lane Ends (Right Lane)", "category": "Warning", "code": "W4-2", "panels": [ { "face": "W4-2R" } ], "support": { "type": "post" } },
-    { "id": "W4-2L_LeftLaneEnds", "name": "Lane Ends (Left Lane)", "category": "Warning", "code": "W4-2", "panels": [ { "face": "W4-2L" } ], "support": { "type": "post" } },
+    { "id": "W4-2R_MergeLeft", "name": "Merge Left (Right Lane Ends)", "category": "Warning", "code": "W4-2", "panels": [ { "face": "W4-2R" } ], "support": { "type": "post" } },
+    { "id": "W4-2L_MergeRight", "name": "Merge Right (Left Lane Ends)", "category": "Warning", "code": "W4-2", "panels": [ { "face": "W4-2L" } ], "support": { "type": "post" } },
+    { "id": "W9-1R_RightLaneEnds", "name": "Right Lane Ends", "category": "Warning", "code": "W9-1", "panels": [ { "face": "W9-1R" } ], "support": { "type": "post" } },
+    { "id": "W9-1L_LeftLaneEnds", "name": "Left Lane Ends", "category": "Warning", "code": "W9-1", "panels": [ { "face": "W9-1L" } ], "support": { "type": "post" } },
     { "id": "W6-1_DividedHighway", "name": "Divided Highway", "category": "Warning", "code": "W6-1", "panels": [ { "face": "W6-1" } ], "support": { "type": "post" } },
     { "id": "W6-2_DividedHighwayEnds", "name": "Divided Highway Ends", "category": "Warning", "code": "W6-2", "panels": [ { "face": "W6-2" } ], "support": { "type": "post" } },
     { "id": "W6-3_TwoWayTraffic", "name": "Two-Way Traffic", "category": "Warning", "code": "W6-3", "panels": [ { "face": "W6-3" } ], "support": { "type": "post" } },
@@ -39,6 +39,6 @@
     { "id": "W14-1_DeadEnd", "name": "Dead End", "category": "Warning", "code": "W14-1", "panels": [ { "face": "W14-1" } ], "support": { "type": "post" } },
     { "id": "W14-2_NoOutlet", "name": "No Outlet", "category": "Warning", "code": "W14-2", "panels": [ { "face": "W14-2" } ], "support": { "type": "post" } },
     { "id": "W14-3_NoPassingZone", "name": "No Passing Zone (Pennant)", "category": "Warning", "code": "W14-3",
-      "description": "Pennant placed on the left side of the road at the start of a no-passing zone.", "panels": [ { "face": "W14-3" } ], "support": { "type": "post" } }
+      "description": "Pennant placed on the left side of the road at the start of a no-passing zone.", "panels": [ { "face": "W14-3", "offsetX": 22 } ], "support": { "type": "post" } }
   ]
 }
