@@ -43,6 +43,9 @@ Invoke-Step "Rendering sign textures and icons" {
 }
 
 Invoke-Step "Compiling the mod" {
+    # Start from an empty output folder so icons/textures of removed signs do not linger and get shipped.
+    $binOut = Join-Path $root "src\USRoadSigns\bin\$Configuration"
+    if (Test-Path $binOut) { Remove-Item $binOut -Recurse -Force }
     dotnet build (Join-Path $root "src\USRoadSigns\USRoadSigns.csproj") -c $Configuration --nologo -v q "-p:ModContentDir=$content"
 }
 

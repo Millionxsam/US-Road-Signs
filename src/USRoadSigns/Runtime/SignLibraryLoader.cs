@@ -181,7 +181,18 @@ namespace USRoadSigns.Runtime
                 };
                 // LED lenses glow through the emissive map; EmissiveProperties on each sign switches them on and off.
                 if (spec.Slot == MaterialSlot.Lamp)
-                    maps[AssetFactory.EmissiveColorMap] = Get(textureAssets, "Lamp_Emissive");
+                {
+                    try
+                    {
+                        var emissiveMaps = new Dictionary<string, TextureAsset>(maps) { { AssetFactory.EmissiveColorMap, Get(textureAssets, "Lamp_Emissive") } };
+                        slotSurfaces[spec.Slot] = m_Factory.CreateSurface("USRS_" + spec.Name, emissiveMaps);
+                        continue;
+                    }
+                    catch (Exception e)
+                    {
+                        Mod.Log.Error(e, "Could not give the LED material an emissive map; flashing LEDs will not glow");
+                    }
+                }
                 slotSurfaces[spec.Slot] = m_Factory.CreateSurface("USRS_" + spec.Name, maps);
             }
 
