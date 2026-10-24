@@ -141,8 +141,8 @@ namespace USRoadSigns.Digital
 
             UpdateIntensity();
 
-            float time = Time.realtimeSinceStartup;
-            int frame = Time.frameCount;
+            float time = UnityEngine.Time.realtimeSinceStartup;
+            int frame = UnityEngine.Time.frameCount;
             NativeArray<Entity> entities = m_Query.ToEntityArray(Allocator.Temp);
             try
             {
@@ -267,7 +267,7 @@ namespace USRoadSigns.Digital
         private void OnBeginContextRendering(ScriptableRenderContext context, List<Camera> cameras)
         {
             // Only draw what was prepared this frame (nothing stale after leaving a city).
-            if (m_PreparedFrame != Time.frameCount)
+            if (m_PreparedFrame != UnityEngine.Time.frameCount)
                 return;
             foreach (DrawItem item in m_Draws)
             {
