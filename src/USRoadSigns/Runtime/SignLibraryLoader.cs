@@ -11,6 +11,7 @@ using Game.Prefabs;
 using Unity.Entities;
 using UnityEngine;
 using USRoadSigns.Catalog;
+using USRoadSigns.Digital;
 using USRoadSigns.Geometry;
 using Texture = Colossal.AssetPipeline.Importers.TextureImporter.Texture;
 
@@ -241,6 +242,20 @@ namespace USRoadSigns.Runtime
             }
 
             Mod.Log.Info($"Registered {created}/{Catalog.Signs.Count} signs in {watch.ElapsedMilliseconds} ms.");
+
+            // Digital message signs: their own category, structures built in code, messages drawn at runtime.
+            if (menu != null)
+            {
+                try
+                {
+                    UIAssetCategoryPrefab digitalCategory = CreateCategory(prefabSystem, menu, DigitalSignTypes.Category());
+                    DigitalSignLibrary.Register(prefabSystem, m_Factory, digitalCategory, slotSurfaces, Get(textureAssets, "ControlMask"), IconUrl);
+                }
+                catch (Exception e)
+                {
+                    Mod.Log.Error(e, "Could not create the digital message signs");
+                }
+            }
         }
 
         private static TextureAsset Get(Dictionary<string, TextureAsset> textures, string name)

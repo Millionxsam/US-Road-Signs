@@ -68,6 +68,9 @@
 		<Reference Include="Unity.Mathematics"><HintPath>$(ManagedPath)\Unity.Mathematics.dll</HintPath><Private>false</Private></Reference>
 		<Reference Include="Unity.InputSystem"><HintPath>$(ManagedPath)\Unity.InputSystem.dll</HintPath><Private>false</Private></Reference>
 		<Reference Include="Newtonsoft.Json"><HintPath>$(ManagedPath)\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+		<!-- Digital signs draw their displays with HDRP materials (HDMaterial.ValidateMaterial) -->
+		<Reference Include="Unity.RenderPipelines.Core.Runtime"><HintPath>$(ManagedPath)\Unity.RenderPipelines.Core.Runtime.dll</HintPath><Private>false</Private></Reference>
+		<Reference Include="Unity.RenderPipelines.HighDefinition.Runtime"><HintPath>$(ManagedPath)\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath><Private>false</Private></Reference>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -87,6 +90,18 @@
 			<Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+
+	<!-- UI module (info panel editor for digital signs) and the digital sign menu icons -->
+	<ItemGroup>
+		<None Update="UI\USRoadSigns.mjs">
+			<Link>USRoadSigns.mjs</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Resources\Icons\Digital\*.png">
+			<Link>Icons\Digital\%(Filename)%(Extension)</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(UseOfficialToolchain)' == 'true'">

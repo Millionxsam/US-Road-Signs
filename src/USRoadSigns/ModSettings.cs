@@ -1,6 +1,7 @@
 using Colossal.IO.AssetDatabase;
 using Game.Modding;
 using Game.Settings;
+using Game.UI;
 using USRoadSigns.Geometry;
 
 namespace USRoadSigns
@@ -14,12 +15,13 @@ namespace USRoadSigns
     }
 
     [FileLocation(nameof(USRoadSigns))]
-    [SettingsUIGroupOrder(kAppearanceGroup, kInfoGroup)]
-    [SettingsUIShowGroupName(kAppearanceGroup, kInfoGroup)]
+    [SettingsUIGroupOrder(kAppearanceGroup, kDigitalGroup, kInfoGroup)]
+    [SettingsUIShowGroupName(kAppearanceGroup, kDigitalGroup, kInfoGroup)]
     public sealed class ModSettings : ModSetting
     {
         public const string kSection = "Main";
         public const string kAppearanceGroup = "Appearance";
+        public const string kDigitalGroup = "Digital";
         public const string kInfoGroup = "Info";
 
         public ModSettings(IMod mod) : base(mod)
@@ -35,6 +37,11 @@ namespace USRoadSigns
         [SettingsUISection(kSection, kAppearanceGroup)]
         public bool ShowMountingBolts { get; set; }
 
+        /// <summary>Glow of digital sign LEDs, percent. Applied immediately.</summary>
+        [SettingsUISlider(min = 25, max = 400, step = 25, unit = Unit.kPercentage)]
+        [SettingsUISection(kSection, kDigitalGroup)]
+        public int LedBrightness { get; set; }
+
         /// <summary>Informational text shown in the options page.</summary>
         [SettingsUIMultilineText]
         [SettingsUISection(kSection, kInfoGroup)]
@@ -48,6 +55,7 @@ namespace USRoadSigns
         {
             StandardPostStyle = PostStyle.SquareTube;
             ShowMountingBolts = true;
+            LedBrightness = 100;
         }
 
         internal AssemblyOptions ToAssemblyOptions()

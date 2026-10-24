@@ -36,6 +36,39 @@ The LED colors, brightness, flash rate, spacing and size are set under `flashing
 Where the LEDs would cover lettering or symbols on a small sign, the face sets `"flashingPadding"`
 (inches): the flashing version uses a larger plate with the same artwork centered inside.
 
+## Digital message signs
+
+The **Digital Message Signs** category (first tab of the US Road Signs menu) holds changeable message signs
+and arrow boards whose display you set yourself:
+
+| Sign                                    | Structure                                         | Display                       |
+| --------------------------------------- | ------------------------------------------------- | ----------------------------- |
+| Portable Message Sign (Trailer)         | Solar work-zone trailer, raised mast              | 3 lines x 8 chars (48 x 27)   |
+| Compact Message Sign (Trailer)          | Small towable board, about the size of a TV       | 2 lines x 5 chars (32 x 18)   |
+| Arrow Board (Trailer)                   | Type C arrow board on a solar trailer             | 28 lamps, 10 patterns         |
+| Roadside Message Sign (Pole)            | Single round pole, roof beacons                   | 3 lines x 15 chars (90 x 27)  |
+| Overhead Message Sign (Cantilever)      | Pole with a truss arm reaching over the lanes     | 3 lines x 18 chars (108 x 27) |
+| Overhead Message Sign (Gantry, 3 Lanes) | Box-truss gantry, 18 m span, walk-in cabinet      | 3 lines x 21 chars (126 x 27) |
+| Overhead Message Sign (Gantry, 5 Lanes) | Box-truss gantry, 26 m span, walk-in cabinet      | 3 lines x 21 chars (126 x 27) |
+
+Place one, then click it. The **Message sign** section of the info panel lets you:
+
+- type each line (up to 4 pages that alternate, with an adjustable time per page); a line turns red when it is
+  too wide for that sign. `<` `>` `^` `~` draw left, right, up and down arrows;
+- pick one of about 60 common messages (only those that fit the selected sign are listed);
+- set the alignment, make the text flash, change the LED color (amber, yellow, white, red, green, blue);
+- switch the roof beacons on (pole, cantilever and gantry signs);
+- on arrow boards, choose the pattern: arrows, sequential arrows and chevrons, caution bar, four corners or off.
+
+Settings are stored per sign in the save game. An unedited sign shows its default message. The LED glow can
+be adjusted under **Options > US Road Signs > LED brightness**.
+
+How it works: the structures are ordinary prefabs built in code (`src/Shared/Digital`). Each placed sign gets a
+`DigitalSign` component; `DigitalSignRenderSystem` renders the current page from a 5 x 7 LED font into a
+texture and draws it in front of the sign's LED window with the game's default lit shader. The info panel
+section is `DigitalSignSection` plus the plain JavaScript UI module `src/USRoadSigns/UI/USRoadSigns.mjs`
+(no npm build needed).
+
 ## Placing signs
 
 - Signs place anywhere, with no road needed. Rotate them while placing as with any prop.
@@ -76,4 +109,7 @@ To add a sign, you only edit data:
 | `src/USRoadSigns`         | The mod: entry point, settings, localization                         |
 | `src/USRoadSigns/Runtime` | Texture/surface/mesh asset creation, prefab + menu registration      |
 | `tools/SignForge`         | Renders face textures, material textures and menu icons from `data/` |
+| `src/Shared/Digital`      | Digital signs: types, structures, LED font, layout, arrow patterns   |
+| `src/USRoadSigns/Digital` | Digital signs: prefabs, per-sign component, renderer, info panel     |
+| `src/USRoadSigns/UI`      | UI module for the info panel editor                                  |
 | `build.ps1`               | One-step build into `dist/USRoadSigns`                               |

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Colossal;
 using USRoadSigns.Catalog;
+using USRoadSigns.Digital;
 
 namespace USRoadSigns.Localization
 {
@@ -40,6 +41,10 @@ namespace USRoadSigns.Localization
                 { m_Settings.GetOptionLabelLocaleID(nameof(ModSettings.ShowMountingBolts)), "Show mounting bolts" },
                 { m_Settings.GetOptionDescLocaleID(nameof(ModSettings.ShowMountingBolts)), "Adds small bolt heads and washers where signs are fastened to their supports. Takes effect after restarting the game." },
 
+                { m_Settings.GetOptionGroupLocaleID(ModSettings.kDigitalGroup), "Digital message signs" },
+                { m_Settings.GetOptionLabelLocaleID(nameof(ModSettings.LedBrightness)), "LED brightness" },
+                { m_Settings.GetOptionDescLocaleID(nameof(ModSettings.LedBrightness)), "How strongly the LEDs of digital message signs, arrow boards and their beacons glow. Applies immediately." },
+
                 { m_Settings.GetOptionLabelLocaleID(nameof(ModSettings.RestartNotice)), "Appearance changes are applied when the game starts. Restart the game after changing them; signs already placed in your cities will update automatically." },
                 { m_Settings.GetOptionLabelLocaleID(nameof(ModSettings.LibraryStatus)), m_Catalog != null
                     ? $"Sign library: {m_Catalog.Signs.Count} signs in {m_Catalog.Categories.Count} categories. Find them in the \"US Road Signs\" toolbar menu."
@@ -67,6 +72,17 @@ namespace USRoadSigns.Localization
                     if (!string.IsNullOrEmpty(sign.Code))
                         description = string.IsNullOrEmpty(description) ? "MUTCD " + sign.Code : description + " (MUTCD " + sign.Code + ")";
                     entries["Assets.DESCRIPTION[" + prefab + "]"] = description;
+                }
+
+                CategoryDef digital = DigitalSignTypes.Category();
+                string digitalId = CategoryPrefabName(m_Catalog, digital);
+                entries["SubServices.NAME[" + digitalId + "]"] = digital.Name;
+                entries["Assets.SUB_SERVICE_DESCRIPTION[" + digitalId + "]"] = digital.Description;
+                foreach (DigitalSignType type in DigitalSignTypes.All)
+                {
+                    string prefab = DigitalSignLibrary.PrefabName(type);
+                    entries["Assets.NAME[" + prefab + "]"] = type.Name;
+                    entries["Assets.DESCRIPTION[" + prefab + "]"] = type.Description + " Select it after placing to change what it shows.";
                 }
             }
 

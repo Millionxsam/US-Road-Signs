@@ -5,6 +5,8 @@ using Colossal.Logging;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
+using Game.UI.InGame;
+using USRoadSigns.Digital;
 using USRoadSigns.Localization;
 using USRoadSigns.Runtime;
 
@@ -65,6 +67,8 @@ namespace USRoadSigns
             if (m_Loader == null)
                 return;
 
+            RegisterDigitalSignSystems(updateSystem);
+
             GameManager.State state = GameManager.instance.state;
             if (state == GameManager.State.WorldReady || state == GameManager.State.Loading)
             {
@@ -74,6 +78,21 @@ namespace USRoadSigns
             {
                 m_WaitingForWorld = true;
                 GameManager.instance.onWorldReady += OnWorldReady;
+            }
+        }
+
+        /// <summary>Message renderer plus the "Message Sign" section of the selected info panel.</summary>
+        private static void RegisterDigitalSignSystems(UpdateSystem updateSystem)
+        {
+            try
+            {
+                updateSystem.UpdateAt<DigitalSignRenderSystem>(SystemUpdatePhase.Rendering);
+                DigitalSignSection section = updateSystem.World.GetOrCreateSystemManaged<DigitalSignSection>();
+                updateSystem.World.GetOrCreateSystemManaged<SelectedInfoUISystem>().AddMiddleSection(section);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e, "Could not set up the digital sign systems; message signs will show blank displays.");
             }
         }
 

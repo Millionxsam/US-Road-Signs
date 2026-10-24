@@ -19,6 +19,21 @@ namespace USRoadSigns.Geometry
         Face = 4,
         /// <summary>Flashing LED lenses (emissive, animated by the game's light system).</summary>
         Lamp = 5,
+
+        // Digital message signs (textures generated at runtime by DigitalTextures).
+
+        /// <summary>Highway-orange painted steel (message trailers, arrow boards).</summary>
+        OrangePaint = 6,
+        /// <summary>Black powder-coated aluminum (display cabinets, beacon housings).</summary>
+        BlackHousing = 7,
+        /// <summary>Unlit LED matrix behind the display window; UVs are in LED pitches.</summary>
+        LedMatrix = 8,
+        /// <summary>Cast-in-place concrete (foundations).</summary>
+        Concrete = 9,
+        /// <summary>Photovoltaic panel (trailer solar arrays).</summary>
+        Solar = 10,
+        /// <summary>Tire rubber.</summary>
+        Rubber = 11,
     }
 
     /// <summary>
