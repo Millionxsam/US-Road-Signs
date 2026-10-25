@@ -510,10 +510,14 @@ namespace USRoadSigns.Digital
         {
             if (!type.HasBeacons)
                 return;
+            // Four beacons spread evenly along the cabinet roof (TxDOT DMS specs mount them at the top).
             const float d = 0.25f;
-            foreach (float side in new[] { -1f, 1f })
+            const int count = 4;
+            for (int i = 0; i < count; i++)
             {
-                float x = centerX + side * (cabWidth * 0.5f - 0.45f);
+                // Outer beacons sit at the cabinet's top corners, the others evenly between them.
+                float edge = cabWidth * 0.5f - d * 0.5f - 0.08f;
+                float x = centerX - edge + 2f * edge * i / (count - 1);
                 // Short stand on the cabinet roof.
                 ctx.Housing.AddBox(new Vec3(x, top + 0.06f, cabFront - 0.18f), new Vec3(0.16f, 0.12f, 0.16f), YawTransform.Identity, PaintUv);
                 AddBeacon(ctx, new Vec3(x, top + 0.12f + d * 0.5f + 0.03f, cabFront - 0.04f), d);

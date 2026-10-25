@@ -218,8 +218,9 @@ namespace USRoadSigns.Digital
             for (int i = 0; i < info.Beacons.Length; i++)
             {
                 BeaconLens beacon = info.Beacons[i];
-                // Beacons alternate (wig-wag), each lit for half a period.
-                bool lit = state.Beacons && ((time / BeaconPeriod + i * 0.5f) % 1f) < 0.5f;
+                // Alternating pairs: beacons 1 and 3 flash together, then 2 and 4, so two are always lit.
+                bool firstHalf = (time / BeaconPeriod) % 1f < 0.5f;
+                bool lit = state.Beacons && (firstHalf == (i % 2 == 0));
                 m_Draws.Add(new DrawItem
                 {
                     Matrix = objectMatrix * Matrix4x4.TRS(new Vector3(beacon.Center.X, beacon.Center.Y, beacon.Center.Z + 0.002f), Quaternion.identity, new Vector3(beacon.Diameter, beacon.Diameter, 1f)),

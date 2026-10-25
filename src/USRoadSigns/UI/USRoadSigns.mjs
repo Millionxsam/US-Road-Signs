@@ -1,11 +1,12 @@
 /*
  * US Road Signs - UI module (Cities: Skylines II).
  *
- * Adds the "Message Sign" section to the selected info panel for digital message signs and arrow boards.
+ * Adds the "Message Sign" section to the selected info panel for digital message signs and arrow boards,
+ * and the "Route sign" section for route marker assemblies and destination signs.
  * Plain ES module, no build step: the game exposes React and its cs2/* modules as window globals (the same
  * externals the official mod UI template compiles against).
  *
- * C# counterpart: USRoadSigns.Digital.DigitalSignSection (properties and triggers).
+ * C# counterparts: USRoadSigns.Digital.DigitalSignSection and USRoadSigns.Route.RouteSignSection (properties and triggers).
  */
 
 const React = window.React;
@@ -15,6 +16,7 @@ const modding = window["cs2/modding"];
 const h = React.createElement;
 const GROUP = "USRoadSigns";
 const SECTION = "USRoadSigns.Digital.DigitalSignSection";
+const ROUTE_SECTION = "USRoadSigns.Route.RouteSignSection";
 const LINE_SEPARATOR = "\n";
 const PAGE_SEPARATOR = "\f";
 
@@ -72,21 +74,6 @@ const S = {
     buttonSelected: { backgroundColor: "rgba(80, 160, 255, 0.55)", borderColor: "rgba(140, 200, 255, 0.9)" },
     swatch: { width: "22rem", height: "22rem", margin: "2rem 6rem 2rem 0", borderRadius: "11rem", border: "2rem solid rgba(255,255,255,0.25)", cursor: "pointer" },
     swatchSelected: { border: "3rem solid white" },
-    presetList: { maxHeight: "170rem", overflowY: "scroll", backgroundColor: "rgba(0, 0, 0, 0.25)", borderRadius: "3rem", padding: "2rem" },
-    preset: {
-        display: "block",
-        width: "100%",
-        textAlign: "left",
-        padding: "4rem 8rem",
-        margin: "1rem 0",
-        fontFamily: "monospace",
-        fontSize: "12rem",
-        color: "rgb(255, 178, 60)",
-        backgroundColor: "rgba(20, 20, 20, 0.8)",
-        border: "none",
-        borderRadius: "2rem",
-        cursor: "pointer",
-    },
     hint: { fontSize: "11rem", opacity: 0.6, margin: "4rem 0" },
     value: { minWidth: "48rem", textAlign: "center", fontSize: "13rem" },
 };
@@ -125,7 +112,7 @@ function MessageEditor(props) {
     const lines = props.lines;
     const [pages, setPages] = React.useState(() => clonePages(props.pages, lines));
 
-    // Reload the fields when another sign is selected or C# replaced the message (preset, reset).
+    // Reload the fields when another sign is selected or C# replaced the message (reset).
     React.useEffect(() => {
         setPages(clonePages(props.pages, lines));
     }, [props.signKey]);
@@ -135,9 +122,21 @@ function MessageEditor(props) {
         send("digitalSetMessage", encode(next));
     };
 
-    const setLine = (p, l, value) => {
+    // Upper-casing changes the input's value, which makes the browser put the caret at the end.
+    // Remember where it was and put it back after React re-renders the field.
+    const pendingCaret = React.useRef(null);
+    React.useLayoutEffect(() => {
+        const pending = pendingCaret.current;
+        if (pending && pending.input) {
+            try { pending.input.setSelectionRange(pending.start, pending.end); } catch (e) { }
+        }
+        pendingCaret.current = null;
+    });
+
+    const setLine = (p, l, input) => {
+        pendingCaret.current = { input: input, start: input.selectionStart, end: input.selectionEnd };
         const next = pages.map(page => page.slice());
-        next[p][l] = value.toUpperCase().replace(/[\n\f\r]/g, "");
+        next[p][l] = input.value.toUpperCase().replace(/[\n\f\r]/g, "");
         commit(next);
     };
 
@@ -168,7 +167,7 @@ function MessageEditor(props) {
                 maxLength: props.maxLineLength,
                 style: merge(S.lineInput, tooLong && S.lineInputOverflow),
                 placeholder: "Line " + (l + 1),
-                onChange: (e) => setLine(p, l, e.target.value),
+                onChange: (e) => setLine(p, l, e.target),
                 onKeyDown: (e) => {
                     if (e.key === "Enter" || e.key === "Escape") e.currentTarget.blur();
                 },
@@ -244,15 +243,142 @@ function DigitalSignSection(props) {
             h(Button, { selected: props.beacons, onClick: () => send("digitalSetBeacons", !props.beacons) }, props.beacons ? "Warning beacons: flashing" : "Warning beacons: off")));
     }
 
-    if (isText && (props.presets || []).length > 0) {
-        body.push(h("div", { key: "pl", style: S.label }, "Common messages"));
-        body.push(h("div", { key: "pll", style: S.presetList },
-            props.presets.map((label, i) =>
-                h("button", { key: "p" + i, style: S.preset, onClick: () => send("digitalApplyPreset", i) }, label))));
+    body.push(h("div", { key: "rs", style: merge(S.row, { marginTop: "8rem" }) },
+        h(Button, { onClick: () => send("digitalReset") }, "Reset to default")));
+
+    const content = h("div", { style: S.body }, body);
+    return InfoSection
+        ? h(InfoSection, { disableFocus: true }, header, content)
+        : h("div", null, header, content);
+}
+
+// ---------------------------------------------------------------------------------------------
+// Route sign section
+// ---------------------------------------------------------------------------------------------
+
+/** Option lists arrive flattened as [value, label, value, label, ...]. */
+function pairs(flat) {
+    const list = [];
+    for (let i = 0; i + 1 < (flat || []).length; i += 2) list.push({ value: parseInt(flat[i], 10), label: flat[i + 1] });
+    return list;
+}
+
+function routeSet(target, index, field, value) {
+    send("routeSet", [target, index, field, String(value)].join("\n"));
+}
+
+/** Text box with its own state, reloaded when another sign is selected or the sign is reset. */
+function TextField(props) {
+    const [value, setValue] = React.useState(props.value || "");
+    React.useEffect(() => { setValue(props.value || ""); }, [props.signKey]);
+
+    // Upper-casing changes the value, which moves the caret to the end; put it back after rendering.
+    const pendingCaret = React.useRef(null);
+    React.useLayoutEffect(() => {
+        const pending = pendingCaret.current;
+        if (pending && pending.input) {
+            try { pending.input.setSelectionRange(pending.start, pending.end); } catch (e) { }
+        }
+        pendingCaret.current = null;
+    });
+
+    return h("input", {
+        type: "text",
+        value: value,
+        maxLength: props.maxLength,
+        placeholder: props.placeholder,
+        style: merge(S.lineInput, { textTransform: props.upper ? "uppercase" : "none", color: "rgb(235, 240, 235)", letterSpacing: "1rem" }, props.style),
+        onChange: (e) => {
+            const input = e.target;
+            pendingCaret.current = { input: input, start: input.selectionStart, end: input.selectionEnd };
+            let next = input.value.replace(/[\n\r\f,;|~]/g, "");
+            if (props.upper) next = next.toUpperCase();
+            setValue(next);
+            props.onCommit(next);
+        },
+        onKeyDown: (e) => {
+            if (e.key === "Enter" || e.key === "Escape") e.currentTarget.blur();
+        },
+    });
+}
+
+function OptionRow(props) {
+    return h("div", { style: S.row },
+        props.options.map(o => h(Button, { key: o.value, selected: props.value === o.value, onClick: () => props.onPick(o.value) }, o.label)));
+}
+
+const COUNTY = 5;
+
+function RouteColumnEditor(props) {
+    const c = props.column;
+    const i = props.index;
+    const set = (field, value) => routeSet("column", i, field, value);
+    const body = [];
+    if (props.count > 1) body.push(h("div", { key: "t", style: S.pageHeader }, h("div", { style: S.pageTitle }, "Route " + (i + 1) + (i === 0 ? " (left)" : (i === props.count - 1 ? " (right)" : "")))));
+    body.push(h("div", { key: "ml", style: S.label }, "Route marker"));
+    body.push(h(OptionRow, { key: "m", options: props.shieldOptions, value: c.shield, onPick: v => set("shield", v) }));
+    body.push(h("div", { key: "nl", style: S.label }, "Route number"));
+    body.push(h(TextField, { key: "n", signKey: props.signKey, value: c.number, maxLength: props.maxNumber, upper: true, placeholder: "e.g. 80", onCommit: v => set("number", v) }));
+    if (c.shield === COUNTY) {
+        body.push(h("div", { key: "cl", style: S.label }, "County name"));
+        body.push(h(TextField, { key: "c", signKey: props.signKey, value: c.name, maxLength: props.maxName, upper: true, placeholder: "e.g. LASSEN", onCommit: v => set("name", v) }));
+    }
+    if (props.hasAux) {
+        body.push(h("div", { key: "al", style: S.label }, "Top plate"));
+        body.push(h(OptionRow, { key: "a", options: props.auxOptions, value: c.aux, onPick: v => set("aux", v) }));
+    }
+    body.push(h("div", { key: "dl", style: S.label }, "Direction"));
+    body.push(h(OptionRow, { key: "d", options: props.cardinalOptions, value: c.cardinal, onPick: v => set("cardinal", v) }));
+    if (props.hasArrow) {
+        body.push(h("div", { key: "rl", style: S.label }, "Arrow"));
+        body.push(h(OptionRow, { key: "r", options: props.arrowOptions, value: c.arrow, onPick: v => set("arrow", v) }));
+    }
+    return h("div", { style: { marginBottom: "6rem" } }, body);
+}
+
+function DestinationLineEditor(props) {
+    const l = props.line;
+    const i = props.index;
+    const set = (field, value) => routeSet("line", i, field, value);
+    return h("div", { style: { marginBottom: "4rem" } },
+        h("div", { style: S.pageHeader }, h("div", { style: S.pageTitle }, "Line " + (i + 1))),
+        h(TextField, { signKey: props.signKey, value: l.text, maxLength: props.maxText, placeholder: "Destination", onCommit: v => set("text", v) }),
+        h(OptionRow, { options: props.arrowOptions, value: l.arrow, onPick: v => set("arrow", v) }),
+        h("div", { style: S.row },
+            h("div", { style: merge(S.hint, { marginRight: "8rem" }) }, "Miles"),
+            h(TextField, { signKey: props.signKey, value: l.distance, maxLength: props.maxDistance, placeholder: "-", style: { width: "70rem" }, onCommit: v => set("distance", v) })));
+}
+
+function RouteSignSection(props) {
+    const isMarker = props.kind === "marker";
+    const header = InfoRow
+        ? h(InfoRow, { left: isMarker ? "Route marker" : "Destination sign", right: isMarker ? (props.columns || []).length + " route(s)" : (props.lines || []).length + " line(s)", uppercase: true, disableFocus: true })
+        : h("div", { style: S.label }, isMarker ? "Route marker" : "Destination sign");
+
+    const body = [];
+    if (isMarker) {
+        const columns = props.columns || [];
+        columns.forEach((c, i) => body.push(h(RouteColumnEditor, {
+            key: "c" + i, index: i, count: columns.length, column: c, signKey: props.signKey,
+            hasAux: props.hasAux, hasArrow: props.hasArrow, maxNumber: props.maxNumber, maxName: props.maxName,
+            shieldOptions: pairs(props.shieldOptions), auxOptions: pairs(props.auxOptions),
+            cardinalOptions: pairs(props.cardinalOptions), arrowOptions: pairs(props.arrowOptions),
+        })));
+        body.push(h("div", { key: "pl", style: S.label }, "Plate colors"));
+        body.push(h(OptionRow, { key: "p", options: [{ value: 0, label: "Match the marker" }, { value: 1, label: "Black on white" }], value: props.plates, onPick: v => routeSet("sign", 0, "plates", v) }));
+    } else {
+        (props.lines || []).forEach((l, i) => body.push(h(DestinationLineEditor, {
+            key: "l" + i, index: i, line: l, signKey: props.signKey, maxText: props.maxText, maxDistance: props.maxDistance,
+            arrowOptions: pairs(props.destinationArrowOptions),
+        })));
+        body.push(h("div", { key: "cl", style: S.label }, "Sign color"));
+        body.push(h("div", { key: "cr", style: S.row },
+            pairs(props.colorOptions).map(o => h(Button, { key: o.value, selected: props.color === o.value, onClick: () => routeSet("sign", 0, "color", o.value) }, o.label)),
+            h(Button, { selected: props.dividers, onClick: () => routeSet("sign", 0, "dividers", props.dividers ? 0 : 1), style: { marginLeft: "12rem" } }, props.dividers ? "Divider lines: on" : "Divider lines: off")));
     }
 
     body.push(h("div", { key: "rs", style: merge(S.row, { marginTop: "8rem" }) },
-        h(Button, { onClick: () => send("digitalReset") }, "Reset to default")));
+        h(Button, { onClick: () => send("routeReset") }, "Reset to default")));
 
     const content = h("div", { style: S.body }, body);
     return InfoSection
@@ -266,6 +392,7 @@ const register = (moduleRegistry) => {
         "selectedInfoSectionComponents",
         (components) => {
             components[SECTION] = DigitalSignSection;
+            components[ROUTE_SECTION] = RouteSignSection;
             return components;
         });
     console.log("USRoadSigns UI module registered.");

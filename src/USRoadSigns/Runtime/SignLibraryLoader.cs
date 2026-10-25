@@ -13,6 +13,7 @@ using UnityEngine;
 using USRoadSigns.Catalog;
 using USRoadSigns.Digital;
 using USRoadSigns.Geometry;
+using USRoadSigns.Route;
 using Texture = Colossal.AssetPipeline.Importers.TextureImporter.Texture;
 
 namespace USRoadSigns.Runtime
@@ -256,7 +257,25 @@ namespace USRoadSigns.Runtime
                     Mod.Log.Error(e, "Could not create the digital message signs");
                 }
             }
+
+            // Route marker assemblies and destination signs: Highway category (and its flashing copy), plates drawn at runtime.
+            if (categories.TryGetValue(RouteHighwayCategory, out UIAssetCategoryPrefab highway))
+            {
+                try
+                {
+                    categories.TryGetValue(RouteHighwayCategory + "Flashing", out UIAssetCategoryPrefab highwayFlashing);
+                    RouteSignLibrary.Register(prefabSystem, m_Factory, highway, highwayFlashing, slotSurfaces,
+                        Catalog.Root.Flashing, assemblyOptions.IncludeBolts, IconUrl);
+                }
+                catch (Exception e)
+                {
+                    Mod.Log.Error(e, "Could not create the route signs");
+                }
+            }
         }
+
+        /// <summary>Catalog category that holds the route marker assemblies and destination signs.</summary>
+        private const string RouteHighwayCategory = "Highway";
 
         private static TextureAsset Get(Dictionary<string, TextureAsset> textures, string name)
         {
@@ -376,8 +395,13 @@ namespace USRoadSigns.Runtime
         /// </summary>
         private void AddFlashingLights(RenderPrefab render, int lampSubMesh, SignDef sign)
         {
-            FlashingDefaults settings = Catalog.Root.Flashing ?? new FlashingDefaults();
-            RgbaColor c = settings.GetColor(sign.LedColor);
+            AddFlashingLights(render, lampSubMesh, Catalog.Root.Flashing ?? new FlashingDefaults(), sign.LedColor);
+        }
+
+        /// <summary>Same as above for prefabs built outside the catalog (route signs).</summary>
+        internal static void AddFlashingLights(RenderPrefab render, int lampSubMesh, FlashingDefaults settings, string ledColor)
+        {
+            RgbaColor c = settings.GetColor(ledColor);
 
             EmissiveProperties emissive = render.AddComponent<EmissiveProperties>();
             emissive.m_MultiLights = new List<EmissiveProperties.MultiLightMapping>();

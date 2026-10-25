@@ -92,7 +92,7 @@
 		</Content>
 	</ItemGroup>
 
-	<!-- UI module (info panel editor for digital signs) and the digital sign menu icons -->
+	<!-- UI module (info panel editors for digital and route signs) and their menu icons -->
 	<ItemGroup>
 		<None Update="UI\USRoadSigns.mjs">
 			<Link>USRoadSigns.mjs</Link>
@@ -100,6 +100,10 @@
 		</None>
 		<None Update="Resources\Icons\Digital\*.png">
 			<Link>Icons\Digital\%(Filename)%(Extension)</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Resources\Icons\Route\*.png">
+			<Link>Icons\Route\%(Filename)%(Extension)</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>

@@ -67,9 +67,9 @@ namespace USRoadSigns.Digital
     {
         public const string CategoryId = "DigitalSigns";
         public const string CategoryName = "Digital Message Signs";
-        public const string CategoryDescription = "Changeable message signs and arrow boards. Select a placed sign to type its own message, pick a preset, change the LED color or set the arrow pattern.";
+        public const string CategoryDescription = "Changeable message signs and arrow boards. Select a placed sign to type its own message, change the LED color or set the arrow pattern.";
         public const string CategoryIcon = "Icons/Digital/Category.png";
-        public const int CategoryPriority = 5;
+        public const int CategoryPriority = 1000;   // after every other category
 
         /// <summary>Toolbar category holding every digital sign (inside the US Road Signs menu).</summary>
         public static CategoryDef Category() => new CategoryDef
@@ -119,7 +119,7 @@ namespace USRoadSigns.Digital
                 Description = "Permanent dynamic message sign on a single round pole. 3 lines of 15 characters.",
                 Structure = StructureKind.Pole, Display = DisplayKind.Text,
                 Columns = 90, Rows = 27, Lines = 3, Pitch = 0.066f, HasBeacons = true,
-                DefaultMessage = "TEXTING|WHILE DRIVING|OH CELL NO",
+                DefaultMessage = "CRASH AHEAD|RIGHT LANE|BLOCKED",
                 Priority = 40, Cost = 9000,
             },
             new DigitalSignType
@@ -139,7 +139,7 @@ namespace USRoadSigns.Digital
                 Description = "Walk-in dynamic message sign on a truss gantry spanning about 18 m (3 lanes and shoulders). 3 lines of 21 characters.",
                 Structure = StructureKind.Gantry, Display = DisplayKind.Text,
                 Columns = 126, Rows = 27, Lines = 3, Pitch = 0.066f, Span = 18f, HasBeacons = true,
-                DefaultMessage = "VISITING IN-LAWS?|SLOW DOWN|GET THERE LATE",
+                DefaultMessage = "STOPPED TRAFFIC|2 MILES AHEAD|EXPECT DELAYS",
                 Priority = 60, Cost = 22000,
             },
             new DigitalSignType
@@ -162,102 +162,6 @@ namespace USRoadSigns.Digital
                     return type;
             }
             return null;
-        }
-
-        /// <summary>
-        /// Common messages in preset notation ('|' between lines, '||' between pages). The UI only offers presets
-        /// whose lines fit the selected sign.
-        /// </summary>
-        public static readonly IReadOnlyList<string> Presets = new List<string>
-        {
-            // Work zones
-            "ROAD|WORK|AHEAD",
-            "ROAD|WORK|AHEAD||USE|CAUTION",
-            "USE|CAUTION",
-            "SLOW|TRAFFIC|AHEAD",
-            "STOPPED|TRAFFIC|AHEAD",
-            "PREPARE|TO STOP",
-            "EXPECT|DELAYS",
-            "LEFT|LANE|CLOSED",
-            "RIGHT|LANE|CLOSED",
-            "2 LEFT|LANES|CLOSED",
-            "2 RIGHT|LANES|CLOSED",
-            "LANES|SHIFT|AHEAD",
-            "LANES|CHANGE|AHEAD",
-            "MERGE|LEFT",
-            "MERGE|RIGHT",
-            "ROAD|CLOSED|AHEAD",
-            "ROAD|CLOSED||DETOUR|>",
-            "DETOUR|AHEAD",
-            "RAMP|CLOSED",
-            "EXIT|CLOSED",
-            "FLAGGER|AHEAD",
-            "WORKERS|PRESENT",
-            "TRUCKS|ENTERING",
-            "NIGHT|WORK|AHEAD",
-            "ONE LANE|ROAD|AHEAD",
-            "BUMP|AHEAD",
-            "LOOSE|GRAVEL",
-            "UNEVEN|LANES",
-            "NO|SHOULDER",
-            "FINES|DOUBLED",
-            "SPEED|LIMIT|45",
-            "SLOW|DOWN",
-            // Incidents and weather
-            "CRASH|AHEAD",
-            "ACCIDENT|AHEAD||EXPECT|DELAYS",
-            "FOG|AHEAD",
-            "ICE ON|BRIDGE",
-            "HIGH|WINDS",
-            "FLOODED|ROAD|AHEAD",
-            "CRASH AHEAD|LEFT LANE|BLOCKED",
-            "DISABLED|VEHICLE|RIGHT SHOULDER",
-            "ALL LANES|CLOSED|AT EXIT 12",
-            "STOPPED TRAFFIC|AHEAD|BE PREPARED TO STOP",
-            // Travel and events
-            "EVENT|PARKING|>",
-            "EVENT|TRAFFIC|USE EXIT 5",
-            "TRAVEL TIME TO|DOWNTOWN|12-15 MIN",
-            "I-95 NORTH|EXIT 12|8 MIN",
-            "EXPRESS LANES|OPEN",
-            "EXPRESS LANES|CLOSED",
-            "AMBER ALERT|CALL 911|WITH INFO",
-            // Safety campaigns
-            "BUCKLE|UP",
-            "SLOW DOWN|MOVE OVER",
-            "CLICK IT|OR TICKET",
-            "DONT|TEXT AND|DRIVE",
-            "TEXTING|WHILE DRIVING|OH CELL NO",
-            "WATCH FOR|MOTORCYCLES",
-            "DRIVE SOBER|OR GET|PULLED OVER",
-            "VISITING IN-LAWS?|SLOW DOWN|GET THERE LATE",
-            "TEXTING AND DRIVING?|SAY IT: I'M THE|PROBLEM IT'S ME",
-            "HEADLIGHTS ON|WHEN WIPERS ON",
-            "LEFT LANE|FOR PASSING|ONLY",
-        };
-
-        /// <summary>Presets whose pages fit the sign (line count and width).</summary>
-        public static List<string> PresetsFor(DigitalSignType type)
-        {
-            var list = new List<string>();
-            if (type.Display != DisplayKind.Text)
-                return list;
-            foreach (string preset in Presets)
-            {
-                bool fits = true;
-                foreach (string page in preset.Split(new[] { "||" }, System.StringSplitOptions.None))
-                {
-                    string[] lines = page.Split('|');
-                    if (lines.Length > type.Lines || !MessageLayout.Fits(lines, type.Columns))
-                    {
-                        fits = false;
-                        break;
-                    }
-                }
-                if (fits)
-                    list.Add(preset);
-            }
-            return list;
         }
     }
 

@@ -414,6 +414,12 @@ namespace USRoadSigns.Geometry
         /// <summary>2 in (or other) perforated square steel tube with slightly rounded corners.</summary>
         private static void AddSquareTube(Context ctx, float xInches, float zInches, float sizeInches, float bottom, float top)
         {
+            AddSquareTube(ctx.Perforated, ctx.Galvanized, xInches, zInches, sizeInches, bottom, top);
+        }
+
+        /// <summary>Square tube post into the given parts (also used by the runtime route signs). Inches, viewer-right x.</summary>
+        public static void AddSquareTube(MeshPart perforated, MeshPart galvanized, float xInches, float zInches, float sizeInches, float bottom, float top)
+        {
             float h = sizeInches * 0.5f;
             float c = Math.Min(0.14f, sizeInches * 0.08f);
             var profile = new List<Vec2>
@@ -426,11 +432,11 @@ namespace USRoadSigns.Geometry
 
             Vec3 origin = new Vec3(-xInches * K, 0f, zInches * K);
             // Long sides get the hole pattern across u [0,1]; chamfers map to a hole-free strip.
-            ctx.Perforated.AddVerticalExtrusion(profile, origin, bottom * K, top * K, capBottom: false, capTop: false,
+            perforated.AddVerticalExtrusion(profile, origin, bottom * K, top * K, capBottom: false, capTop: false,
                 uvScale: InchesPerMeter,
                 segmentU: (index, len) => len > 0.5f * K ? new Vec2(0f, 1f) : new Vec2(0.0f, 0.04f));
             // Cap
-            ctx.Galvanized.AddPolygon(MeshPart.ToCounterClockwise(profile), origin + new Vec3(0f, top * K, 0f), Vec3.Right, Vec3.Forward, Vec3.Up,
+            galvanized.AddPolygon(MeshPart.ToCounterClockwise(profile), origin + new Vec3(0f, top * K, 0f), Vec3.Right, Vec3.Forward, Vec3.Up,
                 p => p * GalvanizedUvPerMeter);
         }
 
@@ -591,6 +597,12 @@ namespace USRoadSigns.Geometry
 
         private static void AddIBeam(Context ctx, float xInches, float bottom, float top)
         {
+            AddIBeam(ctx.Galvanized, xInches, bottom, top);
+        }
+
+        /// <summary>W6x9 steel I-beam post (5.9 in deep, flanges facing front and back). Inches, viewer-right x.</summary>
+        public static void AddIBeam(MeshPart galvanized, float xInches, float bottom, float top)
+        {
             const float d = 5.90f, bf = 3.94f, tf = 0.215f, tw = 0.170f;
             float hd = d * 0.5f, hb = bf * 0.5f, ht = tw * 0.5f;
             var profile = new List<Vec2>
@@ -601,7 +613,7 @@ namespace USRoadSigns.Geometry
             };
             for (int i = 0; i < profile.Count; i++)
                 profile[i] = profile[i] * K;
-            ctx.Galvanized.AddVerticalExtrusion(MeshPart.ToCounterClockwise(profile), new Vec3(-xInches * K, 0f, 0f), bottom * K, top * K,
+            galvanized.AddVerticalExtrusion(MeshPart.ToCounterClockwise(profile), new Vec3(-xInches * K, 0f, 0f), bottom * K, top * K,
                 capBottom: false, capTop: true, uvScale: GalvanizedUvPerMeter);
         }
 

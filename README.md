@@ -38,7 +38,7 @@ Where the LEDs would cover lettering or symbols on a small sign, the face sets `
 
 ## Digital message signs
 
-The **Digital Message Signs** category (first tab of the US Road Signs menu) holds changeable message signs
+The **Digital Message Signs** category (last tab of the US Road Signs menu) holds changeable message signs
 and arrow boards whose display you set yourself:
 
 | Sign                                    | Structure                                         | Display                       |
@@ -55,9 +55,8 @@ Place one, then click it. The **Message sign** section of the info panel lets yo
 
 - type each line (up to 4 pages that alternate, with an adjustable time per page); a line turns red when it is
   too wide for that sign. `<` `>` `^` `~` draw left, right, up and down arrows;
-- pick one of about 60 common messages (only those that fit the selected sign are listed);
 - set the alignment, make the text flash, change the LED color (amber, yellow, white, red, green, blue);
-- switch the roof beacons on (pole, cantilever and gantry signs);
+- switch on the four roof beacons (pole, cantilever and gantry signs); beacons 1 and 3 flash together, alternating with 2 and 4;
 - on arrow boards, choose the pattern: arrows, sequential arrows and chevrons, caution bar, four corners or off.
 
 Settings are stored per sign in the save game. An unedited sign shows its default message. The LED glow can
@@ -68,6 +67,40 @@ How it works: the structures are ordinary prefabs built in code (`src/Shared/Dig
 texture and draws it in front of the sign's LED window with the game's default lit shader. The info panel
 section is `DigitalSignSection` plus the plain JavaScript UI module `src/USRoadSigns/UI/USRoadSigns.mjs`
 (no npm build needed).
+
+## Route markers and destination signs
+
+The **Highway** category starts with route marker assemblies and green destination signs whose legends you set
+yourself (each also has a flashing copy with white LEDs in **Highway (Flashing)**, like the other green guide signs):
+
+| Sign                                   | Structure                                                  | Shows                                  |
+| -------------------------------------- | ---------------------------------------------------------- | -------------------------------------- |
+| Route Marker (Current Route)           | One square post                                            | Direction + route marker               |
+| Route Marker Assembly (Directional)    | One square post                                            | Top plate + direction + marker + arrow |
+| Route Marker Assembly (2 Routes)       | Two columns on one post with steel channel braces          | 2 x (top plate, direction, marker, arrow) |
+| Route Marker Assembly (3 Routes)       | Three columns on two posts with steel channel braces       | 3 x (top plate, direction, marker, arrow) |
+| Route Marker (Freeway, Large)          | 36-inch marker on two posts                                | Direction + route marker               |
+| Destination Sign (1, 2 or 3 Lines)     | Two square posts                                           | Place names with arrows and miles      |
+| Destination Sign (4 Lines, Large)      | Two steel I-beam posts                                     | Place names with arrows and miles      |
+| Overhead Destination Sign (Mast Arm)   | Pole with a mast arm over the lanes                        | Place names with arrows and miles      |
+
+Place one, then click it. The **Route sign** section of the info panel lets you:
+
+- pick each column's route marker: Interstate (M1-1), Business Loop or Spur (M1-2/M1-3), U.S. Route (M1-4),
+  State Route (M1-5), County Route (M1-6, with the county name) or Forest Route (M1-7), and type its number;
+  three-character numbers get the wide 30 x 24 marker where the MUTCD calls for it;
+- choose the cardinal direction (NORTH, SOUTH, EAST, WEST or none), a top plate (TO, JCT, BEGIN, END, ALT, BYPASS,
+  BUSINESS, TRUCK) and the arrow plate (left, right, ahead, diagonal, advance turn, two-way, ahead-or-turn);
+- color the plates to match the marker (blue for Interstates, green for Business routes...) or black on white;
+- on destination signs, type each line (mixed case), pick its arrow (left and ahead arrows go left of the
+  names, right arrows to the right), add a mileage, switch the divider lines and choose green, blue or brown.
+
+Settings are stored per sign in the save game. An unedited sign shows its default legend.
+
+How it works: the plate outline depends on the marker chosen, so route marker plates are not part of the prefab.
+`src/Shared/Route` lays out the plates (`RouteSignBuilder`), draws their artwork with a small anti-aliased vector
+rasterizer and a stroke font in the style of the FHWA alphabets (`FaceCanvas`, `StrokeFont`, `RouteFaces`), and
+`RouteSignRenderSystem` draws the plates, braces and LEDs per sign; the prefab holds the posts and hardware.
 
 ## Placing signs
 
@@ -111,5 +144,7 @@ To add a sign, you only edit data:
 | `tools/SignForge`         | Renders face textures, material textures and menu icons from `data/` |
 | `src/Shared/Digital`      | Digital signs: types, structures, LED font, layout, arrow patterns   |
 | `src/USRoadSigns/Digital` | Digital signs: prefabs, per-sign component, renderer, info panel     |
-| `src/USRoadSigns/UI`      | UI module for the info panel editor                                  |
+| `src/Shared/Route`        | Route signs: types, layout, plate meshes, face artwork, stroke font  |
+| `src/USRoadSigns/Route`   | Route signs: prefabs, per-sign component, renderer, info panel       |
+| `src/USRoadSigns/UI`      | UI module for the info panel editors                                 |
 | `build.ps1`               | One-step build into `dist/USRoadSigns`                               |

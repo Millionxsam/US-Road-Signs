@@ -20,7 +20,6 @@ namespace USRoadSigns.Digital
         private DigitalSignState m_State;
         private Entity m_Entity;
         private int m_Revision;
-        private List<string> m_Presets = new List<string>();
 
         protected override string group => nameof(DigitalSignSection);
 
@@ -29,7 +28,6 @@ namespace USRoadSigns.Digital
         {
             base.OnCreate();
             AddBinding(new TriggerBinding<string>(Group, "digitalSetMessage", SetMessage));
-            AddBinding(new TriggerBinding<int>(Group, "digitalApplyPreset", ApplyPreset));
             AddBinding(new TriggerBinding<int>(Group, "digitalSetColor", value => Modify(s => s.Color = (LedColor)Clamp(value, 0, LedColors.Count - 1))));
             AddBinding(new TriggerBinding<int>(Group, "digitalSetAlign", value => Modify(s => s.Align = (TextAlign)Clamp(value, 0, 2))));
             AddBinding(new TriggerBinding<int>(Group, "digitalSetArrow", value => Modify(s => s.Arrow = (ArrowMode)Clamp(value, 0, ArrowBoard.ModeCount - 1))));
@@ -63,7 +61,6 @@ namespace USRoadSigns.Digital
             {
                 m_Entity = selectedEntity;
                 m_Revision++;
-                m_Presets = DigitalSignTypes.PresetsFor(m_Info.Type);
             }
             m_State = DigitalSignState.Resolve(m_Info.Type, EntityManager.GetComponentData<DigitalSign>(selectedEntity));
         }
@@ -147,12 +144,6 @@ namespace USRoadSigns.Digital
                     writer.Write(ArrowBoard.ModeName((ArrowMode)i));
             }
             writer.ArrayEnd();
-
-            writer.PropertyName("presets");
-            writer.ArrayBegin(m_Presets.Count);
-            foreach (string preset in m_Presets)
-                writer.Write(preset.Replace("||", "  /  ").Replace("|", " "));
-            writer.ArrayEnd();
         }
 
         // ------------------------------------------------------------------------------------------
@@ -166,14 +157,6 @@ namespace USRoadSigns.Digital
             // Normalize through the parser: line count, upper case, supported characters, page limit.
             string normalized = SignMessage.Format(SignMessage.Parse(message, m_Info.Type.Lines));
             Modify(s => s.Message = normalized, resync: false);
-        }
-
-        private void ApplyPreset(int index)
-        {
-            if (m_Info == null || index < 0 || index >= m_Presets.Count)
-                return;
-            string message = SignMessage.FromPreset(m_Presets[index], m_Info.Type.Lines);
-            Modify(s => s.Message = message, resync: true);
         }
 
         private void ResetToDefaults()
@@ -201,7 +184,7 @@ namespace USRoadSigns.Digital
 
         private void Changed(bool resync)
         {
-            // A resync makes the panel reload its text fields (presets, reset); typing does not, so the caret stays put.
+            // A resync makes the panel reload its text fields (reset); typing does not, so the caret stays put.
             if (resync)
                 m_Revision++;
             RequestUpdate();

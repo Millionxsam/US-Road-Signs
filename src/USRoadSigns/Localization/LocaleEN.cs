@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Colossal;
 using USRoadSigns.Catalog;
 using USRoadSigns.Digital;
+using USRoadSigns.Route;
 
 namespace USRoadSigns.Localization
 {
@@ -83,6 +84,17 @@ namespace USRoadSigns.Localization
                     string prefab = DigitalSignLibrary.PrefabName(type);
                     entries["Assets.NAME[" + prefab + "]"] = type.Name;
                     entries["Assets.DESCRIPTION[" + prefab + "]"] = type.Description + " Select it after placing to change what it shows.";
+                }
+
+                foreach (RouteSignType type in RouteSignTypes.All)
+                {
+                    string edit = type.Kind == RouteSignKind.Marker
+                        ? " Select it after placing to change the routes, numbers, directions and arrows."
+                        : " Select it after placing to type the destinations and choose their arrows.";
+                    entries["Assets.NAME[" + RouteSignLibrary.PrefabName(type, false) + "]"] = type.Name;
+                    entries["Assets.DESCRIPTION[" + RouteSignLibrary.PrefabName(type, false) + "]"] = type.Description + edit;
+                    entries["Assets.NAME[" + RouteSignLibrary.PrefabName(type, true) + "]"] = type.Name + " (Flashing)";
+                    entries["Assets.DESCRIPTION[" + RouteSignLibrary.PrefabName(type, true) + "]"] = type.Description + " With flashing LED lights in the border." + edit;
                 }
             }
 

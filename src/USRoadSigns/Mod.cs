@@ -8,6 +8,7 @@ using Game.SceneFlow;
 using Game.UI.InGame;
 using USRoadSigns.Digital;
 using USRoadSigns.Localization;
+using USRoadSigns.Route;
 using USRoadSigns.Runtime;
 
 namespace USRoadSigns
@@ -68,6 +69,7 @@ namespace USRoadSigns
                 return;
 
             RegisterDigitalSignSystems(updateSystem);
+            RegisterRouteSignSystems(updateSystem);
 
             GameManager.State state = GameManager.instance.state;
             if (state == GameManager.State.WorldReady || state == GameManager.State.Loading)
@@ -93,6 +95,21 @@ namespace USRoadSigns
             catch (Exception e)
             {
                 Log.Error(e, "Could not set up the digital sign systems; message signs will show blank displays.");
+            }
+        }
+
+        /// <summary>Plate and artwork renderer plus the "Route sign" section of the selected info panel.</summary>
+        private static void RegisterRouteSignSystems(UpdateSystem updateSystem)
+        {
+            try
+            {
+                updateSystem.UpdateAt<RouteSignRenderSystem>(SystemUpdatePhase.Rendering);
+                RouteSignSection section = updateSystem.World.GetOrCreateSystemManaged<RouteSignSection>();
+                updateSystem.World.GetOrCreateSystemManaged<SelectedInfoUISystem>().AddMiddleSection(section);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e, "Could not set up the route sign systems; route marker plates will not be drawn.");
             }
         }
 
