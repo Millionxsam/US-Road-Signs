@@ -1,5 +1,5 @@
 <Publish>
-	<ModId Value="" />
+	<ModId Value="163735" />
 	<DisplayName Value="US Road Signs" />
 	<ShortDescription Value="730 realistic American road signs with posts (regular and flashing signs)." />
 	<LongDescription>
@@ -41,15 +41,22 @@ Restart the game after changing these. Signs already in your city update automat
 	<Thumbnail Value="Properties/Thumbnail.jpg" />
 	<Screenshot Value="Properties/Screenshots/1.png" />
 	<Screenshot Value="Properties/Screenshots/4.jpg" />
+	<Screenshot Value="Properties/Screenshots/17.jpg" />
 	<Screenshot Value="Properties/Screenshots/5.jpg" />
 	<Screenshot Value="Properties/Screenshots/9.png" />
-	<Screenshot Value="Properties/Screenshots/7.png" />
 	<Screenshot Value="Properties/Screenshots/10.png" />
 	<Screenshot Value="Properties/Screenshots/12.png" />
 	<Screenshot Value="Properties/Screenshots/14.png" />
 	<Screenshot Value="Properties/Screenshots/15.png" />
 	<Screenshot Value="Properties/Screenshots/16.png" />
-	<ModVersion Value="1.0.0" />
+	<ModVersion Value="1.1.0" />
 	<GameVersion Value="1.*" />
 	<AccessLevel Value="Public" />
+	<ChangeLog>
+		Added "Digital Message Signs" category: includes structures that show digital messages.
+		After placing a structure, click on it to configure settings such as the message, add pages, change color, or toggle warning beacons.
+		
+		Added Interstate, U.S. Route, State Route, County Route, and Forest Route signs to the Highway category:
+		After placing one of these signs, click on it to change things like the route number and arrow directions.
+	</ChangeLog>
 </Publish>

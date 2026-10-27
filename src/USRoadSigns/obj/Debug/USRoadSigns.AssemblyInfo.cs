@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("USRoadSigns")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5e2948d20433c910cc3f8a6fd9095147461a7ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed0c0aa852ff0180131284611b39760d95e69348")]
 [assembly: System.Reflection.AssemblyProductAttribute("USRoadSigns")]
 [assembly: System.Reflection.AssemblyTitleAttribute("USRoadSigns")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
